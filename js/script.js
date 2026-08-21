@@ -13,7 +13,7 @@ var images = [
     "madda",
     "marion",
     "dennis",
-    "profilbilde"
+    "noa"
 ];
 
 var cardSection = document.getElementById("card-section");
@@ -24,15 +24,18 @@ row2.className = "card-row-2";
 cardSection.append(row1);
 cardSection.append(row2);
 
+
+
 for(var i = 0; i < navn.length; i+=1){
     // Card container
     var card = document.createElement("div");
     card.className = "card mb-3";
-    card.style = "max-width: 540px;";
+    card.style = "width: 540px; max-height: 200px;";
 
     // Row
     var div2 = document.createElement("div");
     div2.className = "row g-0";
+    div2.style = "overflow: hidden;";
     card.append(div2);
 
     // Col
@@ -44,8 +47,9 @@ for(var i = 0; i < navn.length; i+=1){
     var img = document.createElement("img");
     img.setAttribute("src", "../images/" + `${images[i]}` + ".jpg");
     img.setAttribute("alt", "...")
-    img.style = "width: 200px;"
-    img.className = "img.fluid rounded-start";
+    // img.style = "width: 200px;"
+    img.className = "rounded-start";
+    img.id = 'image-' + `${images[i]}`;
     div3.append(img)
     
     // Col
@@ -66,14 +70,21 @@ for(var i = 0; i < navn.length; i+=1){
     cardText.className = "card-text";
     cardText.innerHTML = "Sample text";
 
+    var detailsBtn = document.createElement('a');
+    detailsBtn.className = "btn btn-outline-primary";
+    detailsBtn.innerHTML = "Se mer";
+    detailsBtn.id = 'btn-' + `${images[i]}`;
+    
+    
     var cardSmallText = document.createElement("p");
     cardSmallText.className = "card-text";
     cardSmallText.innerHTML = "<small class='text-body-secondary'>Last updated 3 mins ago</small>"
-
-
+    
+    
     cardBody.append(cardTitle);
     cardBody.append(cardText);
     cardBody.append(cardSmallText);
+    cardBody.append(detailsBtn);
 
 
     

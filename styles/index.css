@@ -6,16 +6,42 @@
 .card-row-1, .card-row-2 {
     display: flex;
     flex-direction: row;
-    gap: 20px;
+    gap: 2rem;
     /* padding: 0 10%; */
 }
 
 .card-image img {
-    width: 400px;
-    height: 100%;
+    width: 200px;
+    height: 200px;
+    position: relative;
+    left: -20%;
 }
 
 .card-image {
     overflow: hidden;
-    object-fit: cover;
+    /* object-fit: cover; */
+}
+
+.card a {
+    position: absolute;
+    right: 16px;
+    bottom: 16px;
+    left: auto;
+}
+
+#card-section {
+    padding: 0 ;
+}
+
+#image-hildiddy {
+    left: -30%;
+    height: 400px;
+}
+
+#image-noa {
+    left: -30%;
+}
+
+#image-marion {
+    height: 300px;
 }

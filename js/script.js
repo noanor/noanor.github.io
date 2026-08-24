@@ -40,7 +40,7 @@ for(var i = 0; i < navn.length; i+=1){
 
     // Col
     var div3 = document.createElement("div");
-    div3.className = "col-md-4 card-image";
+    div3.className = "col-md-4 card-image rounded start";
     div2.append(div3);
 
     // Image

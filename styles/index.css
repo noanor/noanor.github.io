@@ -1,3 +1,26 @@
+/* #forside {
+    background-color: red;
+}
+
+#om-oss {
+    background-color: blue;
+} */
+
+#card-section {
+    padding: 0 ;
+}
+
+#forside, #om-oss, #card-section {
+    scroll-margin-top: 8vh;
+    height: 92vh;
+}
+
+#navbar {
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+
 .card-section {
     display: flex;
     flex-direction: column;
@@ -29,9 +52,6 @@
     left: auto;
 }
 
-#card-section {
-    padding: 0 ;
-}
 
 #image-hildiddy {
     left: -30%;
@@ -44,4 +64,8 @@
 
 #image-marion {
     height: 300px;
+}
+
+#image-madda {
+    width: 150px;
 }

@@ -13,6 +13,7 @@
 #forside, #om-oss, #card-section {
     scroll-margin-top: 8vh;
     height: 92vh;
+    margin-top: 5px;
 }
 
 #navbar {

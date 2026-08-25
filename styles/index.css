@@ -59,6 +59,10 @@
     height: 92vh;
 }
 
+#prosjekt {
+    overflow-y: auto;
+}
+
 /*
   Hjem-bakgrunn: Vanta Globe (js/forside-vanta.js).
   Vanta legger inn sitt eget canvas. Teksten må ligge over (z-index).
@@ -154,4 +158,39 @@
 
 #image-madda {
     width: 150px;
+}
+
+#lsp-data {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.wheel-wrap {
+    position: relative;
+    width: min(420px, 100%);
+    aspect-ratio: 1;
+}
+
+.wheel-container {
+    width: 100%;
+    height: 100%;
+}
+
+.wheel-pointer {
+    display: none;
+}
+
+.wheel-hub {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 48%;
+    height: 48%;
+    border-radius: 50%;
+    background: #fff;
+    border: 3px solid #1a1a1a;
+    z-index: 2;
+    pointer-events: none;
 }

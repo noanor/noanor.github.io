@@ -98,9 +98,10 @@
 }
 
 .navbar-logo {
-    font-size: 2.75rem;
-    line-height: 1;
-    color: #000000;
+    width: 65px;
+    height: 65px;
+    object-fit: contain;
+    display: block;
 }
 
 #navbar .nav-link {
@@ -266,6 +267,13 @@ Logo
     font-weight: 700;
     letter-spacing: 0.08em;
     color: #000000;
+}
+
+.footer-logo-image {
+    width: 42px;
+    height: 42px;
+    object-fit: contain;
+    display: block;
 }
 
 .footer-line {

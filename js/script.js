@@ -45,7 +45,7 @@ for(var i = 0; i < navn.length; i+=1){
 
     // Image
     var img = document.createElement("img");
-    img.setAttribute("src", "../images/" + `${images[i]}` + ".jpg");
+    img.setAttribute("src", "./images/" + images[i] + ".jpg");
     img.setAttribute("alt", "...")
     // img.style = "width: 200px;"
     img.className = "rounded-start";

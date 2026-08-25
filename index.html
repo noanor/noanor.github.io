@@ -67,14 +67,42 @@
 
             <section id="prosjekt">
                 <h2 class="mb-3">Prosjekt</h2>
-                <div id="lsp-data">
-                    <div class="wheel-wrap">
-                        <div class="wheel-container"></div>
-                        <div class="wheel-pointer" aria-hidden="true"></div>
-                        <div class="wheel-hub" aria-hidden="true"></div>
+                <div class="row g-0 justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="card prosjekt-kort mb-3 overflow-hidden">
+                            <div class="row g-0">
+                                <div class="col-md-4 prosjekt-card-img-wrap bg-image hover-zoom rounded-start">
+                                    <img src="./images/kartverket-logo.png" class="prosjekt-card-img" alt="Kartverket">
+                                </div>
+                                <div class="col-md-8 d-flex">
+                                    <div class="card-body d-flex flex-column">
+                                        <h3 class="card-title pb-2 mb-0">Kartverket - Luftfartshinder softwareapplikasjon</h3>
+                                        <hr class="prosjekt-kort-strek">
+                                        <div class="flex-grow-1 d-flex align-items-center prosjekt-kort-tekst">
+                                            <p class="card-text mb-0">
+                                                System for innmelding og kontroll av luftfartshindre til Nasjonalt register for luftfartshindre (NRL).
+                                                Piloter og flygere kan registrere hinder på kart; registrator godkjenner eller avviser.
+                                            </p>
+                                        </div>
+                                        <div class="mt-auto" style="margin-bottom: 6mm;">
+                                            <div class="prosjekt-tags mb-3">
+                                                <span class="prosjekt-tag">ASP.NET Core</span>
+                                                <span class="prosjekt-tag">Entity Framework</span>
+                                                <span class="prosjekt-tag">MySQL</span>
+                                                <span class="prosjekt-tag">Leaflet</span>
+                                                <span class="prosjekt-tag">Docker</span>
+                                                <span class="prosjekt-tag">Authentication</span>
+                                                <span class="prosjekt-tag">Security</span>
+                                            </div>
+                                            <a href="./luftfartshinder.html" class="btn btn-accent align-self-start">
+                                                Se mer
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <button type="button" id="spin-btn" class="btn btn-accent mt-3">Spin</button>
-                    <p id="spin-result" class="mt-2 mb-0"></p>
                 </div>
             </section>
 
@@ -179,9 +207,7 @@
         <script src="https://kit.fontawesome.com/53d2400da6.js" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/vanta@0.5.24/dist/vanta.globe.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/spin-wheel@5.0.2/dist/spin-wheel-iife.js"></script>
         <script src="./js/script.js"></script>
         <script src="./js/forside-vanta.js"></script>
-        <script src="./js/prosjekt-wheel.js"></script>
     </body>
 </html>

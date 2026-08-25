@@ -10,16 +10,101 @@
     padding: 0 ;
 }
 
-#forside, #om-oss, #card-section {
+:root {
+    --accent: #2563eb;
+}
+
+/* Teknisk display-font for merkenavnet CORE-6 (Orbitron = gratis stand-in for Eurostile Extended Bold). */
+.brand-font {
+    font-family: "Orbitron", sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+}
+
+.brand-tagline {
+    font-family: "Orbitron", sans-serif;
+    font-weight: 500;
+    font-size: 1.05rem;
+    letter-spacing: 0.08em;
+    color: #334155;
+    max-width: 28rem;
+}
+
+.text-accent {
+    color: #000000;
+}
+
+.btn-accent {
+    --bs-btn-color: #fff;
+    --bs-btn-bg: var(--accent);
+    --bs-btn-border-color: var(--accent);
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #1d4ed8;
+    --bs-btn-hover-border-color: #1d4ed8;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: #1e40af;
+    --bs-btn-active-border-color: #1e40af;
+    font-family: "Orbitron", sans-serif;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    padding-inline: 1.4rem;
+}
+
+#forside, #om-oss, #card-section, #prosjekt {
     scroll-margin-top: 8vh;
-    height: 92vh;
     margin-top: 5px;
+}
+
+#om-oss, #card-section, #prosjekt {
+    height: 92vh;
+}
+
+/*
+  Hjem-bakgrunn: Vanta Globe (js/forside-vanta.js).
+  Vanta legger inn sitt eget canvas. Teksten må ligge over (z-index).
+*/
+#forside {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    box-sizing: border-box;
+    height: 100vh;
+    padding-top: 4.75rem;
+    background-color: #d6d6e0;
+    display: flex;
+    align-items: center;
+}
+
+#forside canvas {
+    z-index: 0 !important;
+}
+
+.forside-innhold {
+    position: relative;
+    z-index: 1;
 }
 
 #navbar {
     position: fixed;
     width: 100%;
     top: 0;
+    z-index: 1030;
+    border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+    box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
+}
+
+.navbar-logo {
+    font-size: 2.75rem;
+    line-height: 1;
+    color: #000000;
+}
+
+#navbar .nav-link {
+    font-weight: 500;
+}
+
+#navbar .nav-link:hover {
+    color: var(--accent);
 }
 
 .card-section {

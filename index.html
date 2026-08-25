@@ -68,7 +68,13 @@
             <section id="prosjekt">
                 <h2 class="mb-3">Prosjekt</h2>
                 <div id="lsp-data">
-                    <!-- Innhold fylles inn senere -->
+                    <div class="wheel-wrap">
+                        <div class="wheel-container"></div>
+                        <div class="wheel-pointer" aria-hidden="true"></div>
+                        <div class="wheel-hub" aria-hidden="true"></div>
+                    </div>
+                    <button type="button" id="spin-btn" class="btn btn-accent mt-3">Spin</button>
+                    <p id="spin-result" class="mt-2 mb-0"></p>
                 </div>
             </section>
 
@@ -132,7 +138,9 @@
         <script src="https://kit.fontawesome.com/53d2400da6.js" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/vanta@0.5.24/dist/vanta.globe.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/spin-wheel@5.0.2/dist/spin-wheel-iife.js"></script>
         <script src="./js/script.js"></script>
         <script src="./js/forside-vanta.js"></script>
+        <script src="./js/prosjekt-wheel.js"></script>
     </body>
 </html>

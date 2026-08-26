@@ -281,6 +281,205 @@
 }
 
 /* 
+Om oss seksjonen 
+*/
+
+   #om-oss {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    height: auto;
+    min-height: 92vh;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+.om-oss-eyebrow {
+    font-family: "Orbitron", sans-serif;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 0.5rem;
+}
+
+.om-oss-meta {
+    font-family: "Orbitron", sans-serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #64748b;
+    margin-bottom: 1.5rem;
+}
+
+.om-oss-intro {
+    font-size: 1.05rem;
+    color: #1e293b;
+}
+
+.om-oss-tekst p {
+    color: #475569;
+    line-height: 1.7;
+}
+
+.om-oss-stats {
+    display: flex;
+    gap: 2rem;
+    margin-top: 1.75rem;
+    flex-wrap: wrap;
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    padding-left: 0.9rem;
+    border-left: 2px solid var(--accent);
+}
+
+.stat-number {
+    font-family: "Orbitron", sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+    color: var(--accent);
+    line-height: 1;
+}
+
+.stat-label {
+    font-size: 0.8rem;
+    color: #64748b;
+    letter-spacing: 0.04em;
+    margin-top: 0.35rem;
+}
+
+
+/* 
+Gruppebildet 
+*/
+
+.om-oss-image-wrap {
+    border-radius: 0.75rem;
+    overflow: hidden;
+    background-color: #ececec;
+    aspect-ratio: 4 / 3;
+    max-height: 340px;
+    margin-inline: auto;
+    box-shadow: 0 12px 28px rgba(15, 23, 42, 0.16);
+}
+
+
+/* 
+Promovideoen 
+*/
+
+.om-oss-video-section {
+    margin-top: 3.5rem;
+}
+
+.om-oss-video-wrap {
+    width: 100%;
+    max-width: 900px;
+    margin-inline: auto;
+    border-radius: 0.75rem;
+    overflow: hidden;
+    aspect-ratio: 16 / 9;
+    box-shadow: 0 12px 28px rgba(15, 23, 42, 0.16);
+}
+
+.om-oss-video {
+    width: 100%;
+    height: 100%;
+    display: block;
+    background-color: #000;
+}
+
+.om-oss-media-caption {
+    margin-top: 0.75rem;
+    font-size: 0.8rem;
+    color: #64748b;
+    text-align: center;
+}
+
+
+/* 
+Ambisjoner, kompetanse og interesser blokker 
+*/
+
+.om-oss-cards .om-oss-card {
+    height: 100%;
+    padding: 1.75rem;
+    border-radius: 0.75rem;
+    background-color: #ffffff;
+    border-top: 3px solid var(--accent);
+    box-shadow: 0 4px 14px rgba(15, 23, 42, 0.06);
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.om-oss-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 28px rgba(15, 23, 42, 0.14);
+}
+
+.icon-badge {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: rgba(37, 99, 235, 0.1);
+    margin-bottom: 0.9rem;
+}
+
+.icon-badge i {
+    font-size: 1.25rem;
+    color: var(--accent);
+}
+
+.om-oss-card h3 {
+    font-family: "Orbitron", sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    margin-bottom: 0.6rem;
+}
+
+.om-oss-card p {
+    color: #475569;
+    font-size: 0.92rem;
+    line-height: 1.6;
+    margin-bottom: 0.75rem;
+}
+
+.om-oss-video:focus-visible,
+.om-oss-card:focus-visible {
+    outline: 3px solid var(--accent);
+    outline-offset: 2px;
+}
+
+@media (max-width: 767.98px) {
+
+    #om-oss {
+        min-height: auto;
+        padding-top: 6rem;
+    }
+
+    .om-oss-image-wrap {
+        max-height: none;
+    }
+
+    .om-oss-video-section {
+        margin-top: 2.5rem;
+    }
+
+    .om-oss-stats {
+        gap: 1.25rem;
+    }
+}
+
+/* 
 Footer 
 */
    .core-footer {

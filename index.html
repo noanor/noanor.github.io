@@ -55,9 +55,150 @@
         </section>
 
         <div class="container mb-5" id="container">
-            <section id="om-oss">
-                <h2 id="info">Om Oss</h2>
-
+            <section id="om-oss" aria-labelledby="om-oss-heading">
+                <div class="container om-oss-innhold">
+        
+                    <div class="row gy-5 align-items-center">
+                        <div class="col-lg-6 om-oss-tekst">
+                            <p class="om-oss-eyebrow">CORE-6 · Gruppe 7 · Bachelor 2027</p>
+        
+                            <h2 id="om-oss-heading" class="mb-3">Om Oss</h2>
+        
+                            <p class="om-oss-intro">
+                                Vi er <strong>CORE-6</strong> — seks studenter innen IT og informasjonssystemer
+                                ved Universitetet i Agder, med ulik bakgrunn og erfaring, som jobber mot ett
+                                felles mål: å levere teknologiske løsninger av høy kvalitet.
+                            </p>
+        
+                            <p>
+                                Nettopp denne kombinasjonen gjør oss sterke. Ulike perspektiver gjør at vi
+                                løser problemer fra flere vinkler, samtidig som vi deler samme arbeidsmoral
+                                og ambisjonsnivå. Det er derfor CORE-6 ikke bare er seks studenter — vi er et
+                                team som utfyller hverandre, utfordrer hverandre og sammen skaper resultater
+                                som gjør en forskjell.
+                            </p>
+        
+                            <div class="om-oss-stats" role="list">
+                                <div class="stat-item" role="listitem">
+                                    <span class="stat-number">6</span>
+                                    <span class="stat-label">Medlemmer</span>
+                                </div>
+        
+                                <div class="stat-item" role="listitem">
+                                    <span class="stat-number">6</span>
+                                    <span class="stat-label">Bakgrunner</span>
+                                </div>
+        
+                                <div class="stat-item" role="listitem">
+                                    <span class="stat-number">1</span>
+                                    <span class="stat-label">Felles mål</span>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <!-- Gruppebilde kommer -->
+                        <div class="col-lg-6">
+                            <div class="om-oss-image-wrap">
+                                <img
+                                    src="./images/gruppebilde.jpg"
+                                    class="om-oss-image"
+                                    alt="Gruppebilde av CORE-6"
+                                >
+                            </div>
+        
+                            <p class="om-oss-media-caption">Gruppebilde av CORE-6</p>
+                        </div>
+                    </div>
+        
+                    <!-- Ambisjoner, kompetanse, interesser bokser -->
+                    <div class="row mt-5 g-4 om-oss-cards">
+        
+                        <div class="col-md-4">
+                            <div class="om-oss-card">
+                                <span class="icon-badge">
+                                    <i class="bi bi-rocket-takeoff" aria-hidden="true"></i>
+                                </span>
+        
+                                <h3>Ambisjoner</h3>
+        
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Amet autem, quibusdam alias similique delectus rem quaerat
+                                    minima eos reiciendis dolore earum blanditiis enim?
+                                    Impedit veritatis tempora tenetur tempore rerum officiis?
+                                </p>
+                            </div>
+                        </div>
+        
+                        <div class="col-md-4">
+                            <div class="om-oss-card">
+                                <span class="icon-badge">
+                                    <i class="bi bi-cpu" aria-hidden="true"></i>
+                                </span>
+        
+                                <h3>Kompetanse</h3>
+        
+                                <p>
+                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                                    Odit minima, corrupti cupiditate eius, aliquam corporis
+                                    quis vero itaque dignissimos suscipit quidem reprehenderit
+                                    sunt ex earum non? Nesciunt atque architecto explicabo.
+                                </p>
+        
+                                <div class="prosjekt-tags">
+                                    <span class="prosjekt-tag">C#</span>
+                                    <span class="prosjekt-tag">Verktøy</span>
+                                    <span class="prosjekt-tag">Program jaja legg inn</span>
+                                    <span class="prosjekt-tag">Python</span>
+                                    <span class="prosjekt-tag">Docker idk</span>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div class="col-md-4">
+                            <div class="om-oss-card">
+                                <span class="icon-badge">
+                                    <i class="bi bi-lightbulb" aria-hidden="true"></i>
+                                </span>
+        
+                                <h3>Interesser</h3>
+        
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                                    Sit aspernatur illum sunt impedit optio veritatis tempore
+                                    accusantium placeat cumque ducimus hic eum voluptatem
+                                    consequatur quis iste voluptas labore, praesentium delectus.
+                                </p>
+                            </div>
+                        </div>
+        
+                    </div>
+        
+                    <!-- Video kommer -->
+                    <div class="om-oss-video-section">
+                        <div class="om-oss-video-wrap">
+                            <video
+                                class="om-oss-video"
+                                controls
+                                poster="./images/video-poster.jpg"
+                                aria-label="Promovideo av CORE-6"
+                            >
+                                <source src="./images/promovideo.mp4" type="video/mp4">
+        
+                                <track
+                                    kind="captions"
+                                    src="./captions/promovideo-no.vtt"
+                                    srclang="no"
+                                    label="Norsk"
+                                >
+        
+                                Nettleseren din støtter ikke videoavspilling.
+                            </video>
+                        </div>
+        
+                        <p class="om-oss-media-caption">Promovideo av CORE-6</p>
+                    </div>
+                </div>
             </section>
 
             <section id="card-section">

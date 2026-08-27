@@ -51,6 +51,12 @@
     padding-inline: 1.4rem;
 }
 
+.navbar-brand-text {
+    font-size: 1.15rem;
+    color: #0f172a;
+    line-height: 1;
+}
+
 #forside, #om-oss, #card-section, #prosjekt {
     scroll-margin-top: 8vh;
     margin-top: 5px;
@@ -97,23 +103,49 @@
     width: 100%;
     top: 0;
     z-index: 1030;
-    border-bottom: 1px solid rgba(15, 23, 42, 0.08);
-    box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
+
+    background-color: #d6d6e0;
+
+    border-bottom: none;
+    box-shadow: none;
 }
 
 .navbar-logo {
-    width: 65px;
-    height: 65px;
+    width: 48px;
+    height: 48px;
     object-fit: contain;
     display: block;
 }
 
 #navbar .nav-link {
+    font-family: "Orbitron", sans-serif;
+    font-size: 0.8rem;
     font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #334155;
+    position: relative;
+    padding-bottom: 0.2rem;
+    transition: color 0.2s ease;
+}
+
+#navbar .nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--accent);
+    transition: width 0.2s ease;
 }
 
 #navbar .nav-link:hover {
     color: var(--accent);
+}
+
+#navbar .nav-link:hover::after {
+    width: 100%;
 }
 
 .card-section {

@@ -3,29 +3,37 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Gruppe 7</title>
+        <title>CORE-6 | Bachelorprosjekt IT & Informasjonssystemer</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="./styles/index.css">
+
 
     </head>
     <body>
-        <nav class="navbar navbar-expand-lg bg-body-tertiary" id="navbar">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">Gruppe 7</a>
+        <nav class="navbar navbar-expand-lg" id="navbar">
+            <div class="container-fluid px-4 px-xl-5">
+                <a class="navbar-brand ms-2 me-lg-4 d-flex align-items-center gap-2" href="#forside" aria-label="CORE-6 – til forsiden">
+                    <img src="./images/logo-transparent.png" class="navbar-logo">
+                    <span class="navbar-brand-text brand-font">CORE-6</span>
+                </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
                 <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                        <a class="nav-link" href="#forside">Hjem</a>
-                        </li>
+                    <ul class="navbar-nav gap-lg-4 ms-auto">
                         <li class="nav-item">
                         <a class="nav-link" href="#om-oss">Om oss</a>
                         </li>
                         <li class="nav-item">
-                        <a class="nav-link" href="#card-section">Medlemmer</a>
+                        <a class="nav-link" href="#card-section">Teammedlemmer</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="#prosjekt">Prosjekter</a>
                         </li>
                         <li class="nav-item">
                         <a class="nav-link" href="#kontakt-oss">Kontakt</a>
@@ -36,83 +44,299 @@
         </nav>
 
 
+        <section id="forside">
+            <div class="container forside-innhold">
+                <h1 class="display-4 brand-font text-accent mb-2">CORE-6</h1>
+                <p class="brand-tagline mb-4">Sammen bygger vi bedre.</p>
+                <a href="#prosjekt" class="btn btn-accent btn-lg">Se prosjektet</a>
+            </div>
+        </section>
+
         <div class="container mb-5" id="container">
-            <section id="forside">
-                <h1 class="mt-5 pt-2">Gruppe 7</h1>
-                
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusantium praesentium itaque commodi mollitia. Provident numquam exercitationem porro non asperiores minus excepturi voluptates et libero. Quos veniam eius iusto sit suscipit?
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit error est corrupti, dicta aperiam sint, adipisci id laboriosam totam reprehenderit impedit deleniti quia vero assumenda alias ullam nostrum consequuntur animi!
-                Suscipit consequuntur, sapiente ducimus alias ullam labore asperiores laborum voluptatum fugit corrupti inventore sequi natus quas quos ex ratione necessitatibus? Odio rem placeat autem et numquam laudantium. Vero, modi ducimus!
-                Assumenda officia, quis porro reiciendis explicabo quod sint delectus amet animi facilis nostrum, placeat omnis hic! Sunt corrupti quidem quasi. Exercitationem cum natus sunt iste illo cupiditate. Consectetur, modi eos?
-            </section>
-
-            <section id="om-oss">
-                <h2 id="info">Om Oss</h2>
-
+            <section id="om-oss" aria-labelledby="om-oss-heading">
+                <div class="container om-oss-innhold">
+        
+                    <div class="row gy-5 align-items-center">
+                        <div class="col-lg-6 om-oss-tekst">
+                            <p class="om-oss-eyebrow">CORE-6 · Gruppe 7 · Bachelor 2027</p>
+        
+                            <h2 id="om-oss-heading" class="mb-3 brand-font">Om Oss</h2>
+        
+                            <p class="om-oss-intro">
+                                Vi er <strong>CORE-6</strong>, seks studenter innen IT og informasjonssystemer ved Universitetet i Agder, med ulik bakgrunn og erfaring, som jobber mot ett felles mål: å levere teknologiske løsninger av høy kvalitet.
+                            </p>
+        
+                            <p>
+                                Nettopp denne kombinasjonen gjør oss sterke. Ulike perspektiver gjør at vi løser problemer fra flere vinkler, samtidig som vi deler samme arbeidsmoral og ambisjonsnivå. Det er derfor CORE-6 ikke bare er seks studenter. Vi er et team som utfyller hverandre, utfordrer hverandre og sammen skaper resultater som gjør en forskjell.
+                            </p>
+        
+                            <div class="om-oss-stats" role="list">
+                                <div class="stat-item" role="listitem">
+                                    <span class="stat-number">6</span>
+                                    <span class="stat-label">Teammedlemmer</span>
+                                </div>
+        
+                                <div class="stat-item" role="listitem">
+                                    <span class="stat-number">6</span>
+                                    <span class="stat-label">Bakgrunner</span>
+                                </div>
+        
+                                <div class="stat-item" role="listitem">
+                                    <span class="stat-number">1</span>
+                                    <span class="stat-label">Felles mål</span>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <!-- Gruppebilde kommer -->
+                        <div class="col-lg-6">
+                            <div class="om-oss-image-wrap">
+                                <img
+                                    src="./images/gruppebilde.jpg"
+                                    class="om-oss-image"
+                                    alt="Gruppebilde av CORE-6"
+                                >
+                            </div>
+        
+                            <p class="om-oss-media-caption">Gruppebilde av CORE-6 kommer snart</p>
+                        </div>
+                    </div>
+        
+                    <!-- Ambisjoner, kompetanse, interesser bokser -->
+                    <div class="row mt-5 g-4 om-oss-cards">
+        
+                        <div class="col-md-4">
+                            <div class="om-oss-card">
+                                <span class="icon-badge">
+                                    <i class="bi bi-rocket-takeoff" aria-hidden="true"></i>
+                                </span>
+        
+                                <h3>Ambisjoner</h3>
+        
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Amet autem, quibusdam alias similique delectus rem quaerat
+                                    minima eos reiciendis dolore earum blanditiis enim?
+                                    Impedit veritatis tempora tenetur tempore rerum officiis?
+                                </p>
+                            </div>
+                        </div>
+        
+                        <div class="col-md-4">
+                            <div class="om-oss-card">
+                                <span class="icon-badge">
+                                    <i class="bi bi-cpu" aria-hidden="true"></i>
+                                </span>
+        
+                                <h3>Kompetanse</h3>
+        
+                                <p>
+                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                                    Odit minima, corrupti cupiditate eius, aliquam corporis
+                                    quis vero itaque dignissimos suscipit quidem reprehenderit
+                                    sunt ex earum non? Nesciunt atque architecto explicabo.
+                                </p>
+        
+                                <div class="prosjekt-tags">
+                                    <span class="prosjekt-tag">C#</span>
+                                    <span class="prosjekt-tag">Verktøy</span>
+                                    <span class="prosjekt-tag">Program jaja legg inn</span>
+                                    <span class="prosjekt-tag">Python</span>
+                                    <span class="prosjekt-tag">Docker idk</span>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div class="col-md-4">
+                            <div class="om-oss-card">
+                                <span class="icon-badge">
+                                    <i class="bi bi-lightbulb" aria-hidden="true"></i>
+                                </span>
+        
+                                <h3>Interesser</h3>
+        
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                                    Sit aspernatur illum sunt impedit optio veritatis tempore
+                                    accusantium placeat cumque ducimus hic eum voluptatem
+                                    consequatur quis iste voluptas labore, praesentium delectus.
+                                </p>
+                            </div>
+                        </div>
+        
+                    </div>
+        
+                    <!-- Video kommer -->
+                    <div class="om-oss-video-section">
+                        <div class="om-oss-video-wrap">
+                            <video
+                                class="om-oss-video"
+                                controls
+                                poster="./images/video-poster.jpg"
+                                aria-label="Promovideo av CORE-6"
+                            >
+                                <source src="./images/promovideo.mp4" type="video/mp4">
+        
+                                <track
+                                    kind="captions"
+                                    src="./captions/promovideo-no.vtt"
+                                    srclang="no"
+                                    label="Norsk"
+                                >
+        
+                                Nettleseren din støtter ikke videoavspilling.
+                            </video>
+                        </div>
+        
+                        <p class="om-oss-media-caption">Promovideo av CORE-6 kommer snart</p>
+                    </div>
+                </div>
             </section>
 
             <section id="card-section">
-                <h2 class="mb-3">Medlemmer</h2>
+                <h2 class="mb-3">Teammedlemmer</h2>
                 <!-- Kort kommer her -->
+            </section>
+
+            <section id="prosjekt">
+                <h2 class="mb-3">Prosjekter</h2>
+                <div class="row g-0 justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="card prosjekt-kort mb-3 overflow-hidden">
+                            <div class="row g-0">
+                                <div class="col-md-4 prosjekt-card-img-wrap bg-image hover-zoom rounded-start">
+                                    <img src="./images/kartverket-logo.png" class="prosjekt-card-img" alt="Kartverket">
+                                </div>
+                                <div class="col-md-8 d-flex">
+                                    <div class="card-body d-flex flex-column">
+                                        <h3 class="card-title pb-2 mb-0">Kartverket - Luftfartshinder softwareapplikasjon</h3>
+                                        <hr class="prosjekt-kort-strek">
+                                        <div class="flex-grow-1 d-flex align-items-center prosjekt-kort-tekst">
+                                            <p class="card-text mb-0">
+                                                System for innmelding og kontroll av luftfartshindre til Nasjonalt register for luftfartshindre (NRL).
+                                                Piloter og flygere kan registrere hinder på kart; registrator godkjenner eller avviser.
+                                            </p>
+                                        </div>
+                                        <div class="mt-auto" style="margin-bottom: 6mm;">
+                                            <div class="prosjekt-tags mb-3">
+                                                <span class="prosjekt-tag">ASP.NET Core</span>
+                                                <span class="prosjekt-tag">Entity Framework</span>
+                                                <span class="prosjekt-tag">MySQL</span>
+                                                <span class="prosjekt-tag">Leaflet</span>
+                                                <span class="prosjekt-tag">Docker</span>
+                                                <span class="prosjekt-tag">Authentication</span>
+                                                <span class="prosjekt-tag">Security</span>
+                                            </div>
+                                            <a href="./luftfartshinder.html" class="btn btn-accent align-self-start">
+                                                Se mer
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </section>
 
         </div>
 
-        <footer id="kontakt-oss" class="bg-dark text-light pt-5 pb-4 mt-auto" aria-labelledby="footer-heading">
-            <h2 id="footer-heading" class="visually-hidden">Kontakt og navigasjonsinformasjon</h2>
-          
-            <div class="container">
-              <div class="row gy-4">
-          
-                <div class="col-12 col-md-4">
-                  <h3 class="h5 mb-2">Brain Squad</h3>
-                  <p class="small text-light-emphasis mb-1">Gruppe 7</p>
-                  <p class="small text-light-emphasis mb-1">Bachelorprosjekt, vår 2027</p>
-                  <p class="small text-light-emphasis mb-1">
-                    IT og informasjonssystemer, <a href="https://www.uia.no/studier/program/it-og-informasjonssystemer-bachelor/" class="footer-link">Universitetet i Agder (UiA)</a>
-                  </p>
-                </div>
-          
-                <div class="col-6 col-md-4">
-                  <h3 class="h6 mb-3">Navigasjon</h3>
-                  <nav aria-label="Hurtiglenker i bunntekst">
-                    <ul class="list-unstyled mb-0">
-                      <li class="mb-2"><a href="#forside" class="footer-link">Hjem</a></li>
-                      <li class="mb-2"><a href="#om-oss" class="footer-link">Om oss</a></li>
-                      <li class="mb-2"><a href="#card-section" class="footer-link">Medlemmer</a></li>
-                    </ul>
-                  </nav>
-                </div>
-          
-                <div class="col-6 col-md-4">
-                  <h3 class="h6 mb-3">Kontakt oss</h3>
-                  <p class="small text-light-emphasis mb-3">Har du spørsmål om prosjektet eller gruppen? Ta gjerne kontakt.</p>
-                  <address class="small mb-0" style="font-style: normal;">
-                    <p class="mb-2">
-                      <i class="fa-solid fa-phone me-2" aria-hidden="true"></i>
-                      <a href="tel:+4712345678" class="footer-link">+47 123 45 678 HUSK LEGG TIL</a>
-                    </p>
-                    <p class="mb-0">
-                      <i class="fa-solid fa-envelope me-2" aria-hidden="true"></i>
-                      <a href="mailto:gruppe7@epost.no" class="footer-link">gruppe7@epost.no HUSK LEGG TIL</a>
-                    </p>
-                  </address>
-                </div>
-          
+        <footer id="kontakt-oss" class="core-footer" aria-labelledby="footer-heading">
+          <h2 id="footer-heading" class="visually-hidden">
+              Kontakt og navigasjonsinformasjon
+          </h2>
+      
+          <div class="container">
+              <div class="row gy-5">
+      
+                  <div class="col-12 col-md-5">
+                      <div class="footer-brand">
+                        <img src="./images/logo-transparent.png" alt="CORE-6 logo" class="footer-logo-image">
+                          <span class="footer-logo">CORE-6</span>
+                          <span class="footer-line"></span>
+                      </div>
+      
+                      <p class="footer-tagline">
+                          Sammen bygger vi bedre.
+                      </p>
+      
+                      <p class="footer-description">
+                          Gruppe 7 – bachelorprosjekt innen IT og informasjonssystemer ved Universitetet i Agder.
+                      </p>
+      
+                      <p class="footer-meta">
+                          Bachelorprosjekt · Vår 2027
+                      </p>
+                  </div>
+      
+                  <div class="col-6 col-md-3">
+                      <h3 class="footer-heading">Navigasjon</h3>
+      
+                      <nav aria-label="Hurtiglenker i bunntekst">
+                          <ul class="footer-nav">
+                              <li>
+                                  <a href="#om-oss">
+                                      Om oss
+                                  </a>
+                              </li>
+                              <li>
+                                  <a href="#card-section">
+                                      Teammedlemmer
+                                  </a>
+                              </li>
+                              <li>
+                                  <a href="#prosjekt">
+                                      Prosjekter
+                                  </a>
+                              </li>
+                          </ul>
+                      </nav>
+                  </div>
+      
+                  <div class="col-6 col-md-4">
+                      <h3 class="footer-heading">Kontakt</h3>
+      
+                      <p class="footer-contact-text">
+                          Har du spørsmål om prosjektet eller gruppen? Ta gjerne kontakt.
+                      </p>
+      
+                      <address class="footer-contact">
+                          <a href="tel:+4712345678">
+                              <i class="bi bi-telephone" aria-hidden="true"></i>
+                              <span>+47 123 45 678</span>
+                          </a>
+      
+                          <a href="mailto:gruppe7@epost.no">
+                              <i class="bi bi-envelope" aria-hidden="true"></i>
+                              <span>gruppe7@epost.no</span>
+                          </a>
+      
+                          <a
+                              href="https://www.uia.no/studier/program/it-og-informasjonssystemer-bachelor/"
+                              target="_blank"
+                              rel="noopener"
+                          >
+                            <i class="bi bi-geo-alt" aria-hidden="true"></i>
+                              <span>Universitetet i Agder, Kristiansand</span>
+                          </a>
+                      </address>
+                  </div>
+      
               </div>
-          
-              <hr class="border-secondary my-4">
-          
-              <div class="d-flex flex-column flex-sm-row justify-content-between align-items-center gap-2">
-                <p class="small mb-0 text-light-emphasis">
-                    &copy; 2026–2027 Gruppe 7. Alle rettigheter forbeholdt.
+      
+              <div class="footer-bottom">
+                  <p>
+                      &copy; 2026–2027 CORE-6 · Gruppe 7
                   </p>
               </div>
-            </div>
-          </footer>
+          </div>
+      </footer>
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
         <script src="https://kit.fontawesome.com/53d2400da6.js" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vanta@0.5.24/dist/vanta.globe.min.js"></script>
         <script src="./js/script.js"></script>
+        <script src="./js/forside-vanta.js"></script>
     </body>
 </html>

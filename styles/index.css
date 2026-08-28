@@ -8,19 +8,144 @@
 
 #card-section {
     padding: 0 ;
+    min-height: 92vh;
 }
 
-#forside, #om-oss, #card-section {
+:root {
+    --accent: #2563eb;
+}
+
+/* Teknisk display-font for merkenavnet CORE-6 (Orbitron = gratis stand-in for Eurostile Extended Bold). */
+.brand-font {
+    font-family: "Orbitron", sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+}
+
+.brand-tagline {
+    font-family: "Orbitron", sans-serif;
+    font-weight: 500;
+    font-size: 1.05rem;
+    letter-spacing: 0.08em;
+    color: #334155;
+    max-width: 28rem;
+}
+
+.text-accent {
+    color: #000000;
+}
+
+.btn-accent {
+    --bs-btn-color: #fff;
+    --bs-btn-bg: var(--accent);
+    --bs-btn-border-color: var(--accent);
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #1d4ed8;
+    --bs-btn-hover-border-color: #1d4ed8;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: #1e40af;
+    --bs-btn-active-border-color: #1e40af;
+    font-family: "Orbitron", sans-serif;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    padding-inline: 1.4rem;
+}
+
+.navbar-brand-text {
+    font-size: 1.15rem;
+    color: #0f172a;
+    line-height: 1;
+}
+
+#forside, #om-oss, #card-section, #prosjekt {
     scroll-margin-top: 8vh;
-    height: 92vh;
     margin-top: 5px;
+}
+
+#om-oss {
+    height: 92vh;
+}
+
+#prosjekt {
+    overflow-x: hidden;
+    min-height: 92vh;
+    padding-top: 0.5rem;
+    padding-bottom: 0.75rem;
+}
+
+/*
+  Hjem-bakgrunn: Vanta Globe (js/forside-vanta.js).
+  Vanta legger inn sitt eget canvas. Teksten må ligge over (z-index).
+*/
+#forside {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    box-sizing: border-box;
+    height: 100vh;
+    padding-top: 4.75rem;
+    background-color: #d6d6e0;
+    display: flex;
+    align-items: center;
+}
+
+#forside canvas {
+    z-index: 0 !important;
+}
+
+.forside-innhold {
+    position: relative;
+    z-index: 1;
 }
 
 #navbar {
     position: fixed;
     width: 100%;
     top: 0;
-    z-index: 1000;
+    z-index: 1030;
+
+    background-color: #d6d6e0;
+
+    border-bottom: none;
+    box-shadow: none;
+}
+
+.navbar-logo {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+    display: block;
+}
+
+#navbar .nav-link {
+    font-family: "Orbitron", sans-serif;
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #334155;
+    position: relative;
+    padding-bottom: 0.2rem;
+    transition: color 0.2s ease;
+}
+
+#navbar .nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--accent);
+    transition: width 0.2s ease;
+}
+
+#navbar .nav-link:hover {
+    color: var(--accent);
+}
+
+#navbar .nav-link:hover::after {
+    width: 100%;
 }
 
 .card-section {
@@ -70,4 +195,786 @@
 
 #image-madda {
     width: 150px;
+}
+
+#lsp-data {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.wheel-wrap {
+    position: relative;
+    width: min(420px, 100%);
+    aspect-ratio: 1;
+}
+
+.wheel-container {
+    width: 100%;
+    height: 100%;
+}
+
+.prosjekt-card-img-wrap {
+    position: relative;
+    padding: 0;
+    overflow: hidden;
+    min-height: 180px;
+    align-self: stretch;
+}
+
+.prosjekt-card-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+.hover-zoom {
+    overflow: hidden;
+}
+
+.hover-zoom img {
+    transition: transform 0.4s ease;
+}
+
+.hover-zoom:hover img {
+    transform: scale(1.12);
+}
+
+.prosjekt-kort {
+    transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease;
+}
+
+.prosjekt-kort:hover {
+    transform: translateY(-8px);
+    background-color: #f1f3f5;
+    box-shadow: 0 12px 28px rgba(15, 23, 42, 0.16);
+}
+
+.prosjekt-kort-strek {
+    width: 100%;
+    margin: 0.35rem 0 0;
+    opacity: 1;
+    border: 0;
+    border-top: 2px solid var(--accent);
+}
+
+.prosjekt-kort-tekst {
+    padding-bottom: 1.75rem;
+}
+
+.prosjekt-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    width: 100%;
+}
+
+.prosjekt-tag {
+    display: inline-block;
+    padding: 0.35rem 0.85rem;
+    border-radius: 999px;
+    background-color: #ececec;
+    color: #4a4a4a;
+    font-size: 0.8rem;
+    font-weight: 500;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.prosjekt-tag:hover {
+    transform: translateY(-4px);
+    background-color: #dedede;
+}
+
+.wheel-pointer {
+    display: none;
+}
+
+.wheel-hub {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 48%;
+    height: 48%;
+    border-radius: 50%;
+    background: #fff;
+    border: 3px solid #1a1a1a;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.underside {
+    padding-top: 6.5rem;
+    padding-bottom: 4rem;
+    min-height: 70vh;
+}
+
+.underside-card {
+    max-width: none;
+    height: 100%;
+}
+
+.om-oss-card.underside-card h3 {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    font-size: 1.15rem;
+    margin-bottom: 1rem;
+    color: #000000;
+}
+
+.step-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 1.75rem;
+    height: 1.75rem;
+    border-radius: 50%;
+    background-color: var(--accent);
+    color: #ffffff;
+    font-family: "Orbitron", sans-serif;
+    font-size: 0.85rem;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.om-oss-card.underside-card p {
+    font-size: 1.05rem;
+    line-height: 1.75;
+    color: #000000;
+    margin-bottom: 1rem;
+}
+
+.om-oss-card.underside-card p:last-child {
+    margin-bottom: 0;
+}
+
+.samarbeid-flow {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem 0.75rem;
+}
+
+.samarbeid-circle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: min(280px, 85vw);
+    aspect-ratio: 1;
+    padding: 2rem 1.6rem;
+    border-radius: 50%;
+    background-color: #ffffff;
+    border: 3px solid var(--accent);
+    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.1);
+    text-align: center;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.samarbeid-circle:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 28px rgba(15, 23, 42, 0.14);
+}
+
+.samarbeid-circle h3 {
+    font-family: "Orbitron", sans-serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    color: #000000;
+    margin-bottom: 0.75rem;
+}
+
+.samarbeid-circle p {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.55;
+    color: #000000;
+}
+
+.samarbeid-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent);
+    font-size: 2.25rem;
+    line-height: 1;
+}
+
+@media (max-width: 991.98px) {
+    .samarbeid-flow {
+        flex-direction: column;
+    }
+
+    .samarbeid-arrow i {
+        transform: rotate(90deg);
+    }
+}
+
+.dokumentasjon-kort .om-oss-card.underside-card h3,
+.dokumentasjon-kort h3 {
+    display: block;
+}
+
+.dokumentasjon-kort h3 {
+    font-family: "Orbitron", sans-serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    color: #000000;
+    margin-bottom: 1rem;
+}
+
+.dokumentasjon-kort p {
+    font-size: 1.05rem;
+    line-height: 1.75;
+    color: #000000;
+    margin-bottom: 1rem;
+}
+
+.code-panel {
+    margin: 0;
+    padding: 1.35rem 1.4rem;
+    border-radius: 0.75rem;
+    background-color: #0b1f3a;
+    border: 1px solid rgba(37, 99, 235, 0.45);
+    box-shadow: inset 0 0 0 1px rgba(96, 165, 250, 0.12);
+    color: #e2e8f0;
+    font-family: Consolas, "Courier New", monospace;
+    font-size: 0.85rem;
+    line-height: 1.55;
+    overflow-x: auto;
+    white-space: pre;
+}
+
+.code-panel .code-comment {
+    color: #93c5fd;
+}
+
+.code-panel .code-keyword {
+    color: #60a5fa;
+}
+
+.code-panel .code-type {
+    color: #38bdf8;
+}
+
+.code-panel .code-method {
+    color: #bfdbfe;
+}
+
+/* 
+Om oss seksjonen 
+*/
+
+   #om-oss {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    height: auto;
+    min-height: 92vh;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+.om-oss-eyebrow {
+    font-family: "Orbitron", sans-serif;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 0.5rem;
+}
+
+.om-oss-meta {
+    font-family: "Orbitron", sans-serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #64748b;
+    margin-bottom: 1.5rem;
+}
+
+.om-oss-intro {
+    font-size: 1.05rem;
+    color: #1e293b;
+}
+
+.om-oss-tekst p {
+    color: #475569;
+    line-height: 1.7;
+}
+
+.om-oss-stats {
+    display: flex;
+    gap: 2rem;
+    margin-top: 1.75rem;
+    flex-wrap: wrap;
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    padding-left: 0.9rem;
+    border-left: 2px solid var(--accent);
+}
+
+.stat-number {
+    font-family: "Orbitron", sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+    color: var(--accent);
+    line-height: 1;
+}
+
+.stat-label {
+    font-size: 0.8rem;
+    color: #64748b;
+    letter-spacing: 0.04em;
+    margin-top: 0.35rem;
+}
+
+
+/* 
+Gruppebildet 
+*/
+
+.om-oss-image-wrap {
+    border-radius: 0.75rem;
+    overflow: hidden;
+    background-color: #ececec;
+    aspect-ratio: 4 / 3;
+    max-height: 340px;
+    margin-inline: auto;
+    box-shadow: 0 12px 28px rgba(15, 23, 42, 0.16);
+}
+
+
+/* 
+Promovideoen 
+*/
+
+.om-oss-video-section {
+    margin-top: 3.5rem;
+}
+
+.om-oss-video-wrap {
+    width: 100%;
+    max-width: 900px;
+    margin-inline: auto;
+    border-radius: 0.75rem;
+    overflow: hidden;
+    aspect-ratio: 16 / 9;
+    box-shadow: 0 12px 28px rgba(15, 23, 42, 0.16);
+}
+
+.om-oss-video {
+    width: 100%;
+    height: 100%;
+    display: block;
+    background-color: #000;
+}
+
+.om-oss-media-caption {
+    margin-top: 0.75rem;
+    font-size: 0.8rem;
+    color: #64748b;
+    text-align: center;
+}
+
+
+/* 
+Ambisjoner, kompetanse og interesser blokker 
+*/
+
+.om-oss-card {
+    height: 100%;
+    padding: 1.75rem;
+    border-radius: 0.75rem;
+    background-color: #ffffff;
+    border-top: 3px solid var(--accent);
+    box-shadow: 0 4px 14px rgba(15, 23, 42, 0.06);
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.om-oss-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 28px rgba(15, 23, 42, 0.14);
+}
+
+.icon-badge {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: rgba(37, 99, 235, 0.1);
+    margin-bottom: 0.9rem;
+}
+
+.icon-badge i {
+    font-size: 1.25rem;
+    color: var(--accent);
+}
+
+.om-oss-card h3 {
+    font-family: "Orbitron", sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    margin-bottom: 0.6rem;
+}
+
+.om-oss-card p {
+    color: #475569;
+    font-size: 0.92rem;
+    line-height: 1.6;
+    margin-bottom: 0.75rem;
+}
+
+.om-oss-video:focus-visible,
+.om-oss-card:focus-visible {
+    outline: 3px solid var(--accent);
+    outline-offset: 2px;
+}
+
+@media (max-width: 767.98px) {
+
+    #om-oss {
+        min-height: auto;
+        padding-top: 6rem;
+    }
+
+    .om-oss-image-wrap {
+        max-height: none;
+    }
+
+    .om-oss-video-section {
+        margin-top: 2.5rem;
+    }
+
+    .om-oss-stats {
+        gap: 1.25rem;
+    }
+}
+
+/* 
+Footer 
+*/
+   .core-footer {
+    position: relative;
+    overflow: hidden;
+    padding: 5rem 0 1.5rem;
+    background-color: #d6d6e0;
+    color: #0f172a;
+    border-top: 1px solid rgba(15, 23, 42, 0.12);
+}
+
+/* 
+Footer grid-effekt 
+*/
+.core-footer::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+
+    background-image:
+        linear-gradient(
+            rgba(37, 99, 235, 0.07) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(37, 99, 235, 0.07) 1px,
+            transparent 1px
+        );
+
+    background-size: 70px 70px;
+
+    mask-image: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.7),
+        transparent 85%
+    );
+
+    -webkit-mask-image: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.7),
+        transparent 85%
+    );
+}
+
+/* 
+Sørger for at innholdet ligger over grid 
+*/
+.core-footer .container {
+    position: relative;
+    z-index: 1;
+}
+
+
+/* 
+Logo 
+*/
+.footer-brand {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.footer-logo {
+    font-family: "Orbitron", sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    color: #000000;
+}
+
+.footer-logo-image {
+    width: 42px;
+    height: 42px;
+    object-fit: contain;
+    display: block;
+}
+
+.footer-line {
+    width: 55px;
+    height: 2px;
+    background-color: var(--accent);
+}
+
+.footer-tagline {
+    margin: 0.75rem 0 1rem;
+
+    font-family: "Orbitron", sans-serif;
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+
+    color: #334155;
+}
+
+.footer-description {
+    max-width: 430px;
+    margin-bottom: 0.75rem;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: #475569;
+}
+
+.footer-meta {
+    margin: 0;
+
+    font-family: "Orbitron", sans-serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+
+    color: #64748b;
+}
+
+
+/* 
+Footer heading 
+*/
+.footer-heading {
+    margin-bottom: 1.25rem;
+
+    font-family: "Orbitron", sans-serif;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+
+    color: #000000;
+}
+
+.footer-heading::after {
+    content: "";
+    display: block;
+
+    width: 30px;
+    height: 2px;
+
+    margin-top: 0.6rem;
+
+    background-color: var(--accent);
+}
+
+
+/* 
+Footer navigasjon 
+*/
+.footer-nav {
+    padding: 0;
+    margin: 0;
+
+    list-style: none;
+}
+
+.footer-nav li {
+    margin-bottom: 0.75rem;
+}
+
+.footer-nav a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.7rem;
+
+    color: #475569;
+    text-decoration: none;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.95rem;
+    font-weight: 500;
+
+    transition:
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.footer-nav a span {
+    font-family: "Orbitron", sans-serif;
+    font-size: 0.65rem;
+    color: #94a3b8;
+}
+
+.footer-nav a:hover {
+    color: var(--accent);
+    transform: translateX(4px);
+}
+
+.footer-nav a:hover span {
+    color: var(--accent);
+}
+
+
+/* 
+Footer kontakt 
+*/
+.footer-contact-text {
+    max-width: 350px;
+    margin-bottom: 1.25rem;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: #475569;
+}
+
+.footer-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+}
+
+.footer-contact a {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+
+    color: #334155;
+    text-decoration: none;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.95rem;
+    font-weight: 500;
+
+    transition:
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.footer-contact a i {
+    width: 20px;
+
+    color: var(--accent);
+    font-size: 1rem;
+}
+
+.footer-contact a:hover {
+    color: var(--accent);
+    transform: translateX(4px);
+}
+
+
+/* 
+Footer bunn 
+*/
+
+.footer-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-top: 4rem;
+    padding-top: 1.25rem;
+
+    border-top: 1px solid rgba(15, 23, 42, 0.12);
+}
+
+.footer-bottom p {
+    margin: 0;
+
+    color: #64748b;
+    font-size: 0.75rem;
+}
+
+.footer-status {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    font-family: "Orbitron", sans-serif;
+    font-size: 0.65rem !important;
+    letter-spacing: 0.08em;
+}
+
+.status-dot {
+    width: 7px;
+    height: 7px;
+
+    border-radius: 50%;
+    background-color: var(--accent);
+
+    box-shadow: 0 0 8px rgba(37, 99, 235, 0.6);
+}
+
+
+/* 
+Footer responsivitet 
+*/
+
+@media (max-width: 767.98px) {
+
+    .core-footer {
+        padding: 4rem 0 1.25rem;
+    }
+
+    .footer-logo {
+        font-size: 1.6rem;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.75rem;
+
+        margin-top: 3rem;
+    }
+
 }

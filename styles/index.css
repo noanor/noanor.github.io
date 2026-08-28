@@ -200,7 +200,87 @@
 #lsp-data {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: stretch;
+}
+
+.lsp-wheel-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.25rem;
+    flex-wrap: wrap;
+}
+
+.lsp-wheel-card {
+    flex: 1 1 20rem;
+    max-width: 36rem;
+}
+
+.lsp-wheel-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    color: var(--accent);
+    font-size: 2.25rem;
+    line-height: 1;
+}
+
+.lsp-wheel-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 0 0 auto;
+}
+
+.lsp-wheel-video.om-oss-video-section {
+    margin-top: 0;
+    width: min(420px, 100%);
+}
+
+@media (max-width: 991.98px) {
+    .lsp-wheel-row {
+        flex-direction: column;
+    }
+
+    .lsp-wheel-arrow i {
+        transform: rotate(90deg);
+    }
+}
+
+.lsp-data-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.85rem;
+}
+
+.lsp-medal {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 4.25rem;
+    height: 4.25rem;
+    border-radius: 50%;
+    background: linear-gradient(145deg, #fde68a 0%, #fbbf24 35%, #d97706 70%, #b45309 100%);
+    border: 3px solid #f59e0b;
+    color: #92400e;
+    box-shadow:
+        0 8px 20px rgba(180, 83, 9, 0.35),
+        inset 0 2px 4px rgba(255, 255, 255, 0.45);
+}
+
+.lsp-medal i {
+    font-size: 2rem;
+    line-height: 1;
+    color: #b45309;
+    filter: drop-shadow(0 1px 1px rgba(255, 255, 255, 0.5));
+}
+
+.lsp-data-heading {
+    display: inline-block;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #000000;
 }
 
 .wheel-wrap {
@@ -313,6 +393,20 @@
     min-height: 70vh;
 }
 
+.back-link {
+    display: inline-block;
+    margin-bottom: 1.25rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #64748b;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.back-link:hover {
+    color: var(--accent);
+}
+
 .underside-card {
     max-width: none;
     height: 100%;
@@ -351,6 +445,28 @@
 }
 
 .om-oss-card.underside-card p:last-child {
+    margin-bottom: 0;
+}
+
+.prosjektbeskrivelse h2 {
+    display: inline-block;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #000000;
+}
+
+.prosjektbeskrivelse-innhold {
+    max-width: 52rem;
+    text-align: left;
+}
+
+.prosjektbeskrivelse-innhold p {
+    font-size: 1.05rem;
+    line-height: 1.75;
+    color: #000000;
+    margin-bottom: 1.25rem;
+}
+
+.prosjektbeskrivelse-innhold p:last-child {
     margin-bottom: 0;
 }
 

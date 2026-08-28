@@ -1,55 +1,19 @@
 <!DOCTYPE html>
-<html lang="no">
+<html lang="no" data-page="luftfartshinder">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Luftfartshinder · CORE-6</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="./styles/index.css">
     </head>
     <body>
-        <nav class="navbar navbar-expand-lg bg-body-tertiary" id="navbar">
-            <div class="container-fluid px-4">
-                <a class="navbar-brand ms-2 me-lg-4" href="./index.html#forside" aria-label="CORE-6">
-                    <i class="bi bi-6-circle-fill navbar-logo" aria-hidden="true"></i>
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav gap-lg-3 ms-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="./index.html#forside">Hjem</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="./index.html#om-oss">Om oss</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="./index.html#card-section">Medlemmer</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="./index.html#prosjekt">Prosjekt</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="./index.html#kontakt-oss">Kontakt</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+        <div id="site-navbar"></div>
 
         <main class="container underside">
-            <p class="mb-3">
-                <a href="./index.html#prosjekt">← Tilbake til Prosjekt</a>
-            </p>
+            <a class="back-link" href="./index.html#prosjekt">← Tilbake</a>
             <h1 class="brand-font mb-3">Luftfartshinder</h1>
-            <p class="lead col-lg-8">
-                Fordypet informasjon om prosjektet. Modeller, kart og mer innhold kommer her senere.
-            </p>
 
             <section class="mt-4" id="utfordring-og-losning">
                 <div class="row g-4">
@@ -84,15 +48,69 @@
                 </div>
             </section>
 
-            <section class="mt-5" id="lsp-data">
-                <h2 class="h4 mb-3">Velg type</h2>
-                <div class="wheel-wrap">
-                    <div class="wheel-container"></div>
-                    <div class="wheel-pointer" aria-hidden="true"></div>
-                    <div class="wheel-hub" aria-hidden="true"></div>
+            <section class="mt-5 text-center prosjektbeskrivelse" id="prosjektbeskrivelse">
+                <h2 class="h4 mb-4">Prosjektbeskrivelse</h2>
+                <div class="prosjektbeskrivelse-innhold mx-auto">
+                    <p>
+                        Prosjektet er gjennomført i samarbeid mellom UiA Institutt for informasjonssystemer, Kartverket og Norsk Luftambulanse (NLA), som en del av IT- og informasjonssystemstudiet (IS-200, IS-201 og IS-202). Oppgaven går ut på å utvikle en webapplikasjon for rapportering av enkle luftfartshindre til Nasjonalt register over luftfartshindre (NRL) — et digitalt register over menneskeskapte objekter som utgjør en risiko for luftfarten, spesielt ved lavtflyging.
+                    </p>
+                    <p>
+                        Løsningen skal kunne brukes av piloter og flybesetning fra NLA, Luftforsvaret og Politiets helikoptertjeneste til å melde inn hindre raskt og enkelt via en kartklient, mens registerførere i Kartverket skal kunne motta, behandle og godkjenne eller avvise innmeldingene. Prosjektet stiller krav til brukervennlighet, datakvalitet og en robust teknisk løsning basert på MariaDB, Leaflet, WMS-tjenester og GeoJSON-standarden, og skal bidra til å styrke flysikkerheten gjennom et mer oppdatert og komplett register.
+                    </p>
                 </div>
-                <button type="button" id="spin-btn" class="btn btn-accent mt-3">Spin</button>
-                <p id="spin-result" class="mt-2 mb-0"></p>
+            </section>
+
+            <section class="mt-5" id="lsp-data">
+                <div class="lsp-data-header mb-4 text-center">
+                    <span class="lsp-medal" aria-hidden="true">
+                        <i class="bi bi-award-fill"></i>
+                    </span>
+                    <h2 class="h4 mb-0 lsp-data-heading">Hva gjorde at vi skilte oss ut og tok førsteplassen?</h2>
+                </div>
+
+                <div class="lsp-wheel-row">
+                    <div class="lsp-wheel-card">
+                        <div class="om-oss-card underside-card">
+                            <h3>Suksessfaktor</h3>
+                            <p>
+                                Vi vant EXPO 2025 for beste løsning, blant 23 grupper og over 100 studenter — et resultat av tett brukersamarbeid og en løsning bygget rundt pilotenes faktiske arbeidsflyt i felt.
+                            </p>
+                            <p>
+                                Nøkkelen var at vi begynte tidlig med brukerforståelse. Vi så gjennom videoer av piloter i flyging for å forstå hvordan de samarbeidet i luften, og hadde et Teams-møte med en politioverbetjent/pilot, assisterende flysjef i Oslo politidistrikts helikoptertjeneste, om hans utfordringer og ønsker til et ideelt system. Det ga oss «Hjulet» — løsningen som lot enhver pilot markere et hinder på kortest mulig tid, uten å miste fokus på oppdraget.
+                            </p>
+                        </div>
+                    </div>
+
+                    <span class="lsp-wheel-arrow" aria-hidden="true">
+                        <i class="bi bi-arrow-right"></i>
+                    </span>
+
+                    <div class="lsp-wheel-block text-center">
+                        <h3 class="h5 mb-3">Hjulet i kraft</h3>
+                        <div class="om-oss-video-section lsp-wheel-video mb-4">
+                            <div class="om-oss-video-wrap">
+                                <video
+                                    class="om-oss-video"
+                                    controls
+                                    playsinline
+                                    preload="metadata"
+                                    aria-label="Demonstrasjon av hjulet i Luftfartshinder"
+                                >
+                                    <source src="./Media/Videos/hjulet-inn-action-kartverket.mp4" type="video/mp4">
+                                    <source src="./Media/Videos/Hjulet-Inn-Action-Kartverket.mov" type="video/quicktime">
+                                    Nettleseren din støtter ikke videoavspilling.
+                                </video>
+                            </div>
+                        </div>
+                        <div class="wheel-wrap">
+                            <div class="wheel-container"></div>
+                            <div class="wheel-pointer" aria-hidden="true"></div>
+                            <div class="wheel-hub" aria-hidden="true"></div>
+                        </div>
+                        <button type="button" id="spin-btn" class="btn btn-accent mt-3">Spin</button>
+                        <p id="spin-result" class="mt-2 mb-0"></p>
+                    </div>
+                </div>
             </section>
 
             <section class="mt-5" id="arbeidsprosess">
@@ -190,6 +208,56 @@
                 </div>
             </section>
 
+            <section class="mt-5" id="expo-2025">
+                <h2 class="h4 mb-2">EXPO-2025</h2>
+                <p class="mb-4 col-lg-10">
+                    Bilder og opptak fra presentasjonen og testing med piloter under EXPO 2025.
+                </p>
+                <div class="row g-4">
+                    <div class="col-md-6">
+                        <h3 class="expo-media-title">Gruppen</h3>
+                        <div class="expo-media-image">
+                            <img
+                                src="./Media/IMG_3617.jpeg"
+                                class="expo-photo"
+                                alt="CORE-6 på EXPO 2025"
+                            >
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <h3 class="expo-media-title">Pilot Testing</h3>
+                        <div class="row g-3">
+                            <div class="col-12">
+                                <div class="om-oss-video-wrap expo-video-wrap">
+                                    <video
+                                        class="om-oss-video"
+                                        controls
+                                        playsinline
+                                        preload="metadata"
+                                        aria-label="Pilot Testing opptak 1"
+                                    >
+                                        <source src="./Media/Videos/IMG_3471.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="om-oss-video-wrap expo-video-wrap">
+                                    <video
+                                        class="om-oss-video"
+                                        controls
+                                        playsinline
+                                        preload="metadata"
+                                        aria-label="Pilot Testing opptak 2"
+                                    >
+                                        <source src="./Media/Videos/IMG_3473.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             <section class="mt-5 mb-4" id="dokumentasjon">
                 <div class="om-oss-card underside-card dokumentasjon-kort">
                     <div class="row g-4 align-items-center">
@@ -230,8 +298,11 @@
             </section>
         </main>
 
+        <div id="site-footer"></div>
+
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/spin-wheel@5.0.2/dist/spin-wheel-iife.js"></script>
         <script src="./js/prosjekt-wheel.js"></script>
+        <script src="./js/layout.js"></script>
     </body>
 </html>

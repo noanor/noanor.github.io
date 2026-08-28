@@ -54,7 +54,7 @@ function createCard(name, image, role){
 
     // Image
     var img = document.createElement("img");
-    img.setAttribute("src", "./images/" + image + ".jpg");
+    img.setAttribute("src", "./Media/Profil-pic/" + images[i] + ".jpg");
     img.setAttribute("alt", "...")
     // img.style.cssText = "width: 200px;"
     img.className = "rounded-start";

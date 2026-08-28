@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="no">
+<html lang="no" data-page="index">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,35 +14,7 @@
 
     </head>
     <body>
-        <nav class="navbar navbar-expand-lg" id="navbar">
-            <div class="container-fluid px-4 px-xl-5">
-                <a class="navbar-brand ms-2 me-lg-4 d-flex align-items-center gap-2" href="#forside" aria-label="CORE-6 – til forsiden">
-                    <img src="./images/logo-transparent.png" class="navbar-logo">
-                    <span class="navbar-brand-text brand-font">CORE-6</span>
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav gap-lg-4 ms-auto">
-                        <li class="nav-item">
-                        <a class="nav-link" href="#om-oss">Om oss</a>
-                        </li>
-                        <li class="nav-item">
-                        <a class="nav-link" href="#card-section">Teammedlemmer</a>
-                        </li>
-                        <li class="nav-item">
-                        <a class="nav-link" href="#prosjekt">Prosjekter</a>
-                        </li>
-                        <li class="nav-item">
-                        <a class="nav-link" href="#kontakt-oss">Kontakt</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-
+        <div id="site-navbar"></div>
 
         <section id="forside">
             <div class="container forside-innhold">
@@ -92,7 +64,7 @@
                         <div class="col-lg-6">
                             <div class="om-oss-image-wrap">
                                 <img
-                                    src="./images/gruppebilde.jpg"
+                                    src="./Media/gruppebilde.jpg"
                                     class="om-oss-image"
                                     alt="Gruppebilde av CORE-6"
                                 >
@@ -172,10 +144,10 @@
                             <video
                                 class="om-oss-video"
                                 controls
-                                poster="./images/video-poster.jpg"
+                                poster="./Media/Videos/video-poster.jpg"
                                 aria-label="Promovideo av CORE-6"
                             >
-                                <source src="./images/promovideo.mp4" type="video/mp4">
+                                <source src="./Media/Videos/promovideo.mp4" type="video/mp4">
         
                                 <track
                                     kind="captions"
@@ -205,7 +177,7 @@
                         <div class="card prosjekt-kort mb-3 overflow-hidden">
                             <div class="row g-0">
                                 <div class="col-md-4 prosjekt-card-img-wrap bg-image hover-zoom rounded-start">
-                                    <img src="./images/kartverket-logo.png" class="prosjekt-card-img" alt="Kartverket">
+                                    <img src="./Media/kartverket-logo.png" class="prosjekt-card-img" alt="Kartverket">
                                 </div>
                                 <div class="col-md-8 d-flex">
                                     <div class="card-body d-flex flex-column">
@@ -241,96 +213,7 @@
 
         </div>
 
-        <footer id="kontakt-oss" class="core-footer" aria-labelledby="footer-heading">
-          <h2 id="footer-heading" class="visually-hidden">
-              Kontakt og navigasjonsinformasjon
-          </h2>
-      
-          <div class="container">
-              <div class="row gy-5">
-      
-                  <div class="col-12 col-md-5">
-                      <div class="footer-brand">
-                        <img src="./images/logo-transparent.png" alt="CORE-6 logo" class="footer-logo-image">
-                          <span class="footer-logo">CORE-6</span>
-                          <span class="footer-line"></span>
-                      </div>
-      
-                      <p class="footer-tagline">
-                          Sammen bygger vi bedre.
-                      </p>
-      
-                      <p class="footer-description">
-                          Gruppe 7 – bachelorprosjekt innen IT og informasjonssystemer ved Universitetet i Agder.
-                      </p>
-      
-                      <p class="footer-meta">
-                          Bachelorprosjekt · Vår 2027
-                      </p>
-                  </div>
-      
-                  <div class="col-6 col-md-3">
-                      <h3 class="footer-heading">Navigasjon</h3>
-      
-                      <nav aria-label="Hurtiglenker i bunntekst">
-                          <ul class="footer-nav">
-                              <li>
-                                  <a href="#om-oss">
-                                      Om oss
-                                  </a>
-                              </li>
-                              <li>
-                                  <a href="#card-section">
-                                      Teammedlemmer
-                                  </a>
-                              </li>
-                              <li>
-                                  <a href="#prosjekt">
-                                      Prosjekter
-                                  </a>
-                              </li>
-                          </ul>
-                      </nav>
-                  </div>
-      
-                  <div class="col-6 col-md-4">
-                      <h3 class="footer-heading">Kontakt</h3>
-      
-                      <p class="footer-contact-text">
-                          Har du spørsmål om prosjektet eller gruppen? Ta gjerne kontakt.
-                      </p>
-      
-                      <address class="footer-contact">
-                          <a href="tel:+4712345678">
-                              <i class="bi bi-telephone" aria-hidden="true"></i>
-                              <span>+47 123 45 678</span>
-                          </a>
-      
-                          <a href="mailto:gruppe7@epost.no">
-                              <i class="bi bi-envelope" aria-hidden="true"></i>
-                              <span>gruppe7@epost.no</span>
-                          </a>
-      
-                          <a
-                              href="https://www.uia.no/studier/program/it-og-informasjonssystemer-bachelor/"
-                              target="_blank"
-                              rel="noopener"
-                          >
-                            <i class="bi bi-geo-alt" aria-hidden="true"></i>
-                              <span>Universitetet i Agder, Kristiansand</span>
-                          </a>
-                      </address>
-                  </div>
-      
-              </div>
-      
-              <div class="footer-bottom">
-                  <p>
-                      &copy; 2026–2027 CORE-6 · Gruppe 7
-                  </p>
-              </div>
-          </div>
-      </footer>
+        <div id="site-footer"></div>
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
         <script src="https://kit.fontawesome.com/53d2400da6.js" crossorigin="anonymous"></script>
@@ -338,5 +221,6 @@
         <script src="https://cdn.jsdelivr.net/npm/vanta@0.5.24/dist/vanta.globe.min.js"></script>
         <script src="./js/script.js"></script>
         <script src="./js/forside-vanta.js"></script>
+        <script src="./js/layout.js"></script>
     </body>
 </html>

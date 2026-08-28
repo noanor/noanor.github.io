@@ -13,21 +13,40 @@
 
 :root {
     --accent: #2563eb;
+    --font-ui: "Segoe UI", Segoe UI, Tahoma, Geneva, Verdana, sans-serif;
+    --font-brand: "Orbitron", sans-serif;
 }
 
-/* Teknisk display-font for merkenavnet CORE-6 (Orbitron = gratis stand-in for Eurostile Extended Bold). */
-.brand-font {
-    font-family: "Orbitron", sans-serif;
+body {
+    font-family: var(--font-ui);
+}
+
+/* Display-font kun på CORE-6-hero på forsiden (Orbitron = stand-in for Eurostile). */
+#forside .brand-font {
+    font-family: var(--font-brand);
     font-weight: 700;
     letter-spacing: 0.06em;
 }
 
-.brand-tagline {
-    font-family: "Orbitron", sans-serif;
+.brand-font {
+    font-weight: 700;
+    letter-spacing: normal;
+}
+
+#forside .brand-tagline {
+    font-family: var(--font-brand);
     font-weight: 500;
     font-size: 1.05rem;
     letter-spacing: 0.08em;
-    color: #334155;
+    color: #000000;
+    max-width: 28rem;
+}
+
+.brand-tagline {
+    font-weight: 500;
+    font-size: 1.05rem;
+    letter-spacing: normal;
+    color: #000000;
     max-width: 28rem;
 }
 
@@ -45,16 +64,21 @@
     --bs-btn-active-color: #fff;
     --bs-btn-active-bg: #1e40af;
     --bs-btn-active-border-color: #1e40af;
-    font-family: "Orbitron", sans-serif;
+    font-family: var(--font-ui);
     font-weight: 500;
-    letter-spacing: 0.04em;
+    letter-spacing: normal;
     padding-inline: 1.4rem;
 }
 
 .navbar-brand-text {
     font-size: 1.15rem;
-    color: #0f172a;
+    color: #000000;
     line-height: 1;
+}
+
+#navbar .navbar-brand-text {
+    font-family: var(--font-brand);
+    letter-spacing: 0.06em;
 }
 
 #forside, #om-oss, #card-section, #prosjekt {
@@ -118,12 +142,12 @@
 }
 
 #navbar .nav-link {
-    font-family: "Orbitron", sans-serif;
+    font-family: var(--font-ui);
     font-size: 0.8rem;
     font-weight: 500;
     letter-spacing: 0.06em;
     text-transform: uppercase;
-    color: #334155;
+    color: #000000;
     position: relative;
     padding-bottom: 0.2rem;
     transition: color 0.2s ease;
@@ -247,7 +271,87 @@
 #lsp-data {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: stretch;
+}
+
+.lsp-wheel-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.25rem;
+    flex-wrap: wrap;
+}
+
+.lsp-wheel-card {
+    flex: 1 1 20rem;
+    max-width: 36rem;
+}
+
+.lsp-wheel-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    color: var(--accent);
+    font-size: 2.25rem;
+    line-height: 1;
+}
+
+.lsp-wheel-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 0 0 auto;
+}
+
+.lsp-wheel-video.om-oss-video-section {
+    margin-top: 0;
+    width: min(420px, 100%);
+}
+
+@media (max-width: 991.98px) {
+    .lsp-wheel-row {
+        flex-direction: column;
+    }
+
+    .lsp-wheel-arrow i {
+        transform: rotate(90deg);
+    }
+}
+
+.lsp-data-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.85rem;
+}
+
+.lsp-medal {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 4.25rem;
+    height: 4.25rem;
+    border-radius: 50%;
+    background: linear-gradient(145deg, #fde68a 0%, #fbbf24 35%, #d97706 70%, #b45309 100%);
+    border: 3px solid #f59e0b;
+    color: #92400e;
+    box-shadow:
+        0 8px 20px rgba(180, 83, 9, 0.35),
+        inset 0 2px 4px rgba(255, 255, 255, 0.45);
+}
+
+.lsp-medal i {
+    font-size: 2rem;
+    line-height: 1;
+    color: #b45309;
+    filter: drop-shadow(0 1px 1px rgba(255, 255, 255, 0.5));
+}
+
+.lsp-data-heading {
+    display: inline-block;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #000000;
 }
 
 .wheel-wrap {
@@ -325,7 +429,7 @@
     padding: 0.35rem 0.85rem;
     border-radius: 999px;
     background-color: #ececec;
-    color: #4a4a4a;
+    color: #000000;
     font-size: 0.8rem;
     font-weight: 500;
     transition: transform 0.2s ease, background-color 0.2s ease;
@@ -360,6 +464,20 @@
     min-height: 70vh;
 }
 
+.back-link {
+    display: inline-block;
+    margin-bottom: 1.25rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #64748b;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.back-link:hover {
+    color: var(--accent);
+}
+
 .underside-card {
     max-width: none;
     height: 100%;
@@ -384,7 +502,7 @@
     border-radius: 50%;
     background-color: var(--accent);
     color: #ffffff;
-    font-family: "Orbitron", sans-serif;
+    font-family: var(--font-ui);
     font-size: 0.85rem;
     font-weight: 700;
     line-height: 1;
@@ -398,6 +516,28 @@
 }
 
 .om-oss-card.underside-card p:last-child {
+    margin-bottom: 0;
+}
+
+.prosjektbeskrivelse h2 {
+    display: inline-block;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #000000;
+}
+
+.prosjektbeskrivelse-innhold {
+    max-width: 52rem;
+    text-align: left;
+}
+
+.prosjektbeskrivelse-innhold p {
+    font-size: 1.05rem;
+    line-height: 1.75;
+    color: #000000;
+    margin-bottom: 1.25rem;
+}
+
+.prosjektbeskrivelse-innhold p:last-child {
     margin-bottom: 0;
 }
 
@@ -431,7 +571,7 @@
 }
 
 .samarbeid-circle h3 {
-    font-family: "Orbitron", sans-serif;
+    font-family: var(--font-ui);
     font-size: 1.1rem;
     font-weight: 700;
     letter-spacing: 0.03em;
@@ -465,13 +605,37 @@
     }
 }
 
+.expo-media-title {
+    font-family: var(--font-ui);
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    color: #000000;
+    margin-bottom: 0.75rem;
+}
+
+.expo-media-image {
+    text-align: left;
+}
+
+.expo-photo {
+    width: 100%;
+    display: block;
+    border-radius: 0.6rem;
+    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.12);
+}
+
+.expo-video-wrap {
+    max-width: none;
+}
+
 .dokumentasjon-kort .om-oss-card.underside-card h3,
 .dokumentasjon-kort h3 {
     display: block;
 }
 
 .dokumentasjon-kort h3 {
-    font-family: "Orbitron", sans-serif;
+    font-family: var(--font-ui);
     font-size: 1.25rem;
     font-weight: 700;
     letter-spacing: 0.03em;
@@ -532,7 +696,7 @@ Om oss seksjonen
 }
 
 .om-oss-eyebrow {
-    font-family: "Orbitron", sans-serif;
+    font-family: var(--font-ui);
     font-size: 0.8rem;
     font-weight: 700;
     letter-spacing: 0.12em;
@@ -542,21 +706,21 @@ Om oss seksjonen
 }
 
 .om-oss-meta {
-    font-family: "Orbitron", sans-serif;
+    font-family: var(--font-ui);
     font-size: 0.7rem;
     letter-spacing: 0.08em;
     text-transform: uppercase;
-    color: #64748b;
+    color: #000000;
     margin-bottom: 1.5rem;
 }
 
 .om-oss-intro {
     font-size: 1.05rem;
-    color: #1e293b;
+    color: #000000;
 }
 
 .om-oss-tekst p {
-    color: #475569;
+    color: #000000;
     line-height: 1.7;
 }
 
@@ -575,7 +739,7 @@ Om oss seksjonen
 }
 
 .stat-number {
-    font-family: "Orbitron", sans-serif;
+    font-family: var(--font-ui);
     font-weight: 700;
     font-size: 2rem;
     color: var(--accent);
@@ -584,7 +748,7 @@ Om oss seksjonen
 
 .stat-label {
     font-size: 0.8rem;
-    color: #64748b;
+    color: #000000;
     letter-spacing: 0.04em;
     margin-top: 0.35rem;
 }
@@ -633,7 +797,7 @@ Promovideoen
 .om-oss-media-caption {
     margin-top: 0.75rem;
     font-size: 0.8rem;
-    color: #64748b;
+    color: #000000;
     text-align: center;
 }
 
@@ -676,15 +840,16 @@ Ambisjoner, kompetanse og interesser blokker
 }
 
 .om-oss-card h3 {
-    font-family: "Orbitron", sans-serif;
+    font-family: var(--font-ui);
     font-size: 1rem;
     font-weight: 700;
     letter-spacing: 0.04em;
     margin-bottom: 0.6rem;
+    color: #000000;
 }
 
 .om-oss-card p {
-    color: #475569;
+    color: #000000;
     font-size: 0.92rem;
     line-height: 1.6;
     margin-bottom: 0.75rem;
@@ -724,7 +889,7 @@ Footer
     overflow: hidden;
     padding: 5rem 0 1.5rem;
     background-color: #d6d6e0;
-    color: #0f172a;
+    color: #000000;
     border-top: 1px solid rgba(15, 23, 42, 0.12);
 }
 
@@ -782,7 +947,7 @@ Logo
 }
 
 .footer-logo {
-    font-family: "Orbitron", sans-serif;
+    font-family: var(--font-ui);
     font-size: 2rem;
     font-weight: 700;
     letter-spacing: 0.08em;
@@ -805,33 +970,33 @@ Logo
 .footer-tagline {
     margin: 0.75rem 0 1rem;
 
-    font-family: "Orbitron", sans-serif;
+    font-family: var(--font-ui);
     font-size: 0.85rem;
     font-weight: 500;
     letter-spacing: 0.08em;
 
-    color: #334155;
+    color: #000000;
 }
 
 .footer-description {
     max-width: 430px;
     margin-bottom: 0.75rem;
 
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--font-ui);
     font-size: 0.95rem;
     line-height: 1.7;
-    color: #475569;
+    color: #000000;
 }
 
 .footer-meta {
     margin: 0;
 
-    font-family: "Orbitron", sans-serif;
+    font-family: var(--font-ui);
     font-size: 0.7rem;
     letter-spacing: 0.08em;
     text-transform: uppercase;
 
-    color: #64748b;
+    color: #000000;
 }
 
 
@@ -841,7 +1006,7 @@ Footer heading
 .footer-heading {
     margin-bottom: 1.25rem;
 
-    font-family: "Orbitron", sans-serif;
+    font-family: var(--font-ui);
     font-size: 0.85rem;
     font-weight: 700;
     letter-spacing: 0.08em;
@@ -882,10 +1047,10 @@ Footer navigasjon
     align-items: center;
     gap: 0.7rem;
 
-    color: #475569;
+    color: #000000;
     text-decoration: none;
 
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--font-ui);
     font-size: 0.95rem;
     font-weight: 500;
 
@@ -895,9 +1060,9 @@ Footer navigasjon
 }
 
 .footer-nav a span {
-    font-family: "Orbitron", sans-serif;
+    font-family: var(--font-ui);
     font-size: 0.65rem;
-    color: #94a3b8;
+    color: #000000;
 }
 
 .footer-nav a:hover {
@@ -917,10 +1082,10 @@ Footer kontakt
     max-width: 350px;
     margin-bottom: 1.25rem;
 
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--font-ui);
     font-size: 0.95rem;
     line-height: 1.7;
-    color: #475569;
+    color: #000000;
 }
 
 .footer-contact {
@@ -934,10 +1099,10 @@ Footer kontakt
     align-items: center;
     gap: 0.75rem;
 
-    color: #334155;
+    color: #000000;
     text-decoration: none;
 
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--font-ui);
     font-size: 0.95rem;
     font-weight: 500;
 
@@ -977,7 +1142,7 @@ Footer bunn
 .footer-bottom p {
     margin: 0;
 
-    color: #64748b;
+    color: #000000;
     font-size: 0.75rem;
 }
 
@@ -986,7 +1151,7 @@ Footer bunn
     align-items: center;
     gap: 0.5rem;
 
-    font-family: "Orbitron", sans-serif;
+    font-family: var(--font-ui);
     font-size: 0.65rem !important;
     letter-spacing: 0.08em;
 }

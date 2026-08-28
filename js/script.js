@@ -30,18 +30,7 @@ cardSection.append(cardRow);
 
 
 for(var i = 0; i < navn.length; i+=1){
-    var role;
-    switch(i) {
-        case 0:
-            role = roles[0];
-            break;
-        case 1:
-            role = roles[1];
-            break;
-        case 2:
-            role = roles[2];
-            break;
-    }
+    var role = roles[i] || "";
     var card = createCard(navn[i], images[i], role);
 
     cardRow.append(card);
@@ -91,19 +80,12 @@ function createCard(name, image, role){
     cardText.textContent = role;
 
     var detailsBtn = document.createElement('a');
-    detailsBtn.className = "btn btn-outline-primary";
+    detailsBtn.className = "btn btn-accent";
     detailsBtn.textContent = "Se mer";
     detailsBtn.id = 'btn-' + `${image}`;
-    
-    
-    var cardSmallText = document.createElement("p");
-    cardSmallText.className = "card-text";
-    cardSmallText.innerHTML = "<small class='text-body-secondary'>Last updated 3 mins ago</small>"
-    
-    
+
     cardBody.append(cardTitle);
     cardBody.append(cardText);
-    cardBody.append(cardSmallText);
     cardBody.append(detailsBtn);
 
     return card;

@@ -16,21 +16,41 @@ var images = [
     "noa"
 ];
 
+var roles = [
+    "Gruppeleder",
+    "Nestleder",
+    ""
+];
+
 var cardSection = document.getElementById("card-section");
-var row1 = document.createElement('div');
-row1.className = "card-row-1";
-var row2 = document.createElement('div');
-row2.className = "card-row-2";
-cardSection.append(row1);
-cardSection.append(row2);
+var cardRow = document.createElement('div');
+cardRow.className = "card-row";
+cardSection.append(cardRow);
 
 
 
 for(var i = 0; i < navn.length; i+=1){
+    var role;
+    switch(i) {
+        case 0:
+            role = roles[0];
+            break;
+        case 1:
+            role = roles[1];
+            break;
+        case 2:
+            role = roles[2];
+            break;
+    }
+    var card = createCard(navn[i], images[i], role);
+
+    cardRow.append(card);
+}
+
+function createCard(name, image, role){
     // Card container
     var card = document.createElement("div");
-    card.className = "card mb-3";
-    card.style.cssText = "width: 540px; max-height: 200px;";
+    card.className = "card mb-3 team-card";
 
     // Row
     var div2 = document.createElement("div");
@@ -45,11 +65,11 @@ for(var i = 0; i < navn.length; i+=1){
 
     // Image
     var img = document.createElement("img");
-    img.setAttribute("src", "./images/" + images[i] + ".jpg");
+    img.setAttribute("src", "./images/" + image + ".jpg");
     img.setAttribute("alt", "...")
     // img.style.cssText = "width: 200px;"
     img.className = "rounded-start";
-    img.id = 'image-' + `${images[i]}`;
+    img.id = 'image-' + `${image}`;
     div3.append(img)
     
     // Col
@@ -64,16 +84,16 @@ for(var i = 0; i < navn.length; i+=1){
 
     var cardTitle = document.createElement("h5");
     cardTitle.className = "card-title";
-    cardTitle.innerHTML = `${navn[i]}`;
+    cardTitle.textContent = `${name}`;
     
     var cardText = document.createElement("p");
     cardText.className = "card-text";
-    cardText.innerHTML = "Sample text";
+    cardText.textContent = role;
 
     var detailsBtn = document.createElement('a');
     detailsBtn.className = "btn btn-outline-primary";
-    detailsBtn.innerHTML = "Se mer";
-    detailsBtn.id = 'btn-' + `${images[i]}`;
+    detailsBtn.textContent = "Se mer";
+    detailsBtn.id = 'btn-' + `${image}`;
     
     
     var cardSmallText = document.createElement("p");
@@ -86,15 +106,5 @@ for(var i = 0; i < navn.length; i+=1){
     cardBody.append(cardSmallText);
     cardBody.append(detailsBtn);
 
-
-    
-
-    if (i < 3) {
-        row1.append(card);
-    } else {
-        row2.append(card);
-    }
-
+    return card;
 }
-
-function CreateCard()

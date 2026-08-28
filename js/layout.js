@@ -6,7 +6,7 @@
     <nav class="navbar navbar-expand-lg" id="navbar">
         <div class="container-fluid px-4 px-xl-5">
             <a class="navbar-brand ms-2 me-lg-4 d-flex align-items-center gap-2" href="${home}#forside" aria-label="CORE-6 – til forsiden">
-                <img src="./images/logo-transparent.png" class="navbar-logo">
+                <img src="./Media/logo-transparent.png" class="navbar-logo">
                 <span class="navbar-brand-text brand-font">CORE-6</span>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -43,7 +43,7 @@
 
                 <div class="col-12 col-md-5">
                     <div class="footer-brand">
-                        <img src="./images/logo-transparent.png" alt="CORE-6 logo" class="footer-logo-image">
+                        <img src="./Media/logo-transparent.png" alt="CORE-6 logo" class="footer-logo-image">
                         <span class="footer-logo">CORE-6</span>
                         <span class="footer-line"></span>
                     </div>

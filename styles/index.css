@@ -257,9 +257,9 @@
 .prosjekt-kort-strek {
     width: 100%;
     margin: 0.35rem 0 0;
-    opacity: 0.25;
+    opacity: 1;
     border: 0;
-    border-top: 1px solid #212529;
+    border-top: 2px solid var(--accent);
 }
 
 .prosjekt-kort-tekst {
@@ -311,6 +311,163 @@
     padding-top: 6.5rem;
     padding-bottom: 4rem;
     min-height: 70vh;
+}
+
+.underside-card {
+    max-width: none;
+    height: 100%;
+}
+
+.om-oss-card.underside-card h3 {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    font-size: 1.15rem;
+    margin-bottom: 1rem;
+    color: #000000;
+}
+
+.step-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 1.75rem;
+    height: 1.75rem;
+    border-radius: 50%;
+    background-color: var(--accent);
+    color: #ffffff;
+    font-family: "Orbitron", sans-serif;
+    font-size: 0.85rem;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.om-oss-card.underside-card p {
+    font-size: 1.05rem;
+    line-height: 1.75;
+    color: #000000;
+    margin-bottom: 1rem;
+}
+
+.om-oss-card.underside-card p:last-child {
+    margin-bottom: 0;
+}
+
+.samarbeid-flow {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem 0.75rem;
+}
+
+.samarbeid-circle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: min(280px, 85vw);
+    aspect-ratio: 1;
+    padding: 2rem 1.6rem;
+    border-radius: 50%;
+    background-color: #ffffff;
+    border: 3px solid var(--accent);
+    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.1);
+    text-align: center;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.samarbeid-circle:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 28px rgba(15, 23, 42, 0.14);
+}
+
+.samarbeid-circle h3 {
+    font-family: "Orbitron", sans-serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    color: #000000;
+    margin-bottom: 0.75rem;
+}
+
+.samarbeid-circle p {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.55;
+    color: #000000;
+}
+
+.samarbeid-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent);
+    font-size: 2.25rem;
+    line-height: 1;
+}
+
+@media (max-width: 991.98px) {
+    .samarbeid-flow {
+        flex-direction: column;
+    }
+
+    .samarbeid-arrow i {
+        transform: rotate(90deg);
+    }
+}
+
+.dokumentasjon-kort .om-oss-card.underside-card h3,
+.dokumentasjon-kort h3 {
+    display: block;
+}
+
+.dokumentasjon-kort h3 {
+    font-family: "Orbitron", sans-serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    color: #000000;
+    margin-bottom: 1rem;
+}
+
+.dokumentasjon-kort p {
+    font-size: 1.05rem;
+    line-height: 1.75;
+    color: #000000;
+    margin-bottom: 1rem;
+}
+
+.code-panel {
+    margin: 0;
+    padding: 1.35rem 1.4rem;
+    border-radius: 0.75rem;
+    background-color: #0b1f3a;
+    border: 1px solid rgba(37, 99, 235, 0.45);
+    box-shadow: inset 0 0 0 1px rgba(96, 165, 250, 0.12);
+    color: #e2e8f0;
+    font-family: Consolas, "Courier New", monospace;
+    font-size: 0.85rem;
+    line-height: 1.55;
+    overflow-x: auto;
+    white-space: pre;
+}
+
+.code-panel .code-comment {
+    color: #93c5fd;
+}
+
+.code-panel .code-keyword {
+    color: #60a5fa;
+}
+
+.code-panel .code-type {
+    color: #38bdf8;
+}
+
+.code-panel .code-method {
+    color: #bfdbfe;
 }
 
 /* 
@@ -438,7 +595,7 @@ Promovideoen
 Ambisjoner, kompetanse og interesser blokker 
 */
 
-.om-oss-cards .om-oss-card {
+.om-oss-card {
     height: 100%;
     padding: 1.75rem;
     border-radius: 0.75rem;

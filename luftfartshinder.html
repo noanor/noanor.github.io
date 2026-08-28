@@ -51,6 +51,39 @@
                 Fordypet informasjon om prosjektet. Modeller, kart og mer innhold kommer her senere.
             </p>
 
+            <section class="mt-4" id="utfordring-og-losning">
+                <div class="row g-4">
+                    <div class="col-md-6" id="utfordring">
+                        <div class="om-oss-card underside-card">
+                            <h3>Utfordring</h3>
+                            <p>
+                                Hvordan kan man utvikle en brukervennlig webapplikasjon som lar piloter og flybesetning raskt rapportere enkle luftfartshindre inn i en kartklient?
+                            </p>
+                            <p>
+                                Samtidig skal Kartverkets registerførere få et effektivt verktøy for å motta, behandle og godkjenne rapporteringene — med en pålitelig dataflyt til Nasjonalt register over luftfartshindre (NRL).
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-6" id="var-losning">
+                        <div class="om-oss-card underside-card">
+                            <h3>Vår løsning</h3>
+                            <p>
+                                Vi har utviklet Luftfartshinder, en webapplikasjon der piloter og flybesetning fra NLA, Luftforsvaret og Politiets helikoptertjeneste raskt kan rapportere luftfartshindre.
+                            </p>
+                            <p>
+                                Med en to-klikks løsning og en tannhjulsmeny kan et hinder markeres og lagres som draft på under 2 sekunder direkte i kartklienten, og sendes inn først når oppdraget er ferdig.
+                            </p>
+                            <p>
+                                Rapporteringene valideres og lagres i en MariaDB-database, og behandles av registerførere i Kartverket, som kan godkjenne eller avvise dem gjennom et rollebasert system.
+                            </p>
+                            <p>
+                                Løsningen er bygget med ASP.NET Core MVC, containerisert med Docker, og grundig testet.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             <section class="mt-5" id="lsp-data">
                 <h2 class="h4 mb-3">Velg type</h2>
                 <div class="wheel-wrap">
@@ -62,19 +95,138 @@
                 <p id="spin-result" class="mt-2 mb-0"></p>
             </section>
 
-            <section class="mt-5" id="modeller">
-                <h2 class="h4">Modeller</h2>
-                <p class="text-body-secondary">Kommer senere.</p>
+            <section class="mt-5" id="arbeidsprosess">
+                <h2 class="h4 mb-2">Arbeidsprosess</h2>
+                <p class="mb-4 col-lg-10">
+                    Arbeidet fulgte prinsipper for systemutvikling og god programmeringspraksis.
+                </p>
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-3">
+                        <div class="om-oss-card underside-card">
+                            <h3>
+                                <span class="step-number" aria-hidden="true">1</span>
+                                Arkitektur og oppsett
+                            </h3>
+                            <p>
+                                Vi etablerte en MVC-struktur som la grunnlaget for en skalerbar applikasjon.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="om-oss-card underside-card">
+                            <h3>
+                                <span class="step-number" aria-hidden="true">2</span>
+                                Frontend og skjema
+                            </h3>
+                            <p>
+                                Vi implementerte skjemaer og brukervennlig frontend for innhenting og visning av data.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="om-oss-card underside-card">
+                            <h3>
+                                <span class="step-number" aria-hidden="true">3</span>
+                                Kartintegrasjon
+                            </h3>
+                            <p>
+                                Vi koblet inn kartfunksjonalitet slik at brukere kunne interagere med geografisk informasjon.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="om-oss-card underside-card">
+                            <h3>
+                                <span class="step-number" aria-hidden="true">4</span>
+                                Database og identitetshåndtering
+                            </h3>
+                            <p>
+                                Applikasjonen ble koblet til en database med støtte for sikker innlogging og lagring av brukerdata.
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </section>
 
-            <section class="mt-4" id="kart">
-                <h2 class="h4">Kart</h2>
-                <p class="text-body-secondary">Kommer senere.</p>
+            <section class="mt-5" id="samarbeid">
+                <h2 class="h4 mb-2">Samarbeidsmetodikk</h2>
+                <p class="mb-4 col-lg-10">
+                    Vi organiserte arbeidet etter agile prinsipper, med tydelige rytmer og synlig fremdrift for hele teamet.
+                </p>
+                <div class="samarbeid-flow">
+                    <article class="samarbeid-circle">
+                        <h3>Agile metode</h3>
+                        <p>
+                            Iterative sykluser, tidlig tilbakemelding og kontinuerlig forbedring.
+                        </p>
+                    </article>
+                    <span class="samarbeid-arrow" aria-hidden="true">
+                        <i class="bi bi-arrow-right"></i>
+                    </span>
+                    <article class="samarbeid-circle">
+                        <h3>Scrum</h3>
+                        <p>
+                            Sprintperioder med klare mål, backlog og gjennomgang etter hver sprint.
+                        </p>
+                    </article>
+                    <span class="samarbeid-arrow" aria-hidden="true">
+                        <i class="bi bi-arrow-right"></i>
+                    </span>
+                    <article class="samarbeid-circle">
+                        <h3>Kanban</h3>
+                        <p>
+                            Synlig arbeidsflyt på tavle, med tydelig status og færre flaskehalser.
+                        </p>
+                    </article>
+                    <span class="samarbeid-arrow" aria-hidden="true">
+                        <i class="bi bi-arrow-right"></i>
+                    </span>
+                    <article class="samarbeid-circle">
+                        <h3>Morgenmøter</h3>
+                        <p>
+                            Korte standups for fremdrift, hindringer og neste steg.
+                        </p>
+                    </article>
+                </div>
             </section>
 
-            <section class="mt-4" id="informasjon">
-                <h2 class="h4">Informasjon</h2>
-                <p class="text-body-secondary">Kommer senere.</p>
+            <section class="mt-5 mb-4" id="dokumentasjon">
+                <div class="om-oss-card underside-card dokumentasjon-kort">
+                    <div class="row g-4 align-items-center">
+                        <div class="col-lg-6">
+                            <h3>Dokumentasjon og resultater</h3>
+                            <p>
+                                For å sikre transparens og etterprøvbarhet ble hele prosessen grundig dokumentert underveis. Det endelige resultatet er en prototype som viser hvordan piloter og flybesetning kan rapportere luftfartshindre raskt inn mot Kartverkets Nasjonale register over luftfartshindre (NRL).
+                            </p>
+                            <p>
+                                Gjennom løsningen har vi lagt vekt på funksjonalitet, sikkerhet og brukervennlighet, samtidig som vi har vist hvordan geografisk informasjon om luftfartshindre kan registreres og presenteres på en rask og interaktiv måte direkte i felt.
+                            </p>
+                            <a
+                                class="btn btn-accent mt-2"
+                                href="https://github.com/noanor/kart-oppgave"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <i class="bi bi-github me-2" aria-hidden="true"></i>
+                                Se kode på GitHub
+                            </a>
+                        </div>
+                        <div class="col-lg-6">
+                            <pre class="code-panel" tabindex="0"><code><span class="code-comment">// ASP.NET Core MVC Structure</span>
+<span class="code-keyword">public class</span> <span class="code-type">MapController</span> : <span class="code-type">Controller</span>
+{
+    <span class="code-keyword">private readonly</span> <span class="code-type">IMapService</span> _mapService;
+    <span class="code-keyword">private readonly</span> <span class="code-type">UserManager</span>&lt;<span class="code-type">User</span>&gt; _userManager;
+
+    <span class="code-keyword">public async</span> <span class="code-type">Task</span>&lt;<span class="code-type">IActionResult</span>&gt; <span class="code-method">Index</span>()
+    {
+        <span class="code-keyword">var</span> mapData = <span class="code-keyword">await</span> _mapService.<span class="code-method">GetMapData</span>();
+        <span class="code-keyword">return</span> <span class="code-method">View</span>(mapData);
+    }
+}</code></pre>
+                        </div>
+                    </div>
+                </div>
             </section>
         </main>
 

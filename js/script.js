@@ -30,12 +30,12 @@ for(var i = 0; i < navn.length; i+=1){
     // Card container
     var card = document.createElement("div");
     card.className = "card mb-3";
-    card.style = "width: 540px; max-height: 200px;";
+    card.style.cssText = "width: 540px; max-height: 200px;";
 
     // Row
     var div2 = document.createElement("div");
     div2.className = "row g-0";
-    div2.style = "overflow: hidden;";
+    div2.style.cssText = "overflow: hidden;";
     card.append(div2);
 
     // Col
@@ -47,7 +47,7 @@ for(var i = 0; i < navn.length; i+=1){
     var img = document.createElement("img");
     img.setAttribute("src", "../images/" + `${images[i]}` + ".jpg");
     img.setAttribute("alt", "...")
-    // img.style = "width: 200px;"
+    // img.style.cssText = "width: 200px;"
     img.className = "rounded-start";
     img.id = 'image-' + `${images[i]}`;
     div3.append(img)
@@ -96,3 +96,5 @@ for(var i = 0; i < navn.length; i+=1){
     }
 
 }
+
+function CreateCard()

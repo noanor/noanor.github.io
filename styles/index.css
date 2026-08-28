@@ -76,6 +76,11 @@ body {
     line-height: 1;
 }
 
+#navbar .navbar-brand-text {
+    font-family: var(--font-brand);
+    letter-spacing: 0.06em;
+}
+
 #forside, #om-oss, #card-section, #prosjekt {
     scroll-margin-top: 8vh;
     margin-top: 5px;

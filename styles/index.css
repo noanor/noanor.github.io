@@ -13,20 +13,39 @@
 
 :root {
     --accent: #2563eb;
+    --font-ui: "Segoe UI", Segoe UI, Tahoma, Geneva, Verdana, sans-serif;
+    --font-brand: "Orbitron", sans-serif;
 }
 
-/* Teknisk display-font for merkenavnet CORE-6 (Orbitron = gratis stand-in for Eurostile Extended Bold). */
-.brand-font {
-    font-family: "Orbitron", sans-serif;
+body {
+    font-family: var(--font-ui);
+}
+
+/* Display-font kun på CORE-6-hero på forsiden (Orbitron = stand-in for Eurostile). */
+#forside .brand-font {
+    font-family: var(--font-brand);
     font-weight: 700;
     letter-spacing: 0.06em;
 }
 
-.brand-tagline {
-    font-family: "Orbitron", sans-serif;
+.brand-font {
+    font-weight: 700;
+    letter-spacing: normal;
+}
+
+#forside .brand-tagline {
+    font-family: var(--font-brand);
     font-weight: 500;
     font-size: 1.05rem;
     letter-spacing: 0.08em;
+    color: #000000;
+    max-width: 28rem;
+}
+
+.brand-tagline {
+    font-weight: 500;
+    font-size: 1.05rem;
+    letter-spacing: normal;
     color: #000000;
     max-width: 28rem;
 }
@@ -45,9 +64,9 @@
     --bs-btn-active-color: #fff;
     --bs-btn-active-bg: #1e40af;
     --bs-btn-active-border-color: #1e40af;
-    font-family: "Orbitron", sans-serif;
+    font-family: var(--font-ui);
     font-weight: 500;
-    letter-spacing: 0.04em;
+    letter-spacing: normal;
     padding-inline: 1.4rem;
 }
 
@@ -118,7 +137,7 @@
 }
 
 #navbar .nav-link {
-    font-family: "Orbitron", sans-serif;
+    font-family: var(--font-ui);
     font-size: 0.8rem;
     font-weight: 500;
     letter-spacing: 0.06em;
@@ -431,7 +450,7 @@
     border-radius: 50%;
     background-color: var(--accent);
     color: #ffffff;
-    font-family: "Orbitron", sans-serif;
+    font-family: var(--font-ui);
     font-size: 0.85rem;
     font-weight: 700;
     line-height: 1;
@@ -500,7 +519,7 @@
 }
 
 .samarbeid-circle h3 {
-    font-family: "Orbitron", sans-serif;
+    font-family: var(--font-ui);
     font-size: 1.1rem;
     font-weight: 700;
     letter-spacing: 0.03em;
@@ -535,7 +554,7 @@
 }
 
 .expo-media-title {
-    font-family: "Orbitron", sans-serif;
+    font-family: var(--font-ui);
     font-size: 1rem;
     font-weight: 700;
     letter-spacing: 0.04em;
@@ -564,7 +583,7 @@
 }
 
 .dokumentasjon-kort h3 {
-    font-family: "Orbitron", sans-serif;
+    font-family: var(--font-ui);
     font-size: 1.25rem;
     font-weight: 700;
     letter-spacing: 0.03em;
@@ -625,7 +644,7 @@ Om oss seksjonen
 }
 
 .om-oss-eyebrow {
-    font-family: "Orbitron", sans-serif;
+    font-family: var(--font-ui);
     font-size: 0.8rem;
     font-weight: 700;
     letter-spacing: 0.12em;
@@ -635,7 +654,7 @@ Om oss seksjonen
 }
 
 .om-oss-meta {
-    font-family: "Orbitron", sans-serif;
+    font-family: var(--font-ui);
     font-size: 0.7rem;
     letter-spacing: 0.08em;
     text-transform: uppercase;
@@ -668,7 +687,7 @@ Om oss seksjonen
 }
 
 .stat-number {
-    font-family: "Orbitron", sans-serif;
+    font-family: var(--font-ui);
     font-weight: 700;
     font-size: 2rem;
     color: var(--accent);
@@ -769,7 +788,7 @@ Ambisjoner, kompetanse og interesser blokker
 }
 
 .om-oss-card h3 {
-    font-family: "Orbitron", sans-serif;
+    font-family: var(--font-ui);
     font-size: 1rem;
     font-weight: 700;
     letter-spacing: 0.04em;
@@ -876,7 +895,7 @@ Logo
 }
 
 .footer-logo {
-    font-family: "Orbitron", sans-serif;
+    font-family: var(--font-ui);
     font-size: 2rem;
     font-weight: 700;
     letter-spacing: 0.08em;
@@ -899,7 +918,7 @@ Logo
 .footer-tagline {
     margin: 0.75rem 0 1rem;
 
-    font-family: "Orbitron", sans-serif;
+    font-family: var(--font-ui);
     font-size: 0.85rem;
     font-weight: 500;
     letter-spacing: 0.08em;
@@ -911,7 +930,7 @@ Logo
     max-width: 430px;
     margin-bottom: 0.75rem;
 
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--font-ui);
     font-size: 0.95rem;
     line-height: 1.7;
     color: #000000;
@@ -920,7 +939,7 @@ Logo
 .footer-meta {
     margin: 0;
 
-    font-family: "Orbitron", sans-serif;
+    font-family: var(--font-ui);
     font-size: 0.7rem;
     letter-spacing: 0.08em;
     text-transform: uppercase;
@@ -935,7 +954,7 @@ Footer heading
 .footer-heading {
     margin-bottom: 1.25rem;
 
-    font-family: "Orbitron", sans-serif;
+    font-family: var(--font-ui);
     font-size: 0.85rem;
     font-weight: 700;
     letter-spacing: 0.08em;
@@ -979,7 +998,7 @@ Footer navigasjon
     color: #000000;
     text-decoration: none;
 
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--font-ui);
     font-size: 0.95rem;
     font-weight: 500;
 
@@ -989,7 +1008,7 @@ Footer navigasjon
 }
 
 .footer-nav a span {
-    font-family: "Orbitron", sans-serif;
+    font-family: var(--font-ui);
     font-size: 0.65rem;
     color: #000000;
 }
@@ -1011,7 +1030,7 @@ Footer kontakt
     max-width: 350px;
     margin-bottom: 1.25rem;
 
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--font-ui);
     font-size: 0.95rem;
     line-height: 1.7;
     color: #000000;
@@ -1031,7 +1050,7 @@ Footer kontakt
     color: #000000;
     text-decoration: none;
 
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--font-ui);
     font-size: 0.95rem;
     font-weight: 500;
 
@@ -1080,7 +1099,7 @@ Footer bunn
     align-items: center;
     gap: 0.5rem;
 
-    font-family: "Orbitron", sans-serif;
+    font-family: var(--font-ui);
     font-size: 0.65rem !important;
     letter-spacing: 0.08em;
 }

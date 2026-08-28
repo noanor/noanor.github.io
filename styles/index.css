@@ -27,7 +27,7 @@
     font-weight: 500;
     font-size: 1.05rem;
     letter-spacing: 0.08em;
-    color: #334155;
+    color: #000000;
     max-width: 28rem;
 }
 
@@ -53,7 +53,7 @@
 
 .navbar-brand-text {
     font-size: 1.15rem;
-    color: #0f172a;
+    color: #000000;
     line-height: 1;
 }
 
@@ -123,7 +123,7 @@
     font-weight: 500;
     letter-spacing: 0.06em;
     text-transform: uppercase;
-    color: #334155;
+    color: #000000;
     position: relative;
     padding-bottom: 0.2rem;
     transition: color 0.2s ease;
@@ -278,7 +278,7 @@
     padding: 0.35rem 0.85rem;
     border-radius: 999px;
     background-color: #ececec;
-    color: #4a4a4a;
+    color: #000000;
     font-size: 0.8rem;
     font-weight: 500;
     transition: transform 0.2s ease, background-color 0.2s ease;
@@ -499,17 +499,17 @@ Om oss seksjonen
     font-size: 0.7rem;
     letter-spacing: 0.08em;
     text-transform: uppercase;
-    color: #64748b;
+    color: #000000;
     margin-bottom: 1.5rem;
 }
 
 .om-oss-intro {
     font-size: 1.05rem;
-    color: #1e293b;
+    color: #000000;
 }
 
 .om-oss-tekst p {
-    color: #475569;
+    color: #000000;
     line-height: 1.7;
 }
 
@@ -537,7 +537,7 @@ Om oss seksjonen
 
 .stat-label {
     font-size: 0.8rem;
-    color: #64748b;
+    color: #000000;
     letter-spacing: 0.04em;
     margin-top: 0.35rem;
 }
@@ -586,7 +586,7 @@ Promovideoen
 .om-oss-media-caption {
     margin-top: 0.75rem;
     font-size: 0.8rem;
-    color: #64748b;
+    color: #000000;
     text-align: center;
 }
 
@@ -634,10 +634,11 @@ Ambisjoner, kompetanse og interesser blokker
     font-weight: 700;
     letter-spacing: 0.04em;
     margin-bottom: 0.6rem;
+    color: #000000;
 }
 
 .om-oss-card p {
-    color: #475569;
+    color: #000000;
     font-size: 0.92rem;
     line-height: 1.6;
     margin-bottom: 0.75rem;
@@ -677,7 +678,7 @@ Footer
     overflow: hidden;
     padding: 5rem 0 1.5rem;
     background-color: #d6d6e0;
-    color: #0f172a;
+    color: #000000;
     border-top: 1px solid rgba(15, 23, 42, 0.12);
 }
 
@@ -763,7 +764,7 @@ Logo
     font-weight: 500;
     letter-spacing: 0.08em;
 
-    color: #334155;
+    color: #000000;
 }
 
 .footer-description {
@@ -773,7 +774,7 @@ Logo
     font-family: Arial, Helvetica, sans-serif;
     font-size: 0.95rem;
     line-height: 1.7;
-    color: #475569;
+    color: #000000;
 }
 
 .footer-meta {
@@ -784,7 +785,7 @@ Logo
     letter-spacing: 0.08em;
     text-transform: uppercase;
 
-    color: #64748b;
+    color: #000000;
 }
 
 
@@ -835,7 +836,7 @@ Footer navigasjon
     align-items: center;
     gap: 0.7rem;
 
-    color: #475569;
+    color: #000000;
     text-decoration: none;
 
     font-family: Arial, Helvetica, sans-serif;
@@ -850,7 +851,7 @@ Footer navigasjon
 .footer-nav a span {
     font-family: "Orbitron", sans-serif;
     font-size: 0.65rem;
-    color: #94a3b8;
+    color: #000000;
 }
 
 .footer-nav a:hover {
@@ -873,7 +874,7 @@ Footer kontakt
     font-family: Arial, Helvetica, sans-serif;
     font-size: 0.95rem;
     line-height: 1.7;
-    color: #475569;
+    color: #000000;
 }
 
 .footer-contact {
@@ -887,7 +888,7 @@ Footer kontakt
     align-items: center;
     gap: 0.75rem;
 
-    color: #334155;
+    color: #000000;
     text-decoration: none;
 
     font-family: Arial, Helvetica, sans-serif;
@@ -930,7 +931,7 @@ Footer bunn
 .footer-bottom p {
     margin: 0;
 
-    color: #64748b;
+    color: #000000;
     font-size: 0.75rem;
 }
 

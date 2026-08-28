@@ -89,7 +89,7 @@
                     <h3 class="footer-heading">Kontakt</h3>
 
                     <p class="footer-contact-text">
-                        Har du spørsmål om prosjektet eller gruppen? Ta gjerne kontakt.
+                        Har du spørsmål om prosjektet eller gruppen? Ta gjerne kontakt med oss.
                     </p>
 
                     <address class="footer-contact">

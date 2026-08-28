@@ -947,7 +947,7 @@ Logo
 }
 
 .footer-logo {
-    font-family: var(--font-ui);
+    font-family: var(--font-brand);
     font-size: 2rem;
     font-weight: 700;
     letter-spacing: 0.08em;
@@ -970,7 +970,7 @@ Logo
 .footer-tagline {
     margin: 0.75rem 0 1rem;
 
-    font-family: var(--font-ui);
+    font-family: var(--font-brand);
     font-size: 0.85rem;
     font-weight: 500;
     letter-spacing: 0.08em;

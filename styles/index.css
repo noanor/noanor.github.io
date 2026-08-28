@@ -177,23 +177,54 @@ body {
     flex-direction: column;
 }
 
-.card-row-1, .card-row-2 {
+.card-row {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 2rem;
-    /* padding: 0 10%; */
+}
+
+.team-card {
+    flex: 1 1 320px;
+    width: 100%;
+    max-width: 540px;
+    border: none;
+    border-radius: 0.75rem;
+    overflow: hidden;
+    border-top: 3px solid var(--accent);
+    box-shadow: 0 4px 14px rgba(15, 23, 42, 0.06);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.team-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 28px rgba(15, 23, 42, 0.14);
+}
+
+.team-card .card-title {
+    font-family: "Orbitron", sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+}
+
+.team-card .card-text {
+    color: var(--accent);
+    font-weight: 600;
+    font-size: 0.85rem;
 }
 
 .card-image img {
-    width: 200px;
     height: 200px;
-    position: relative;
-    left: -20%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
 }
 
 .card-image {
+    height: 200px;
     overflow: hidden;
-    /* object-fit: cover; */
 }
 
 .card a {
@@ -203,8 +234,24 @@ body {
     left: auto;
 }
 
+@media (max-width: 767.98px) {
+    .card-row {
+        gap: 1.25rem;
+    }
 
-#image-hildiddy {
+    .team-card {
+        max-width: 100%;
+    }
+
+    .card a {
+        position: static;
+        display: inline-block;
+        margin-top: 0.5rem;
+    }
+}
+
+
+/* #image-hildiddy {
     left: -30%;
     height: 400px;
 }
@@ -219,7 +266,7 @@ body {
 
 #image-madda {
     width: 150px;
-}
+} */
 
 #lsp-data {
     display: flex;

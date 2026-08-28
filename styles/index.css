@@ -534,6 +534,30 @@
     }
 }
 
+.expo-media-title {
+    font-family: "Orbitron", sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    color: #000000;
+    margin-bottom: 0.75rem;
+}
+
+.expo-media-image {
+    text-align: left;
+}
+
+.expo-photo {
+    width: 100%;
+    display: block;
+    border-radius: 0.6rem;
+    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.12);
+}
+
+.expo-video-wrap {
+    max-width: none;
+}
+
 .dokumentasjon-kort .om-oss-card.underside-card h3,
 .dokumentasjon-kort h3 {
     display: block;

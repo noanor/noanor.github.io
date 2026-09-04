@@ -209,9 +209,15 @@ body {
     letter-spacing: 0.03em;
 }
 
-.team-card .card-text {
+.team-card .card-role {
     color: var(--accent);
     font-weight: 600;
+    font-size: 0.85rem;
+}
+
+.team-card .card-text {
+    color: #333;
+    font-weight: 400;
     font-size: 0.85rem;
 }
 

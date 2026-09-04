@@ -111,11 +111,12 @@
 // })();
 
 // ===== RADIAL MENY (WHEEL) SETUP =====
+const wheelContainer = document.querySelector('.wheel-wrap');
 const wheel = document.querySelector('.wheel');
 const arcs = Array.from(wheel.querySelectorAll('.arc'));
 
-let centerX = window.innerWidth / 2;
-let centerY = window.innerHeight / 2;
+let centerX = wheelContainer.innerWidth / 2;
+let centerY = wheelContainer.innerHeight / 2;
 
 window.addEventListener('resize', () => {
     centerX = window.innerWidth / 2;
@@ -126,7 +127,6 @@ let isOpen = false;
 let justOpened = false;
 let selectionMade = false;
 
-const wheelContainer = document.getElementsByClassName('wheel-wrap');
 
 // Opens radial menu at given position
 function openWheel(x, y) {
@@ -145,14 +145,14 @@ function closeWheel() {
     wheel.classList.remove('on');
     setTimeout(() => wheel.classList.add('hidden'), 300);
 
-    if (!selectionMade && tempMarker) {
-        setTimeout(() => {
-            if (tempMarker && map.hasLayer(tempMarker)) {
-                map.removeLayer(tempMarker);
-            }
-            tempMarker = null;
-        }, 50);
-    }
+    // if (!selectionMade && tempMarker) {
+    //     setTimeout(() => {
+    //         if (tempMarker && map.hasLayer(tempMarker)) {
+    //             map.removeLayer(tempMarker);
+    //         }
+    //         tempMarker = null;
+    //     }, 50);
+    // }
 
     selectionMade = false;
     wheel.setAttribute('data-chosen', 0);
@@ -169,7 +169,6 @@ arcs.forEach((arc, i) => {
 // On click in radial menu: select type and add obstacle
 
 wheelContainer.addEventListener('click', async () => {
-    alert('Sucess!');
     openWheel(centerX, centerY);
 })
 
@@ -180,9 +179,9 @@ wheel.addEventListener('click', async (e) => {
     const index = arcs.indexOf(arc) + 1;
     wheel.setAttribute('data-chosen', index);
 
-    const type = obstacleTypeFromChoice(index);
-    const hiddenTypeInput = document.getElementById('obstacletype');
-    if (hiddenTypeInput) hiddenTypeInput.value = type || '';
+    // const type = obstacleTypeFromChoice(index);
+    // const hiddenTypeInput = document.getElementById('obstacletype');
+    // if (hiddenTypeInput) hiddenTypeInput.value = type || '';
 
     closeWheel();
 
@@ -209,12 +208,12 @@ wheel.addEventListener('click', async (e) => {
 });
 
 // Lukker radial meny ved klikk utenfor eller Escape-tast
-wheelContainer.addEventListener('click', (e) => {
+document.addEventListener('click', (e) => {
     if (!isOpen || justOpened) return;
     if (!e.target.closest('.wheel')) closeWheel();
 });
 
-wheelContainer.addEventListener('keydown', (e) => {
+document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && isOpen) {
         closeWheel();
     }

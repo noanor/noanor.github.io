@@ -81,13 +81,14 @@ body {
     letter-spacing: 0.06em;
 }
 
-#forside, #om-oss, #card-section, #prosjekt {
-    scroll-margin-top: 8vh;
+#forside, #card-section, #prosjekt {
+    scroll-margin-top: 12vh;
     margin-top: 5px;
 }
 
 #om-oss {
     height: 92vh;
+    scroll-margin-top: 10vh;
 }
 
 #prosjekt {

@@ -115,14 +115,6 @@ const wheelContainer = document.querySelector('.wheel-wrap');
 const wheel = document.querySelector('.wheel');
 const arcs = Array.from(wheel.querySelectorAll('.arc'));
 
-let centerX = wheelContainer.innerWidth / 2;
-let centerY = wheelContainer.innerHeight / 2;
-
-window.addEventListener('resize', () => {
-    centerX = window.innerWidth / 2;
-    centerY = window.innerHeight / 2;
-});
-
 let isOpen = false;
 let justOpened = false;
 let selectionMade = false;
@@ -168,8 +160,9 @@ arcs.forEach((arc, i) => {
 // ===== RADIAL MENU CLICK HANDLING =====
 // On click in radial menu: select type and add obstacle
 
-wheelContainer.addEventListener('click', async () => {
-    openWheel(centerX, centerY);
+wheelContainer.addEventListener('click', async (e) => {
+    if (e.target.closest('.wheel')) return;
+    openWheel(wheelContainer.clientWidth / 2, wheelContainer.clientHeight / 2);
 })
 
 wheel.addEventListener('click', async (e) => {

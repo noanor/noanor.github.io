@@ -33,7 +33,7 @@
     </nav>`;
 
     const footerHTML = `
-    <footer id="kontakt-oss" class="core-footer" aria-labelledby="footer-heading">
+    <footer class="core-footer" aria-labelledby="footer-heading">
         <h2 id="footer-heading" class="visually-hidden">
             Kontakt og navigasjonsinformasjon
         </h2>

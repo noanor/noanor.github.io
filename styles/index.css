@@ -222,6 +222,16 @@ body {
     font-size: 0.85rem;
 }
 
+.team-card .card-body .btn-accent {
+    margin-top: 0.5rem;
+}
+
+#memberModalImage {
+    width: 100%;
+    max-height: 280px;
+    object-fit: cover;
+}
+
 .card-image img {
     height: 200px;
     width: 100%;
@@ -1017,8 +1027,48 @@ Ambisjoner, kompetanse og interesser blokker
     }
 }
 
-/* 
-Footer 
+/*
+Kontakt-skjema
+*/
+#kontakt-oss {
+    max-width: 40rem;
+    margin-inline: auto;
+    padding-block: 2rem;
+}
+
+.kontakt-intro {
+    color: #333;
+    margin-bottom: 1.5rem;
+}
+
+.kontakt-form .form-control:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 0.25rem rgba(37, 99, 235, 0.25);
+}
+
+.kontakt-form-honeypot {
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+.kontakt-form-status {
+    margin-top: 1rem;
+    font-weight: 500;
+}
+
+.kontakt-form-status-success {
+    color: #15803d;
+}
+
+.kontakt-form-status-error {
+    color: #b91c1c;
+}
+
+/*
+Footer
 */
    .core-footer {
     position: relative;

@@ -209,6 +209,37 @@
                 </div>
             </section>
 
+            <section id="kontakt-oss" aria-labelledby="kontakt-heading">
+                <h2 id="kontakt-heading" class="mb-3 brand-font">Kontakt oss</h2>
+                <p class="kontakt-intro">Har du spørsmål om prosjektet eller gruppen? Send oss en beskjed, så svarer vi så fort vi kan.</p>
+
+                <form id="contact-form" class="kontakt-form" novalidate>
+                    <div class="mb-3">
+                        <label for="contact-name" class="form-label">Navn</label>
+                        <input type="text" class="form-control" id="contact-name" name="name" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="contact-email" class="form-label">E-post</label>
+                        <input type="email" class="form-control" id="contact-email" name="email" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="contact-message" class="form-label">Melding</label>
+                        <textarea class="form-control" id="contact-message" name="message" rows="5" required></textarea>
+                    </div>
+
+                    <label class="kontakt-form-honeypot" aria-hidden="true">
+                        Ikke fyll ut dette feltet
+                        <input type="text" name="_gotcha" tabindex="-1" autocomplete="off">
+                    </label>
+
+                    <button type="submit" class="btn btn-accent">Send melding</button>
+
+                    <div id="contact-form-status" class="kontakt-form-status" role="status" aria-live="polite"></div>
+                </form>
+            </section>
+
         </div>
 
         <div id="site-footer"></div>
@@ -220,5 +251,6 @@
         <script src="./js/script.js"></script>
         <script src="./js/forside-vanta.js"></script>
         <script src="./js/layout.js"></script>
+        <script src="./js/contact-form.js"></script>
     </body>
 </html>

@@ -1,6 +1,6 @@
 var navn = [
     "Efe Kaan Eksi",
-    "Hildiddy Musse",
+    "Hildid Musse",
     "Madalitso Phiri Skjelnes",
     "Marion Rasmussen",
     "Dennis Tea",
@@ -9,7 +9,7 @@ var navn = [
 
 var images = [
     "efe",
-    "hildiddy",
+    "hildid",
     "madda",
     "marion",
     "dennis",
@@ -33,7 +33,7 @@ var cardText = [
 
 var bios = [
     "TODO: Skriv en kort bio for Efe Kaan Eksi",
-    "TODO: Skriv en kort bio for Hildiddy Musse",
+    "TODO: Skriv en kort bio for Hildid Musse",
     "TODO: Skriv en kort bio for Madalitso Phiri Skjelnes",
     "TODO: Skriv en kort bio for Marion Rasmussen",
     "TODO: Skriv en kort bio for Dennis Tea",

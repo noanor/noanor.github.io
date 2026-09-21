@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="no" data-page="nkom">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Nkom · CORE-6</title>
+        <link rel="icon" type="image/png" href="./Media/logo-c6-white.png">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="./styles/index.css">
+    </head>
+
+    <body>
+        <div id="site-navbar"></div>
+
+        <main class="container underside">
+            <a class="back-link" href="./prosjekter.html">← Tilbake til våre prosjekter</a>
+
+            <h1 class="brand-font mb-3">Nkom – FK-fjernkontroll</h1>
+
+            <div class="prosjekt-deltakere mb-4">
+                <span class="prosjekt-deltakere-label">Deltaker fra CORE-6:</span>
+                <div class="prosjekt-deltakere-avatars">
+                    <span class="prosjekt-deltaker" title="Madalitso Phiri Skjelnes"><img src="./Media/Profil-pic/madda.jpg" alt="Madalitso Phiri Skjelnes"></span>
+                </div>
+            </div>
+
+            <a class="btn btn-accent-outline mb-4" href="https://phiri-madalitso.github.io/Nkom/index.html#prosjektet" target="_blank" rel="noopener noreferrer">
+                Les mer om prosjektet <i class="bi bi-box-arrow-up-right ms-1" aria-hidden="true"></i>
+            </a>
+
+            <p class="prosjekt-intro">
+                Dette er Madalitso sitt individuelle praksisprosjekt hos Nasjonal kommunikasjonsmyndighet (Nkom), skrevet fra hans eget ståsted som fullstack-utvikler i teamet.
+            </p>
+
+            <section class="mt-4" id="om-og-behov">
+                <div class="row g-4">
+                    <div class="col-md-6" id="om-prosjektet">
+                        <div class="om-oss-card underside-card">
+                            <h3>Om prosjektet</h3>
+                            <p>
+                                Jeg jobber med FK-fjernkontroll: et system for oversikt over målestasjoner som brukes
+                                til måling av frekvensbruk. Målingene kan tas på land, blant annet med utstyr i bil,
+                                eller i felt med mobil/koffert og avtaler med skip rundt i Norge.
+                            </p>
+                            <p>
+                                På lokasjonene står måleutstyr sammen med en liten PC som kan fjernstyres og kobles på
+                                (LattePanda). Tidligere var det dårlig oversikt over hva som sto hvor, og hvem som
+                                hadde ansvar. Nkom har gått over til Pure Service, men målet er å erstatte det med en
+                                felles, mer lesbar oversikt.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-6" id="behovet">
+                        <div class="om-oss-card underside-card">
+                            <h3>Behovet</h3>
+                            <p>
+                                Jeg skal bidra til et system der utstyr og stasjoner er registrert, slik at man kan
+                                identifisere dem og ha en database- og oversiktsløsning. Noen adresser er sensitive,
+                                og per i dag kjøres mye direkte på PC — sensitiv tilgang ekskluderes i første omgang.
+                            </p>
+                            <p>
+                                Første steg er å forstå hvordan det gjøres i dag, og hvilke svakheter som finnes, slik
+                                at vi vet hva som kan bli bedre. Eksempler er dårlig lesbarhet, med mange like
+                                gruppefelt, og en sletteknapp som må tenkes nøye gjennom.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="mt-5" id="komponenter">
+                <div class="om-oss-card underside-card">
+                    <h3>Komponenter og utfordringer</h3>
+                    <ul class="prosjekt-liste">
+                        <li>Bredbånd på lokasjonene.</li>
+                        <li>LattePanda — den lille PC-en som fjernstyrer og kobler seg på, sammen med måleutstyret.</li>
+                        <li>Utfordring: mobilbredbåndet ble plutselig flyttet rundt, noe som gjorde det krevende å holde oversikt.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="mt-5 text-center prosjektbeskrivelse" id="teknologi-og-rammer">
+                <h2 class="h4 mb-4">Teknologi og rammer</h2>
+                <div class="prosjektbeskrivelse-innhold mx-auto">
+                    <p>
+                        Jeg bygger mot en .NET-webapplikasjon i C#, med React og TypeScript i frontend. Det finnes en
+                        front-baseline i GitHub. Løsningen kjører lokalt i starten; sikkerhet er ikke hovedfokus nå,
+                        men bør komme etter hvert.
+                    </p>
+                    <p>
+                        Vi må velge database eller fil, et lag som opererer på dataene, og et lag som viser dem. Det
+                        skal være et tydelig sted for vedlegg. Jeg skal også se på datamodellering og skalering: hva
+                        skjer når det kommer nytt utstyr? Det skilles mellom funksjonelle krav (knapper og hva som
+                        skjer når man trykker) og ikke-funksjonelle krav (struktur, hvordan ting bygges, database).
+                    </p>
+                    <p>
+                        Nkom har både en IT-side og en Spektrum-side. Behovet for fjernstyring og oversikt kommer fra
+                        Spektrum. Master data betyr én sannhet per type data — best er det at løsningen leser data
+                        uten å endre kilden, slik at sannheten fortsatt lever ett sted. Fremover bør vi se på
+                        ServiceNow, der API-et allerede er dokumentert. Metodikk er Scrum og Kanban.
+                    </p>
+                </div>
+            </section>
+
+            <section class="mt-5" id="funksjonelle-krav">
+                <h2 class="h4 mb-2">Funksjonelle krav</h2>
+                <p class="mb-4 col-lg-10">Dette er kravene til første del av løsningen.</p>
+                <ol class="prosjekt-krav-liste">
+                    <li>Nettside med kartvisning av målestasjoner, med filtrering faste / mobile.</li>
+                    <li>Tabell med bare felt som er avgjørende i første del.</li>
+                    <li>Utstyrsliste med filtrering.</li>
+                    <li>Gå inn på en stasjon og se mer: utstyr, plassering, bilder.</li>
+                    <li>Bilder mer oversiktlige, med bedre navn og gruppering av ting som går igjen.</li>
+                    <li>Logg med datoer og tydelig oversikt.</li>
+                    <li>Kunde / kontaktperson.</li>
+                    <li>Oppsummert visning av den øvrige informasjonen.</li>
+                    <li>Oppdatert filtrering på kart, lett å lese og finne frem.</li>
+                    <li>Notat / husk.</li>
+                    <li>Flere objekter på samme sted: hover, popup, og mulighet til å bla til neste.</li>
+                    <li>Avklare hva som er standardisert og hva som ikke er det.</li>
+                    <li>Standardisering av begreper og felt.</li>
+                    <li>Felt for husk / tiltak — blant annet kritisk / må gjøres.</li>
+                </ol>
+            </section>
+
+            <section class="mt-5" id="prioritering">
+                <div class="om-oss-card underside-card">
+                    <h3>Hva jeg prioriterer</h3>
+                    <p>
+                        Jeg skal først lukke ut støy, gjøre kjernen robust, og holde løsningen lett å skalere slik at
+                        funksjonalitet kan bygges på senere. Fokus er kjernefunksjonalitet, ikke alt på en gang.
+                        Neste steg er skisse for hvordan løsningen kan se ut, entiteter, relasjoner og felt.
+                    </p>
+                </div>
+            </section>
+
+            <section class="mt-5 mb-4" id="problemstilling">
+                <h2 class="h4 mb-3">Problemstilling</h2>
+                <blockquote class="prosjekt-problemstilling">
+                    Hvordan kan jeg optimalisere dagens oversikt og arbeidsflyt for målestasjoner og fjernkontroll —
+                    og hva innebærer det å fylle rollen som fullstack-utvikler i dette arbeidet: å forstå dagens
+                    praksis, modellere data, og bygge et lesbart, skalerbart system oppå master data?
+                </blockquote>
+            </section>
+        </main>
+
+        <div id="site-footer"></div>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+            crossorigin="anonymous"></script>
+        <script src="./js/layout.js"></script>
+    </body>
+
+</html>

@@ -1,0 +1,182 @@
+/*
+Medlemsprofilside (f.eks. dennis-tea.html)
+*/
+
+.member-hero {
+    padding-top: 6.5rem;
+    padding-bottom: 0;
+}
+
+.member-hero-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 17rem) minmax(0, 1fr);
+    gap: 2.5rem;
+    align-items: start;
+}
+
+.member-hero-photo-frame {
+    aspect-ratio: 3 / 4;
+    border-radius: 0.9rem;
+    overflow: hidden;
+    box-shadow: 0 12px 28px rgba(15, 23, 42, 0.16);
+}
+
+.member-hero-photo-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.member-hero-name {
+    max-width: 100%;
+    overflow-wrap: break-word;
+    margin-bottom: 0.5rem;
+}
+
+.member-hero-meta {
+    font-size: 1rem;
+    color: var(--text-body);
+    margin-bottom: 0.15rem;
+}
+
+.member-hero-role {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--accent);
+    letter-spacing: 0.01em;
+    margin-bottom: 1.25rem;
+}
+
+.member-hero-bio {
+    font-size: 1.05rem;
+    line-height: 1.75;
+    color: var(--text-body);
+    max-width: 40rem;
+    margin-bottom: 1.25rem;
+}
+
+.member-hero-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-bottom: 1.5rem;
+}
+
+.member-hero-socials {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem 1.5rem;
+}
+
+.member-hero-social {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--navy);
+    font-weight: 600;
+    font-size: 0.92rem;
+    text-decoration: none;
+    transition: color 0.2s ease, gap 0.2s ease;
+}
+
+.member-hero-social i:first-child {
+    font-size: 1.1rem;
+    color: var(--accent);
+}
+
+.member-hero-social .bi-arrow-right {
+    transition: transform 0.2s ease;
+}
+
+.member-hero-social:hover {
+    color: var(--accent);
+    gap: 0.7rem;
+}
+
+.member-hero-social:hover .bi-arrow-right {
+    transform: translateX(3px);
+}
+
+@media (max-width: 767.98px) {
+    .member-hero {
+        padding-top: 5.5rem;
+    }
+
+    .member-hero-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .member-hero-photo-frame {
+        max-width: 16rem;
+        margin-inline: auto;
+    }
+}
+
+/*
+Bildegalleri – Bootstrap carousel
+*/
+
+.member-gallery-band {
+    padding-bottom: 5rem;
+}
+
+.member-gallery-carousel {
+    max-width: 44rem;
+    margin-inline: auto;
+    border-radius: 0.9rem;
+    overflow: hidden;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35);
+}
+
+.member-gallery-carousel .carousel-inner {
+    aspect-ratio: 4 / 3;
+    background-color: #05070d;
+}
+
+.member-gallery-carousel .carousel-item {
+    height: 100%;
+}
+
+.member-gallery-carousel .carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    background-color: #05070d;
+}
+
+.member-gallery-caption {
+    position: absolute;
+    inset-inline: 0;
+    bottom: 0;
+    margin: 0;
+    padding: 1.75rem 3.5rem 0.6rem;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.75), transparent);
+    color: #ffffff;
+    font-size: 0.85rem;
+    text-align: center;
+}
+
+.member-gallery-carousel .carousel-control-prev,
+.member-gallery-carousel .carousel-control-next {
+    width: 3rem;
+}
+
+.member-gallery-carousel .carousel-indicators {
+    position: static;
+    margin: 0.85rem 0 0;
+}
+
+.member-gallery-hint {
+    margin-top: 1rem;
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.65);
+    text-align: center;
+}
+
+@media (max-width: 575.98px) {
+    .member-gallery-caption {
+        padding-inline: 2.75rem;
+    }
+}

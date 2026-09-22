@@ -19,102 +19,122 @@
             <h1 id="kontakt-heading" class="mb-4 brand-font">Kontakt oss</h1>
 
             <div class="row g-4 kontakt-grid">
-                <section class="col-lg-6" id="kontakt-oss" aria-labelledby="kontakt-heading">
-                    <div class="kontakt-form-card">
-                        <p class="kontakt-intro">Har du spørsmål om prosjektet eller gruppen? Send oss en beskjed, så svarer vi så fort vi kan.</p>
-
-                        <form id="contact-form" class="kontakt-form" novalidate>
-                            <div class="mb-3">
-                                <label for="contact-name" class="form-label">Navn</label>
-                                <input type="text" class="form-control" id="contact-name" name="name">
-                            </div>
-
-                            <div class="mb-3">
-                                <label for="contact-email" class="form-label">E-post <span class="kontakt-form-required" aria-hidden="true">*</span></label>
-                                <input type="email" class="form-control" id="contact-email" name="email" required>
-                                <div class="invalid-feedback">Skriv inn en gyldig e-postadresse.</div>
-                            </div>
-
-                            <div class="mb-3">
-                                <label for="contact-subject" class="form-label">Emne</label>
-                                <input type="text" class="form-control" id="contact-subject" name="_subject" placeholder="Hva gjelder henvendelsen?">
-                            </div>
-
-                            <div class="mb-3">
-                                <label for="contact-message" class="form-label">Melding <span class="kontakt-form-required" aria-hidden="true">*</span></label>
-                                <textarea class="form-control" id="contact-message" name="message" rows="5" required></textarea>
-                                <div class="invalid-feedback">Skriv inn en melding.</div>
-                            </div>
-
-                            <label class="kontakt-form-honeypot" aria-hidden="true">
-                                Ikke fyll ut dette feltet
-                                <input type="text" name="_gotcha" tabindex="-1" autocomplete="off">
-                            </label>
-
-                            <button type="submit" class="btn btn-accent">Send melding</button>
-
-                            <div id="contact-form-status" class="kontakt-form-status" role="status" aria-live="polite"></div>
-                        </form>
-                    </div>
-                </section>
-
-                <section class="col-lg-6 kontakt-medlemmer" aria-labelledby="kontakt-medlemmer-heading">
-                    <h2 id="kontakt-medlemmer-heading" class="h5 mb-1 brand-font">Gruppen</h2>
-                    <p class="kontakt-intro">Kontaktinformasjon til hvert medlem i CORE-6.</p>
+                <section class="col-12 kontakt-medlemmer">
+                    <p class="kontakt-intro">Har du spørsmål om prosjektet eller gruppen? Ta kontakt med oss, så svarer vi deg så fort vi kan.</p>
 
                     <div class="kontakt-medlem-grid">
                         <div class="kontakt-medlem-card">
-                            <p class="kontakt-medlem-navn">Efe Kaan Eksi</p>
-                            <p class="kontakt-medlem-rolle">Gruppeleder / Kontaktperson</p>
-                            <a class="kontakt-medlem-epost" href="mailto:efeke@uia.no">
-                                <i class="bi bi-envelope" aria-hidden="true"></i>
-                                efeke@uia.no
-                            </a>
+                            <div class="kontakt-medlem-header">
+                                <img class="kontakt-medlem-avatar" src="./Media/Profil-pic/efe.jpg" alt="">
+                                <div>
+                                    <p class="kontakt-medlem-navn">Efe Kaan Eksi</p>
+                                    <p class="kontakt-medlem-rolle">Gruppeleder / Kontaktperson</p>
+                                </div>
+                            </div>
+                            <div class="kontakt-medlem-epost-rad">
+                                <a class="kontakt-medlem-epost" href="mailto:efeke@uia.no">
+                                    <i class="bi bi-envelope" aria-hidden="true"></i>
+                                    <span>efeke@uia.no</span>
+                                </a>
+                                <button type="button" class="kontakt-medlem-kopier" data-email="efeke@uia.no" aria-label="Kopier e-postadresse">
+                                    <i class="bi bi-copy" aria-hidden="true"></i>
+                                </button>
+                            </div>
                         </div>
 
                         <div class="kontakt-medlem-card">
-                            <p class="kontakt-medlem-navn">Hildid Musse</p>
-                            <p class="kontakt-medlem-rolle">Nestleder</p>
-                            <a class="kontakt-medlem-epost" href="mailto:hsmusse@uia.no">
-                                <i class="bi bi-envelope" aria-hidden="true"></i>
-                                hsmusse@uia.no
-                            </a>
+                            <div class="kontakt-medlem-header">
+                                <img class="kontakt-medlem-avatar" src="./Media/Profil-pic/hildid.jpg" alt="">
+                                <div>
+                                    <p class="kontakt-medlem-navn">Hildid Musse</p>
+                                    <p class="kontakt-medlem-rolle">Nestleder</p>
+                                </div>
+                            </div>
+                            <div class="kontakt-medlem-epost-rad">
+                                <a class="kontakt-medlem-epost" href="mailto:hsmusse@uia.no">
+                                    <i class="bi bi-envelope" aria-hidden="true"></i>
+                                    <span>hsmusse@uia.no</span>
+                                </a>
+                                <button type="button" class="kontakt-medlem-kopier" data-email="hsmusse@uia.no" aria-label="Kopier e-postadresse">
+                                    <i class="bi bi-copy" aria-hidden="true"></i>
+                                </button>
+                            </div>
                         </div>
 
                         <div class="kontakt-medlem-card">
-                            <p class="kontakt-medlem-navn">Madalitso Phiri Skjelnes</p>
-                            <p class="kontakt-medlem-rolle">Gruppemedlem</p>
-                            <a class="kontakt-medlem-epost" href="mailto:madalitsos@uia.no">
-                                <i class="bi bi-envelope" aria-hidden="true"></i>
-                                madalitsos@uia.no
-                            </a>
+                            <div class="kontakt-medlem-header">
+                                <img class="kontakt-medlem-avatar" src="./Media/Profil-pic/madda.jpg" alt="">
+                                <div>
+                                    <p class="kontakt-medlem-navn">Madalitso Phiri Skjelnes</p>
+                                    <p class="kontakt-medlem-rolle">Gruppemedlem</p>
+                                </div>
+                            </div>
+                            <div class="kontakt-medlem-epost-rad">
+                                <a class="kontakt-medlem-epost" href="mailto:madalitsos@uia.no">
+                                    <i class="bi bi-envelope" aria-hidden="true"></i>
+                                    <span>madalitsos@uia.no</span>
+                                </a>
+                                <button type="button" class="kontakt-medlem-kopier" data-email="madalitsos@uia.no" aria-label="Kopier e-postadresse">
+                                    <i class="bi bi-copy" aria-hidden="true"></i>
+                                </button>
+                            </div>
                         </div>
 
                         <div class="kontakt-medlem-card">
-                            <p class="kontakt-medlem-navn">Marion Rasmussen</p>
-                            <p class="kontakt-medlem-rolle">Gruppemedlem</p>
-                            <a class="kontakt-medlem-epost" href="mailto:marionnr@uia.no">
-                                <i class="bi bi-envelope" aria-hidden="true"></i>
-                                marionnr@uia.no
-                            </a>
+                            <div class="kontakt-medlem-header">
+                                <img class="kontakt-medlem-avatar" src="./Media/Profil-pic/marion.jpg" alt="">
+                                <div>
+                                    <p class="kontakt-medlem-navn">Marion Rasmussen</p>
+                                    <p class="kontakt-medlem-rolle">Gruppemedlem</p>
+                                </div>
+                            </div>
+                            <div class="kontakt-medlem-epost-rad">
+                                <a class="kontakt-medlem-epost" href="mailto:marionnr@uia.no">
+                                    <i class="bi bi-envelope" aria-hidden="true"></i>
+                                    <span>marionnr@uia.no</span>
+                                </a>
+                                <button type="button" class="kontakt-medlem-kopier" data-email="marionnr@uia.no" aria-label="Kopier e-postadresse">
+                                    <i class="bi bi-copy" aria-hidden="true"></i>
+                                </button>
+                            </div>
                         </div>
 
                         <div class="kontakt-medlem-card">
-                            <p class="kontakt-medlem-navn">Dennis Tea</p>
-                            <p class="kontakt-medlem-rolle">Gruppemedlem</p>
-                            <a class="kontakt-medlem-epost" href="mailto:denniste@uia.no">
-                                <i class="bi bi-envelope" aria-hidden="true"></i>
-                                denniste@uia.no
-                            </a>
+                            <div class="kontakt-medlem-header">
+                                <img class="kontakt-medlem-avatar" src="./Media/Profil-pic/dennis.jpg" alt="">
+                                <div>
+                                    <p class="kontakt-medlem-navn">Dennis Tea</p>
+                                    <p class="kontakt-medlem-rolle">Gruppemedlem</p>
+                                </div>
+                            </div>
+                            <div class="kontakt-medlem-epost-rad">
+                                <a class="kontakt-medlem-epost" href="mailto:denniste@uia.no">
+                                    <i class="bi bi-envelope" aria-hidden="true"></i>
+                                    <span>denniste@uia.no</span>
+                                </a>
+                                <button type="button" class="kontakt-medlem-kopier" data-email="denniste@uia.no" aria-label="Kopier e-postadresse">
+                                    <i class="bi bi-copy" aria-hidden="true"></i>
+                                </button>
+                            </div>
                         </div>
 
                         <div class="kontakt-medlem-card">
-                            <p class="kontakt-medlem-navn">Noa Vincent Nordén</p>
-                            <p class="kontakt-medlem-rolle">Gruppemedlem</p>
-                            <a class="kontakt-medlem-epost" href="mailto:noa.vincent.norden@uia.no">
-                                <i class="bi bi-envelope" aria-hidden="true"></i>
-                                noa.vincent.norden@uia.no
-                            </a>
+                            <div class="kontakt-medlem-header">
+                                <img class="kontakt-medlem-avatar" src="./Media/Profil-pic/noa.jpg" alt="">
+                                <div>
+                                    <p class="kontakt-medlem-navn">Noa Vincent Nordén</p>
+                                    <p class="kontakt-medlem-rolle">Gruppemedlem</p>
+                                </div>
+                            </div>
+                            <div class="kontakt-medlem-epost-rad">
+                                <a class="kontakt-medlem-epost" href="mailto:noa.vincent.norden@uia.no">
+                                    <i class="bi bi-envelope" aria-hidden="true"></i>
+                                    <span>noa.vincent.norden@uia.no</span>
+                                </a>
+                                <button type="button" class="kontakt-medlem-kopier" data-email="noa.vincent.norden@uia.no" aria-label="Kopier e-postadresse">
+                                    <i class="bi bi-copy" aria-hidden="true"></i>
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </section>
@@ -126,6 +146,6 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
         <script src="./js/reveal.js"></script>
         <script src="./js/layout.js"></script>
-        <script src="./js/contact-form.js"></script>
+        <script src="./js/kontakt-kopier.js"></script>
     </body>
 </html>

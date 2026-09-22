@@ -1,17 +1,8 @@
 /*
-Kontakt-skjema
+Kontaktside
 */
 .kontakt-grid {
     align-items: stretch;
-}
-
-.kontakt-form-card {
-    height: 100%;
-    padding: 2rem;
-    border-radius: 1rem;
-    background-color: #ffffff;
-    border-top: 3px solid var(--accent);
-    box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
 }
 
 .kontakt-intro {
@@ -19,145 +10,37 @@ Kontakt-skjema
     margin-bottom: 1.5rem;
 }
 
-.kontakt-form .form-control:focus {
-    border-color: var(--accent);
-    box-shadow: 0 0 0 0.25rem rgba(37, 99, 235, 0.25);
-}
-
-.kontakt-form-required {
-    color: #b91c1c;
-}
-
-.kontakt-form .form-control.is-invalid:focus {
-    box-shadow: 0 0 0 0.25rem rgba(185, 28, 28, 0.2);
-}
-
-.kontakt-form-honeypot {
-    position: absolute;
-    left: -9999px;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-}
-
-.kontakt-form-status {
-    margin-top: 1rem;
-    font-weight: 500;
-}
-
-.kontakt-form-status-success {
-    color: #15803d;
-}
-
-.kontakt-form-status-error {
-    color: #b91c1c;
-}
-
-
-/*
-Bekreftelses-popup for kontaktskjemaet
-*/
-
-.contact-popup {
-    position: fixed;
-    top: 5.5rem;
-    left: 50%;
-    transform: translate(-50%, -1.5rem);
-    z-index: 1080;
-    width: min(26rem, calc(100vw - 2rem));
-    background-color: #ffffff;
-    border-radius: 0.75rem;
-    box-shadow: 0 16px 40px rgba(15, 23, 42, 0.2);
-    overflow: hidden;
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
-    transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s;
-}
-
-.contact-popup-visible {
-    opacity: 1;
-    visibility: visible;
-    pointer-events: auto;
-    transform: translate(-50%, 0);
-}
-
-.contact-popup-content {
-    display: flex;
-    align-items: flex-start;
-    gap: 0.75rem;
-    padding: 1rem 1.1rem;
-}
-
-.contact-popup-icon {
-    flex-shrink: 0;
-    margin-top: 0.15rem;
-    font-size: 1.3rem;
-    color: #15803d;
-}
-
-.contact-popup-text {
-    flex-grow: 1;
-    margin: 0;
-    font-size: 0.92rem;
-    line-height: 1.5;
-    color: var(--navy);
-}
-
-.contact-popup-close {
-    flex-shrink: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 1.75rem;
-    height: 1.75rem;
-    padding: 0;
-    border: none;
-    border-radius: 50%;
-    background-color: transparent;
-    color: #64748b;
-    font-size: 0.8rem;
-    transition: background-color 0.2s ease, color 0.2s ease;
-}
-
-.contact-popup-close:hover {
-    background-color: rgba(15, 23, 42, 0.08);
-    color: var(--navy);
-}
-
-.contact-popup-timer {
-    height: 3px;
-    width: 100%;
-    background-color: rgba(21, 128, 61, 0.15);
-}
-
-.contact-popup-timer-bar {
-    height: 100%;
-    width: 100%;
-    background-color: #15803d;
-}
-
-@media (max-width: 420px) {
-    .contact-popup {
-        top: 4.75rem;
-        width: calc(100vw - 1.5rem);
-    }
-}
-
 .kontakt-medlem-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
-    gap: 1rem;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
     margin-top: 1.25rem;
 }
 
 .kontakt-medlem-card {
     height: 100%;
-    padding: 1.35rem 1.5rem;
+    padding: 1.5rem;
     border-radius: 0.75rem;
     background-color: #ffffff;
     border-top: 3px solid var(--accent);
     box-shadow: 0 4px 14px rgba(15, 23, 42, 0.06);
+}
+
+.kontakt-medlem-header {
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+    margin-bottom: 1.1rem;
+}
+
+.kontakt-medlem-avatar {
+    flex-shrink: 0;
+    width: 2.75rem;
+    height: 2.75rem;
+    border-radius: 50%;
+    object-fit: cover;
+    background-color: var(--bg-muted);
+    border: 2px solid rgba(37, 99, 235, 0.15);
 }
 
 .kontakt-medlem-navn {
@@ -172,19 +55,74 @@ Bekreftelses-popup for kontaktskjemaet
     font-size: 0.8rem;
     font-weight: 600;
     color: var(--navy);
-    margin-bottom: 0.6rem;
+    opacity: 0.6;
+    margin: 0;
+}
+
+.kontakt-medlem-epost-rad {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.6rem;
+    padding-top: 0.9rem;
+    border-top: 1px solid rgba(11, 31, 58, 0.08);
 }
 
 .kontakt-medlem-epost {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
+    min-width: 0;
     color: var(--text-body);
     text-decoration: none;
-    font-size: 0.9rem;
+    font-size: 0.88rem;
     transition: color 0.2s ease;
+}
+
+.kontakt-medlem-epost span {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .kontakt-medlem-epost:hover {
     color: var(--accent);
+}
+
+.kontakt-medlem-kopier {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    padding: 0;
+    border: none;
+    border-radius: 0.5rem;
+    background-color: rgba(37, 99, 235, 0.08);
+    color: var(--accent);
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.kontakt-medlem-kopier:hover {
+    background-color: rgba(37, 99, 235, 0.16);
+}
+
+.kontakt-medlem-kopier-ok {
+    background-color: rgba(21, 128, 61, 0.14);
+    color: #15803d;
+}
+
+@media (max-width: 991.98px) {
+    .kontakt-medlem-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 575.98px) {
+    .kontakt-medlem-grid {
+        grid-template-columns: 1fr;
+    }
 }

@@ -143,7 +143,14 @@ Teamkort – teammedlemmer (team.html)
     transform: translateY(-2px);
 }
 
-.team-card .card-body .btn-accent {
+.team-card-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.team-card .card-body .btn-accent,
+.team-card .card-body .btn-accent-outline {
     margin-top: 0;
     padding: 0.32rem 0.85rem;
     font-size: 0.76rem;

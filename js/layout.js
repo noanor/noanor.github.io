@@ -1,7 +1,12 @@
 (function () {
     const page = document.documentElement.dataset.page || "";
     const projectDetailPages = ["luftfartshinder", "nkom", "smaragd-motorsport"];
-    const activePage = projectDetailPages.includes(page) ? "prosjekter" : page;
+    const memberDetailPages = ["dennis-tea", "hildid-musse"];
+    const activePage = projectDetailPages.includes(page)
+        ? "prosjekter"
+        : memberDetailPages.includes(page)
+            ? "team"
+            : page;
 
     const navItems = [
         { key: "index", label: "Hjem", href: "./index.html" },

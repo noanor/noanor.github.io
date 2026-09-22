@@ -33,7 +33,7 @@ var ansvar = [
 
 var cardText = [
     "Brenner for frontendutvikling og webdesign, med et sterkt fokus på gode brukeropplevelser.",
-    "Kombinerer frontendutvikling med akademisk skriving og en genuin interesse for UX.",
+    "Brenner for å skape gode digitale brukeropplevelser, med interesse for UX-design, problemløsning og frontendutvikling.",
     "Jobber gjerne på tvers av stacken, med spesiell interesse for sikkerhet i systemene vi bygger.",
     "Har sansen for design og tydelig skriving, og bidrar med et kritisk blikk på sikkerhet.",
     "Liker å bygge rene, gjennomtenkte grensesnitt med fokus på frontendutvikling og design.",
@@ -69,11 +69,20 @@ var emails = [
 
 var bios = [
     "TODO: Skriv en kort bio for Efe Kaan Eksi",
-    "TODO: Skriv en kort bio for Hildid Musse",
+    "Født og oppvokst i Kristiansand. Brenner for gode digitale brukeropplevelser, UX-design og frontendutvikling. Utenom skjermen: trening, fotball og reiser.",
     "TODO: Skriv en kort bio for Madalitso Phiri Skjelnes",
     "TODO: Skriv en kort bio for Marion Rasmussen",
     "TODO: Skriv en kort bio for Dennis Tea",
     "TODO: Skriv en kort bio for Noa Vincent Nordén"
+];
+
+var profileLinks = [
+    "",
+    "./hildid-musse.html",
+    "",
+    "",
+    "",
+    ""
 ];
 
 var cardSection = document.getElementById("card-section");
@@ -89,7 +98,7 @@ if (cardSection) {
 
     for (var i = 0; i < navn.length; i += 1) {
         var role = roles[i] || "";
-        var card = createCard(navn[i], images[i], role, ansvar[i], cardText[i], linkedinLinks[i], githubLinks[i], emails[i], i);
+        var card = createCard(navn[i], images[i], role, ansvar[i], cardText[i], linkedinLinks[i], githubLinks[i], emails[i], i, profileLinks[i]);
         var targetRow = i < 3 ? topRow : bottomRow;
 
         targetRow.append(card);
@@ -98,7 +107,7 @@ if (cardSection) {
     createMemberModal();
 }
 
-function createCard(name, image, role, memberAnsvar, text, linkedinUrl, githubUrl, email, index) {
+function createCard(name, image, role, memberAnsvar, text, linkedinUrl, githubUrl, email, index, profileUrl) {
     // Card container
     var card = document.createElement("div");
     card.className = "card team-card";
@@ -182,10 +191,23 @@ function createCard(name, image, role, memberAnsvar, text, linkedinUrl, githubUr
     detailsBtn.setAttribute("data-bs-target", "#memberModal");
     detailsBtn.setAttribute("data-index", index);
 
+    var actions = document.createElement("div");
+    actions.className = "team-card-actions";
+
+    if (profileUrl) {
+        var profileLink = document.createElement("a");
+        profileLink.className = "btn btn-accent-outline";
+        profileLink.href = profileUrl;
+        profileLink.textContent = "Se profil";
+        actions.append(profileLink);
+    }
+
+    actions.append(detailsBtn);
+
     var cardFooter = document.createElement("div");
     cardFooter.className = "team-card-footer";
     cardFooter.append(socials);
-    cardFooter.append(detailsBtn);
+    cardFooter.append(actions);
 
     cardBody.append(cardTitle);
     cardBody.append(cardRole);

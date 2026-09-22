@@ -126,6 +126,7 @@ function openWheel(x, y) {
     wheel.style.setProperty('--y', `${y}px`);
     wheel.setAttribute('data-chosen', 0);
     wheel.classList.remove('hidden');
+    wheelContainer.classList.add('wheel-tried');
     setTimeout(() => wheel.classList.add('on'), 0);
     isOpen = true;
     justOpened = true;

@@ -19,264 +19,318 @@
     <body>
         <div id="site-navbar"></div>
 
-        <main class="container underside">
-            <a class="back-link" href="./prosjekter.html">← Tilbake til våre prosjekter</a>
-            <h1 class="brand-font mb-3">Luftfartshinder</h1>
+        <main class="underside project-underside">
 
-            <section class="mt-4" id="utfordring-og-losning">
-                <div class="row g-4">
-                    <div class="col-md-6" id="utfordring">
-                        <div class="om-oss-card underside-card">
-                            <h3>Utfordring</h3>
-                            <p>
-                                Hvordan kan man utvikle en brukervennlig webapplikasjon som lar piloter og flybesetning
-                                raskt rapportere enkle luftfartshindre inn i en kartklient?
-                            </p>
-                            <p>
-                                Samtidig skal Kartverkets registerførere få et effektivt verktøy for å motta, behandle
-                                og godkjenne rapporteringene — med en pålitelig dataflyt til Nasjonalt register over
-                                luftfartshindre (NRL).
-                            </p>
-                        </div>
+            <div class="container project-hero">
+                <a class="back-link" href="./prosjekter.html">← Tilbake til våre prosjekter</a>
+
+                <div class="project-hero-top">
+                    <h1 class="brand-font mb-0">Kartverket – Luftfartshinder softwareapplikasjon</h1>
+                </div>
+
+                <div class="prosjekt-tags mb-3">
+                    <span class="prosjekt-tag">ASP.NET Core</span>
+                    <span class="prosjekt-tag">MariaDB</span>
+                    <span class="prosjekt-tag">Leaflet</span>
+                    <span class="prosjekt-tag">Docker</span>
+                    <span class="prosjekt-tag">Sikkerhet</span>
+                </div>
+
+                <p class="prosjekt-intro mb-3">
+                    Et system for innmelding og kontroll av luftfartshindre til Nasjonalt register for
+                    luftfartshindre (NRL) — kåret til beste løsning på EXPO 2025.
+                </p>
+
+                <div class="prosjekt-deltakere mb-0">
+                    <span class="prosjekt-deltakere-label">Deltakere fra CORE-6:</span>
+                    <div class="prosjekt-deltakere-avatars">
+                        <span class="prosjekt-deltaker" title="Efe Kaan Eksi"><img src="./Media/Profil-pic/efe.jpg" alt="Efe Kaan Eksi"></span>
+                        <span class="prosjekt-deltaker" title="Hildid Musse"><img src="./Media/Profil-pic/hildid.jpg" alt="Hildid Musse"></span>
+                        <span class="prosjekt-deltaker" title="Madalitso Phiri Skjelnes"><img src="./Media/Profil-pic/madda.jpg" alt="Madalitso Phiri Skjelnes"></span>
+                        <span class="prosjekt-deltaker" title="Marion Rasmussen"><img src="./Media/Profil-pic/marion.jpg" alt="Marion Rasmussen"></span>
+                        <span class="prosjekt-deltaker" title="Dennis Tea"><img src="./Media/Profil-pic/dennis.jpg" alt="Dennis Tea"></span>
+                        <span class="prosjekt-deltaker" title="Noa Vincent Nordén"><img src="./Media/Profil-pic/noa.jpg" alt="Noa Vincent Nordén"></span>
                     </div>
-                    <div class="col-md-6" id="var-losning">
-                        <div class="om-oss-card underside-card">
-                            <h3>Vår løsning</h3>
+                </div>
+            </div>
+
+            <section class="om-oss-band om-oss-band-light" id="om-prosjektet">
+                <div class="container">
+                    <h2 class="section-heading">Om prosjektet</h2>
+                    <div class="prosjektbeskrivelse-innhold project-band-intro">
+                        <p class="mb-0">
+                            Prosjektet er gjennomført i samarbeid mellom UiA Institutt for informasjonssystemer,
+                            Kartverket og Norsk Luftambulanse (NLA), som en del av IT- og informasjonssystemstudiet
+                            (IS-200, IS-201 og IS-202). Oppgaven går ut på å utvikle en webapplikasjon for
+                            rapportering av enkle luftfartshindre til Nasjonalt register over luftfartshindre (NRL)
+                            — et digitalt register over menneskeskapte objekter som utgjør en risiko for luftfarten,
+                            spesielt ved lavtflyging.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="om-oss-band om-oss-band-white" id="utfordringen">
+                <div class="container">
+                    <h2 class="section-heading">Utfordringen</h2>
+                    <div class="prosjektbeskrivelse-innhold project-band-intro">
+                        <p>
+                            Hvordan kan man utvikle en brukervennlig webapplikasjon som lar piloter og flybesetning
+                            raskt rapportere enkle luftfartshindre inn i en kartklient?
+                        </p>
+                        <p>
+                            Samtidig skal Kartverkets registerførere få et effektivt verktøy for å motta, behandle
+                            og godkjenne rapporteringene — med en pålitelig dataflyt til Nasjonalt register over
+                            luftfartshindre (NRL).
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="om-oss-band om-oss-band-navy" id="var-losning">
+                <div class="container">
+                    <h2 class="section-heading">Vår løsning</h2>
+                    <div class="project-block">
+                        <div class="om-oss-card om-oss-card--dark">
                             <p>
-                                Vi har utviklet Luftfartshinder, en webapplikasjon der piloter og flybesetning fra NLA,
-                                Luftforsvaret og Politiets helikoptertjeneste raskt kan rapportere luftfartshindre.
+                                Vi har utviklet Luftfartshinder, en webapplikasjon der piloter og flybesetning fra
+                                NLA, Luftforsvaret og Politiets helikoptertjeneste raskt kan rapportere
+                                luftfartshindre.
                             </p>
                             <p>
-                                Med en to-klikks løsning og en tannhjulsmeny kan et hinder markeres og lagres som draft
-                                på under 2 sekunder direkte i kartklienten, og sendes inn først når oppdraget er ferdig.
+                                Med en to-klikks løsning og en tannhjulsmeny kan et hinder markeres og lagres som
+                                draft på under 2 sekunder direkte i kartklienten, og sendes inn først når oppdraget
+                                er ferdig.
                             </p>
-                            <p>
+                            <p class="mb-0">
                                 Rapporteringene valideres og lagres i en MariaDB-database, og behandles av
-                                registerførere i Kartverket, som kan godkjenne eller avvise dem gjennom et rollebasert
-                                system.
-                            </p>
-                            <p>
-                                Løsningen er bygget med ASP.NET Core MVC, containerisert med Docker, og grundig testet.
+                                registerførere i Kartverket, som kan godkjenne eller avvise dem gjennom et
+                                rollebasert system.
                             </p>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <section class="mt-5 text-center prosjektbeskrivelse" id="prosjektbeskrivelse">
-                <h2 class="h4 mb-4">Prosjektbeskrivelse</h2>
-                <div class="prosjektbeskrivelse-innhold mx-auto">
-                    <p>
-                        Prosjektet er gjennomført i samarbeid mellom UiA Institutt for informasjonssystemer, Kartverket
-                        og Norsk Luftambulanse (NLA), som en del av IT- og informasjonssystemstudiet (IS-200, IS-201 og
-                        IS-202). Oppgaven går ut på å utvikle en webapplikasjon for rapportering av enkle
-                        luftfartshindre til Nasjonalt register over luftfartshindre (NRL) — et digitalt register over
-                        menneskeskapte objekter som utgjør en risiko for luftfarten, spesielt ved lavtflyging.
+            <section class="om-oss-band om-oss-band-light" id="teknologi">
+                <div class="container">
+                    <h2 class="section-heading">Teknologi</h2>
+                    <p class="prosjektbeskrivelse-innhold project-band-intro">
+                        Løsningen er bygget med ASP.NET Core MVC og containerisert med Docker, med en MariaDB-database
+                        i bunnen. Kartintegrasjonen bruker Leaflet sammen med WMS-tjenester og GeoJSON-standarden,
+                        og hele applikasjonen er grundig testet og sikret gjennom rollebasert tilgangsstyring.
                     </p>
-                    <p>
-                        Løsningen skal kunne brukes av piloter og flybesetning fra NLA, Luftforsvaret og Politiets
-                        helikoptertjeneste til å melde inn hindre raskt og enkelt via en kartklient, mens registerførere
-                        i Kartverket skal kunne motta, behandle og godkjenne eller avvise innmeldingene. Prosjektet
-                        stiller krav til brukervennlighet, datakvalitet og en robust teknisk løsning basert på MariaDB,
-                        Leaflet, WMS-tjenester og GeoJSON-standarden, og skal bidra til å styrke flysikkerheten gjennom
-                        et mer oppdatert og komplett register.
-                    </p>
+                    <div class="tech-chip-row project-tech-chips">
+                        <span class="tech-chip">ASP.NET Core</span>
+                        <span class="tech-chip">MariaDB</span>
+                        <span class="tech-chip">Leaflet</span>
+                        <span class="tech-chip">Docker</span>
+                        <span class="tech-chip">WMS</span>
+                        <span class="tech-chip">GeoJSON</span>
+                        <span class="tech-chip">Sikkerhet</span>
+                    </div>
                 </div>
             </section>
 
-            <section class="mt-5" id="lsp-data">
-                <div class="lsp-data-header mb-4 text-center">
-                    <span class="lsp-medal" aria-hidden="true">
-                        <i class="bi bi-award-fill"></i>
-                    </span>
-                    <h2 class="h4 mb-0 lsp-data-heading">Hva gjorde at vi skilte oss ut og tok førsteplassen?</h2>
-                </div>
+            <section class="om-oss-band om-oss-band-white" id="brukerforstaelse-og-testing">
+                <div class="container">
+                    <h2 class="section-heading">Brukerforståelse og testing</h2>
 
-                <div class="lsp-wheel-row">
-                    <div class="lsp-wheel-card">
-                        <div class="om-oss-card underside-card">
-                            <h3>Suksessfaktor</h3>
-                            <p>
-                                Vi vant EXPO 2025 for beste løsning, blant 23 grupper og over 100 studenter — et
-                                resultat av tett brukersamarbeid og en løsning bygget rundt pilotenes faktiske
-                                arbeidsflyt i felt.
-                            </p>
-                            <p>
-                                Nøkkelen var at vi begynte tidlig med brukerforståelse. Vi så gjennom videoer av piloter
-                                i flyging for å forstå hvordan de samarbeidet i luften, og hadde et Teams-møte med en
-                                politioverbetjent/pilot, assisterende flysjef i Oslo politidistrikts helikoptertjeneste,
-                                om hans utfordringer og ønsker til et ideelt system. Det ga oss «Hjulet» — løsningen som
-                                lot enhver pilot markere et hinder på kortest mulig tid, uten å miste fokus på
-                                oppdraget.
-                            </p>
-                        </div>
+                    <div class="om-oss-card underside-card mb-4">
+                        <h3>Fra brukerinnsikt til «Hjulet»</h3>
+                        <p>
+                            Vi begynte tidlig med brukerforståelse. Vi så gjennom videoer av piloter i flyging for å
+                            forstå hvordan de samarbeidet i luften, og hadde et Teams-møte med en
+                            politioverbetjent/pilot, assisterende flysjef i Oslo politidistrikts
+                            helikoptertjeneste, om hans utfordringer og ønsker til et ideelt system.
+                        </p>
+                        <p class="mb-0">
+                            Det ga oss «Hjulet» — løsningen som lar enhver pilot markere et hinder på kortest mulig
+                            tid, uten å miste fokus på oppdraget.
+                        </p>
                     </div>
 
-                    <span class="lsp-wheel-arrow" aria-hidden="true">
-                        <i class="bi bi-arrow-right"></i>
-                    </span>
-
-                    <div class="lsp-wheel-block text-center">
-                        <h3 class="h5 mb-3">Hjulet i kraft</h3>
-                        <div class="om-oss-video-section lsp-wheel-video mb-4">
-                            <div class="om-oss-video-wrap">
-                                <video class="om-oss-video" controls playsinline preload="metadata"
-                                    aria-label="Demonstrasjon av hjulet i Luftfartshinder">
-                                    <source src="./Media/Videos/hjulet-inn-action-kartverket.mp4" type="video/mp4">
-                                    <source src="./Media/Videos/Hjulet-Inn-Action-Kartverket.mov"
-                                        type="video/quicktime">
-                                    Nettleseren din støtter ikke videoavspilling.
-                                </video>
-                            </div>
-                        </div>
-                        <div class="wheel-wrap">
-                            <!-- <div class="wheel-container"></div>
-                            <div class="wheel-pointer" aria-hidden="true"></div>
-                            <div class="wheel-hub" aria-hidden="true"></div> -->
-                            <div class="wheel hidden">
-                                <div class="arc" data-type="point"><i class="fa-solid fa-genderless"></i></div>
-                                <div class="arc" data-type="mast"><i class="material-symbols-outlined">adjust</i></div>
-                                <div class="arc" data-type="line"><i class="material-symbols-outlined">show_chart</i>
-                                </div>
-                                <div class="arc" data-type="powerline"><i
-                                        class="material-symbols-outlined">diagonal_line</i></div>
-                                <div class="arc" data-type="area"><i class="material-symbols-outlined">crop_square</i>
+                    <div class="row g-4 align-items-stretch">
+                        <div class="col-lg-6">
+                            <div class="om-oss-card underside-card">
+                                <h3>Hjulet i kraft</h3>
+                                <div class="om-oss-video-section wheel-showcase-video">
+                                    <div class="om-oss-video-wrap">
+                                        <video class="om-oss-video" controls playsinline preload="metadata"
+                                            poster="./Media/Videos/posters/hjulet-inn-action-kartverket.jpg"
+                                            aria-label="Demonstrasjon av hjulet i Luftfartshinder">
+                                            <source src="./Media/Videos/hjulet-inn-action-kartverket.mp4" type="video/mp4">
+                                            <source src="./Media/Videos/Hjulet-Inn-Action-Kartverket.mov"
+                                                type="video/quicktime">
+                                            Nettleseren din støtter ikke videoavspilling.
+                                        </video>
+                                    </div>
                                 </div>
                             </div>
                         </div>
 
-
-                        <!-- <button type="button" id="spin-btn" class="btn btn-accent mt-3">Spin</button>
-                    <p id="spin-result" class="mt-2 mb-0"></p> -->
-                    </div>
-                </div>
-            </section>
-
-            <section class="mt-5" id="arbeidsprosess">
-                <h2 class="h4 mb-2">Arbeidsprosess</h2>
-                <p class="mb-4 col-lg-10">
-                    Arbeidet fulgte prinsipper for systemutvikling og god programmeringspraksis.
-                </p>
-                <div class="row g-4">
-                    <div class="col-md-6 col-lg-3">
-                        <div class="om-oss-card underside-card">
-                            <h3>
-                                <span class="step-number" aria-hidden="true">1</span>
-                                Arkitektur og oppsett
-                            </h3>
-                            <p>
-                                Vi etablerte en MVC-struktur som la grunnlaget for en skalerbar applikasjon.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-3">
-                        <div class="om-oss-card underside-card">
-                            <h3>
-                                <span class="step-number" aria-hidden="true">2</span>
-                                Frontend og skjema
-                            </h3>
-                            <p>
-                                Vi implementerte skjemaer og brukervennlig frontend for innhenting og visning av data.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-3">
-                        <div class="om-oss-card underside-card">
-                            <h3>
-                                <span class="step-number" aria-hidden="true">3</span>
-                                Kartintegrasjon
-                            </h3>
-                            <p>
-                                Vi koblet inn kartfunksjonalitet slik at brukere kunne interagere med geografisk
-                                informasjon.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-3">
-                        <div class="om-oss-card underside-card">
-                            <h3>
-                                <span class="step-number" aria-hidden="true">4</span>
-                                Database og identitetshåndtering
-                            </h3>
-                            <p>
-                                Applikasjonen ble koblet til en database med støtte for sikker innlogging og lagring av
-                                brukerdata.
-                            </p>
+                        <div class="col-lg-6">
+                            <div class="om-oss-card underside-card text-center wheel-showcase-card">
+                                <h3 class="justify-content-center">Prøv hjulet selv</h3>
+                                <div class="wheel-demo">
+                                    <div class="wheel-wrap">
+                                        <span class="wheel-idle-icon" aria-hidden="true">
+                                            <i class="bi bi-hand-index-thumb"></i>
+                                        </span>
+                                        <div class="wheel hidden">
+                                            <div class="arc" data-type="point"><i class="fa-solid fa-genderless"></i></div>
+                                            <div class="arc" data-type="mast"><i class="material-symbols-outlined">adjust</i></div>
+                                            <div class="arc" data-type="line"><i class="material-symbols-outlined">show_chart</i>
+                                            </div>
+                                            <div class="arc" data-type="powerline"><i
+                                                    class="material-symbols-outlined">diagonal_line</i></div>
+                                            <div class="arc" data-type="area"><i class="material-symbols-outlined">crop_square</i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <span class="wheel-demo-hint">
+                                        <i class="bi bi-hand-index-thumb" aria-hidden="true"></i>
+                                        Trykk på boksen for å prøve hjulet
+                                    </span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <section class="mt-5" id="samarbeid">
-                <h2 class="h4 mb-2">Samarbeidsmetodikk</h2>
-                <p class="mb-4 col-lg-10">
-                    Vi organiserte arbeidet etter agile prinsipper, med tydelige rytmer og synlig fremdrift for hele
-                    teamet.
-                </p>
-                <div class="samarbeid-flow">
-                    <article class="samarbeid-circle">
-                        <h3>Agile metode</h3>
-                        <p>
-                            Iterative sykluser, tidlig tilbakemelding og kontinuerlig forbedring.
-                        </p>
-                    </article>
-                    <span class="samarbeid-arrow" aria-hidden="true">
-                        <i class="bi bi-arrow-right"></i>
-                    </span>
-                    <article class="samarbeid-circle">
-                        <h3>Scrum</h3>
-                        <p>
-                            Sprintperioder med klare mål, backlog og gjennomgang etter hver sprint.
-                        </p>
-                    </article>
-                    <span class="samarbeid-arrow" aria-hidden="true">
-                        <i class="bi bi-arrow-right"></i>
-                    </span>
-                    <article class="samarbeid-circle">
-                        <h3>Kanban</h3>
-                        <p>
-                            Synlig arbeidsflyt på tavle, med tydelig status og færre flaskehalser.
-                        </p>
-                    </article>
-                    <span class="samarbeid-arrow" aria-hidden="true">
-                        <i class="bi bi-arrow-right"></i>
-                    </span>
-                    <article class="samarbeid-circle">
-                        <h3>Morgenmøter</h3>
-                        <p>
-                            Korte standups for fremdrift, hindringer og neste steg.
-                        </p>
-                    </article>
+            <section class="om-oss-band om-oss-band-light" id="arbeidsprosess">
+                <div class="container">
+                    <h2 class="section-heading">Arbeidsprosess</h2>
+                    <p class="prosjektbeskrivelse-innhold project-band-intro mb-4">
+                        Arbeidet fulgte prinsipper for systemutvikling og god programmeringspraksis.
+                    </p>
+                    <div class="row g-4">
+                        <div class="col-md-6 col-lg-3">
+                            <div class="om-oss-card underside-card">
+                                <h3>
+                                    <span class="step-number" aria-hidden="true">1</span>
+                                    Arkitektur og oppsett
+                                </h3>
+                                <p>
+                                    Vi etablerte en MVC-struktur som la grunnlaget for en skalerbar applikasjon.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3">
+                            <div class="om-oss-card underside-card">
+                                <h3>
+                                    <span class="step-number" aria-hidden="true">2</span>
+                                    Frontend og skjema
+                                </h3>
+                                <p>
+                                    Vi implementerte skjemaer og brukervennlig frontend for innhenting og visning av
+                                    data.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3">
+                            <div class="om-oss-card underside-card">
+                                <h3>
+                                    <span class="step-number" aria-hidden="true">3</span>
+                                    Kartintegrasjon
+                                </h3>
+                                <p>
+                                    Vi koblet inn kartfunksjonalitet slik at brukere kunne interagere med geografisk
+                                    informasjon.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3">
+                            <div class="om-oss-card underside-card">
+                                <h3>
+                                    <span class="step-number" aria-hidden="true">4</span>
+                                    Database og identitetshåndtering
+                                </h3>
+                                <p>
+                                    Applikasjonen ble koblet til en database med støtte for sikker innlogging og
+                                    lagring av brukerdata.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
 
-            <section class="mt-5" id="expo-2025">
-                <h2 class="h4 mb-2">EXPO-2025</h2>
-                <p class="mb-4 col-lg-10">
-                    Bilder og opptak fra presentasjonen og testing med piloter under EXPO 2025.
-                </p>
-                <div class="row g-4">
-                    <div class="col-md-6">
+            <section class="om-oss-band om-oss-band-white" id="samarbeid">
+                <div class="container">
+                    <h2 class="section-heading">Samarbeid</h2>
+                    <p class="prosjektbeskrivelse-innhold project-band-intro mb-4">
+                        Vi organiserte arbeidet etter agile prinsipper, med tydelige rytmer og synlig fremdrift for
+                        hele teamet.
+                    </p>
+                    <div class="samarbeid-flow">
+                        <article class="samarbeid-circle">
+                            <h3>Agile metode</h3>
+                            <p>
+                                Iterative sykluser, tidlig tilbakemelding og kontinuerlig forbedring.
+                            </p>
+                        </article>
+                        <span class="samarbeid-arrow" aria-hidden="true">
+                            <i class="bi bi-arrow-right"></i>
+                        </span>
+                        <article class="samarbeid-circle">
+                            <h3>Scrum</h3>
+                            <p>
+                                Sprintperioder med klare mål, backlog og gjennomgang etter hver sprint.
+                            </p>
+                        </article>
+                        <span class="samarbeid-arrow" aria-hidden="true">
+                            <i class="bi bi-arrow-right"></i>
+                        </span>
+                        <article class="samarbeid-circle">
+                            <h3>Kanban</h3>
+                            <p>
+                                Synlig arbeidsflyt på tavle, med tydelig status og færre flaskehalser.
+                            </p>
+                        </article>
+                        <span class="samarbeid-arrow" aria-hidden="true">
+                            <i class="bi bi-arrow-right"></i>
+                        </span>
+                        <article class="samarbeid-circle">
+                            <h3>Morgenmøter</h3>
+                            <p>
+                                Korte standups for fremdrift, hindringer og neste steg.
+                            </p>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <section class="om-oss-band om-oss-band-light" id="expo-2025">
+                <div class="container">
+                    <h2 class="section-heading">EXPO 2025</h2>
+                    <p class="prosjektbeskrivelse-innhold project-band-intro mb-4">
+                        Bilder og opptak fra presentasjonen og testing med piloter under EXPO 2025.
+                    </p>
+
+                    <div class="expo-block">
                         <h3 class="expo-media-title">Gruppen</h3>
-                        <div class="expo-media-image">
+                        <div class="expo-photo-frame">
                             <img src="./Media/IMG_3617.jpeg" class="expo-photo" alt="CORE-6 på EXPO 2025">
                         </div>
                     </div>
-                    <div class="col-md-6">
+
+                    <div class="expo-block">
                         <h3 class="expo-media-title">Pilot Testing</h3>
-                        <div class="row g-3">
-                            <div class="col-12">
-                                <div class="om-oss-video-wrap expo-video-wrap">
+                        <div class="row g-4 justify-content-center">
+                            <div class="col-6">
+                                <div class="expo-portrait-frame">
                                     <video class="om-oss-video" controls playsinline preload="metadata"
-                                        aria-label="Pilot Testing opptak 1">
+                                        poster="./Media/Videos/posters/IMG_3471.jpg" aria-label="Pilot Testing opptak 1">
                                         <source src="./Media/Videos/IMG_3471.mp4" type="video/mp4">
                                     </video>
                                 </div>
                             </div>
-                            <div class="col-12">
-                                <div class="om-oss-video-wrap expo-video-wrap">
+                            <div class="col-6">
+                                <div class="expo-portrait-frame">
                                     <video class="om-oss-video" controls playsinline preload="metadata"
-                                        aria-label="Pilot Testing opptak 2">
+                                        poster="./Media/Videos/posters/IMG_3473.jpg" aria-label="Pilot Testing opptak 2">
                                         <source src="./Media/Videos/IMG_3473.mp4" type="video/mp4">
                                     </video>
                                 </div>
@@ -286,30 +340,57 @@
                 </div>
             </section>
 
-            <section class="mt-5 mb-4" id="dokumentasjon">
-                <div class="om-oss-card underside-card dokumentasjon-kort">
-                    <div class="row g-4 align-items-center">
-                        <div class="col-lg-6">
-                            <h3>Dokumentasjon og resultater</h3>
+            <section class="om-oss-band om-oss-band-white" id="resultat-og-laering">
+                <div class="container">
+                    <h2 class="section-heading">
+                        <span class="section-heading-medal" aria-hidden="true">
+                            <span class="lsp-medal"><i class="bi bi-award-fill"></i></span>
+                        </span>
+                        Resultat og læring
+                    </h2>
+                    <div class="project-block">
+                        <div class="om-oss-card underside-card">
                             <p>
-                                For å sikre transparens og etterprøvbarhet ble hele prosessen grundig dokumentert
-                                underveis. Det endelige resultatet er en prototype som viser hvordan piloter og
-                                flybesetning kan rapportere luftfartshindre raskt inn mot Kartverkets Nasjonale register
-                                over luftfartshindre (NRL).
+                                Vi vant EXPO 2025 for beste løsning, blant 23 grupper og over 100 studenter — et
+                                resultat av tett brukersamarbeid og en løsning bygget rundt pilotenes faktiske
+                                arbeidsflyt i felt.
                             </p>
-                            <p>
-                                Gjennom løsningen har vi lagt vekt på funksjonalitet, sikkerhet og brukervennlighet,
-                                samtidig som vi har vist hvordan geografisk informasjon om luftfartshindre kan
-                                registreres og presenteres på en rask og interaktiv måte direkte i felt.
+                            <p class="mb-0">
+                                Erfaringen lærte oss hvor mye tidlig og tett brukerinvolvering har å si for
+                                sluttresultatet, og at de beste løsningene ofte er de enkleste å bruke i en hektisk
+                                arbeidssituasjon.
                             </p>
-                            <a class="btn btn-accent mt-2" href="https://github.com/noanor/kart-oppgave" target="_blank"
-                                rel="noopener noreferrer">
-                                <i class="bi bi-github me-2" aria-hidden="true"></i>
-                                Se kode på GitHub
-                            </a>
                         </div>
-                        <div class="col-lg-6">
-                            <pre class="code-panel" tabindex="0"><code><span class="code-comment">// ASP.NET Core MVC Structure</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="om-oss-band om-oss-band-light" id="dokumentasjon">
+                <div class="container">
+                    <h2 class="section-heading">Dokumentasjon</h2>
+                    <div class="om-oss-card underside-card dokumentasjon-kort">
+                        <div class="row g-4 align-items-center">
+                            <div class="col-lg-6">
+                                <p>
+                                    For å sikre transparens og etterprøvbarhet ble hele prosessen grundig
+                                    dokumentert underveis. Det endelige resultatet er en prototype som viser hvordan
+                                    piloter og flybesetning kan rapportere luftfartshindre raskt inn mot Kartverkets
+                                    Nasjonale register over luftfartshindre (NRL).
+                                </p>
+                                <p>
+                                    Gjennom løsningen har vi lagt vekt på funksjonalitet, sikkerhet og
+                                    brukervennlighet, samtidig som vi har vist hvordan geografisk informasjon om
+                                    luftfartshindre kan registreres og presenteres på en rask og interaktiv måte
+                                    direkte i felt.
+                                </p>
+                                <a class="btn btn-accent mt-2" href="https://github.com/noanor/kart-oppgave" target="_blank"
+                                    rel="noopener noreferrer">
+                                    <i class="bi bi-github me-2" aria-hidden="true"></i>
+                                    Se kode på GitHub
+                                </a>
+                            </div>
+                            <div class="col-lg-6">
+                                <pre class="code-panel" tabindex="0"><code><span class="code-comment">// ASP.NET Core MVC Structure</span>
 <span class="code-keyword">public class</span> <span class="code-type">MapController</span> : <span class="code-type">Controller</span>
 {
     <span class="code-keyword">private readonly</span> <span class="code-type">IMapService</span> _mapService;
@@ -321,19 +402,28 @@
         <span class="code-keyword">return</span> <span class="code-method">View</span>(mapData);
     }
 }</code></pre>
+                            </div>
                         </div>
                     </div>
                 </div>
             </section>
+
+            <div class="container project-footer-nav">
+                <a class="back-link" href="./prosjekter.html">
+                    Se andre prosjekter <i class="bi bi-arrow-right" aria-hidden="true"></i>
+                </a>
+            </div>
+
         </main>
 
         <div id="site-footer"></div>
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+            integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
             crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/spin-wheel@5.0.2/dist/spin-wheel-iife.js"></script>
         <script src="./js/prosjekt-wheel.js"></script>
+        <script src="./js/reveal.js"></script>
         <script src="./js/layout.js"></script>
     </body>
 

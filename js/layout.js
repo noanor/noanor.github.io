@@ -1,6 +1,7 @@
 (function () {
     const page = document.documentElement.dataset.page || "";
-    const activePage = page === "luftfartshinder" ? "prosjekter" : page;
+    const projectDetailPages = ["luftfartshinder", "nkom", "smaragd-motorsport"];
+    const activePage = projectDetailPages.includes(page) ? "prosjekter" : page;
 
     const navItems = [
         { key: "index", label: "Hjem", href: "./index.html" },

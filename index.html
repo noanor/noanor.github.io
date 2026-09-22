@@ -17,11 +17,12 @@
     <body>
         <div id="site-navbar"></div>
 
+        <main>
         <section id="forside">
             <div class="container forside-innhold">
-                <h1 class="display-4 brand-font text-accent mb-2">CORE-6</h1>
-                <p class="brand-tagline mb-4">Sammen bygger vi bedre.</p>
-                <div class="d-flex flex-column flex-sm-row gap-3">
+                <h1 class="display-4 brand-font text-accent mb-2" data-reveal>CORE-6</h1>
+                <p class="brand-tagline mb-4" data-reveal>Sammen bygger vi bedre.</p>
+                <div class="d-flex flex-column flex-sm-row gap-3" data-reveal>
                     <a href="./prosjekter.html" class="btn btn-accent btn-lg">Se alle prosjektene</a>
                     <a href="./team.html" class="btn btn-accent-outline btn-lg">Vårt team</a>
                 </div>
@@ -72,6 +73,7 @@
                 </div>
             </div>
         </section>
+        </main>
 
         <div id="site-footer"></div>
 
@@ -79,6 +81,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/vanta@0.5.24/dist/vanta.globe.min.js"></script>
         <script src="./js/forside-vanta.js"></script>
+        <script src="./js/reveal.js"></script>
         <script src="./js/layout.js"></script>
     </body>
 </html>

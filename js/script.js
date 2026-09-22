@@ -72,7 +72,7 @@ var bios = [
     "Født og oppvokst i Kristiansand. Brenner for gode digitale brukeropplevelser, UX-design og frontendutvikling. Utenom skjermen: trening, fotball og reiser.",
     "TODO: Skriv en kort bio for Madalitso Phiri Skjelnes",
     "TODO: Skriv en kort bio for Marion Rasmussen",
-    "TODO: Skriv en kort bio for Dennis Tea",
+    "Interessert i UX/UI, frontend, webutvikling og design, og opptatt av å bygge gjennomtenkte, brukervennlige løsninger. Utenfor skjermen er han glad i løping, reising og musikk.",
     "TODO: Skriv en kort bio for Noa Vincent Nordén"
 ];
 
@@ -81,7 +81,7 @@ var profileLinks = [
     "./hildid-musse.html",
     "",
     "",
-    "",
+    "./dennis-tea.html",
     ""
 ];
 

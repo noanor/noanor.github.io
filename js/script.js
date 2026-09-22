@@ -68,7 +68,7 @@ var emails = [
 ];
 
 var bios = [
-    "TODO: Skriv en kort bio for Efe Kaan Eksi",
+    "Setter pris på en aktiv hverdag med trening, padel og fotball, og følger Real Madrid tett. Er også glad i fotografering og å tilbringe tid med venner og familie.",
     "Født og oppvokst i Kristiansand. Brenner for gode digitale brukeropplevelser, UX-design og frontendutvikling. Utenom skjermen: trening, fotball og reiser.",
     "TODO: Skriv en kort bio for Madalitso Phiri Skjelnes",
     "TODO: Skriv en kort bio for Marion Rasmussen",
@@ -77,7 +77,7 @@ var bios = [
 ];
 
 var profileLinks = [
-    "",
+    "./efe-kaan-eksi.html",
     "./hildid-musse.html",
     "",
     "",

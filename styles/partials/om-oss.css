@@ -33,6 +33,7 @@ Om oss seksjonen
     background-color: var(--accent-soft);
 }
 
+
 .section-heading {
     font-family: var(--font-ui);
     font-weight: 700;
@@ -114,8 +115,7 @@ Om oss seksjonen
     white-space: nowrap;
 }
 
-
-/* 
+/*
 Gruppebildet 
 */
 

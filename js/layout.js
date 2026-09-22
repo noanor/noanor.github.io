@@ -97,11 +97,6 @@
                             <span>efeke@uia.no</span>
                         </a>
 
-                        <a href="tel:+4799686783">
-                            <i class="bi bi-telephone" aria-hidden="true"></i>
-                            <span>+47 996 86 783</span>
-                        </a>
-
                         <a
                             href="https://www.uia.no/studier/program/it-og-informasjonssystemer-bachelor/"
                             target="_blank"

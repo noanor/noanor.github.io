@@ -33,7 +33,7 @@ var ansvar = [
 
 var cardText = [
     "Brenner for frontendutvikling og webdesign, med et sterkt fokus på gode brukeropplevelser.",
-    "Kombinerer frontendutvikling med akademisk skriving og en genuin interesse for UX.",
+    "Brenner for å skape gode digitale brukeropplevelser, med interesse for UX-design, problemløsning og frontendutvikling.",
     "Jobber gjerne på tvers av stacken, med spesiell interesse for sikkerhet i systemene vi bygger.",
     "Har sansen for design og tydelig skriving, og bidrar med et kritisk blikk på sikkerhet.",
     "Liker å bygge rene, gjennomtenkte grensesnitt med fokus på frontendutvikling og design.",
@@ -69,19 +69,19 @@ var emails = [
 
 var bios = [
     "Setter pris på en aktiv hverdag med trening, padel og fotball, og følger Real Madrid tett. Er også glad i fotografering og å tilbringe tid med venner og familie.",
-    "TODO: Skriv en kort bio for Hildid Musse",
+    "Født og oppvokst i Kristiansand. Brenner for gode digitale brukeropplevelser, UX-design og frontendutvikling. Utenom skjermen: trening, fotball og reiser.",
     "TODO: Skriv en kort bio for Madalitso Phiri Skjelnes",
     "TODO: Skriv en kort bio for Marion Rasmussen",
-    "TODO: Skriv en kort bio for Dennis Tea",
+    "Interessert i UX/UI, frontend, webutvikling og design, og opptatt av å bygge gjennomtenkte, brukervennlige løsninger. Utenfor skjermen er han glad i løping, reising og musikk.",
     "TODO: Skriv en kort bio for Noa Vincent Nordén"
 ];
 
 var profileLinks = [
     "./efe-kaan-eksi.html",
+    "./hildid-musse.html",
     "",
     "",
-    "",
-    "",
+    "./dennis-tea.html",
     ""
 ];
 

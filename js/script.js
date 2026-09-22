@@ -72,8 +72,17 @@ var bios = [
     "TODO: Skriv en kort bio for Hildid Musse",
     "TODO: Skriv en kort bio for Madalitso Phiri Skjelnes",
     "TODO: Skriv en kort bio for Marion Rasmussen",
-    "TODO: Skriv en kort bio for Dennis Tea",
+    "Interessert i UX/UI, frontend, webutvikling og design, og opptatt av å bygge gjennomtenkte, brukervennlige løsninger. Utenfor skjermen er han glad i løping, reising og musikk.",
     "TODO: Skriv en kort bio for Noa Vincent Nordén"
+];
+
+var profileLinks = [
+    "",
+    "",
+    "",
+    "",
+    "./dennis-tea.html",
+    ""
 ];
 
 var cardSection = document.getElementById("card-section");
@@ -89,7 +98,7 @@ if (cardSection) {
 
     for (var i = 0; i < navn.length; i += 1) {
         var role = roles[i] || "";
-        var card = createCard(navn[i], images[i], role, ansvar[i], cardText[i], linkedinLinks[i], githubLinks[i], emails[i], i);
+        var card = createCard(navn[i], images[i], role, ansvar[i], cardText[i], linkedinLinks[i], githubLinks[i], emails[i], i, profileLinks[i]);
         var targetRow = i < 3 ? topRow : bottomRow;
 
         targetRow.append(card);
@@ -98,7 +107,7 @@ if (cardSection) {
     createMemberModal();
 }
 
-function createCard(name, image, role, memberAnsvar, text, linkedinUrl, githubUrl, email, index) {
+function createCard(name, image, role, memberAnsvar, text, linkedinUrl, githubUrl, email, index, profileUrl) {
     // Card container
     var card = document.createElement("div");
     card.className = "card team-card";
@@ -182,10 +191,23 @@ function createCard(name, image, role, memberAnsvar, text, linkedinUrl, githubUr
     detailsBtn.setAttribute("data-bs-target", "#memberModal");
     detailsBtn.setAttribute("data-index", index);
 
+    var actions = document.createElement("div");
+    actions.className = "team-card-actions";
+
+    if (profileUrl) {
+        var profileLink = document.createElement("a");
+        profileLink.className = "btn btn-accent-outline";
+        profileLink.href = profileUrl;
+        profileLink.textContent = "Se profil";
+        actions.append(profileLink);
+    }
+
+    actions.append(detailsBtn);
+
     var cardFooter = document.createElement("div");
     cardFooter.className = "team-card-footer";
     cardFooter.append(socials);
-    cardFooter.append(detailsBtn);
+    cardFooter.append(actions);
 
     cardBody.append(cardTitle);
     cardBody.append(cardRole);

@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html lang="no" data-page="nkom">
+<html lang="nb" data-page="nkom">
 
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Nasjonal kommunikasjonsmyndighet · CORE-6</title>
         <link rel="icon" type="image/png" href="./Media/logo-c6-white.png">
+        <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
             integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
@@ -16,12 +17,13 @@
     </head>
 
     <body>
+        <a class="skip-link" href="#hovedinnhold">Hopp til hovedinnhold</a>
         <div id="site-navbar"></div>
 
-        <main class="underside project-underside">
+        <main class="underside project-underside" id="hovedinnhold" tabindex="-1">
 
             <div class="container project-hero">
-                <a class="back-link" href="./prosjekter.html">← Tilbake til våre prosjekter</a>
+                <a class="back-link" href="./prosjekter.html"><span aria-hidden="true">←</span> Tilbake til våre prosjekter</a>
 
                 <div class="project-hero-top">
                     <h1 class="brand-font mb-0">Nasjonal kommunikasjonsmyndighet (Nkom) – FK-fjernkontroll</h1>
@@ -210,6 +212,7 @@
                         <div class="project-cta-actions">
                             <a class="btn btn-accent" href="https://phiri-madalitso.github.io/Nkom/index.html#hjem" target="_blank" rel="noopener noreferrer">
                                 Følg med på prosjektet <i class="bi bi-box-arrow-up-right ms-1" aria-hidden="true"></i>
+                                <span class="visually-hidden">(åpnes i ny fane)</span>
                             </a>
                             <a class="project-cta-secondary" href="./prosjekter.html">
                                 Se andre prosjekter <i class="bi bi-arrow-right" aria-hidden="true"></i>

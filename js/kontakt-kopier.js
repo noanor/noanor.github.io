@@ -4,6 +4,8 @@
         return;
     }
 
+    var statusRegion = document.getElementById("kopier-status");
+
     knapper.forEach(function (knapp) {
         var ikon = knapp.querySelector("i");
         var tidsavbrudd = null;
@@ -17,6 +19,10 @@
                 ikon.className = "bi bi-check-lg";
                 knapp.classList.add("kontakt-medlem-kopier-ok");
                 knapp.setAttribute("aria-label", "Kopiert!");
+
+                if (statusRegion) {
+                    statusRegion.textContent = "E-postadressen " + epost + " er kopiert.";
+                }
 
                 tidsavbrudd = setTimeout(function () {
                     ikon.className = "bi bi-copy";

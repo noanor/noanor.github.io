@@ -1,11 +1,14 @@
 <!DOCTYPE html>
-<html lang="no" data-page="luftfartshinder">
+<html lang="nb" data-page="luftfartshinder">
 
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Luftfartshinder · CORE-6</title>
         <link rel="icon" type="image/png" href="./Media/logo-c6-white.png">
+        <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
             integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
@@ -17,12 +20,13 @@
     </head>
 
     <body>
+        <a class="skip-link" href="#hovedinnhold">Hopp til hovedinnhold</a>
         <div id="site-navbar"></div>
 
-        <main class="underside project-underside">
+        <main class="underside project-underside" id="hovedinnhold" tabindex="-1">
 
             <div class="container project-hero">
-                <a class="back-link" href="./prosjekter.html">← Tilbake til våre prosjekter</a>
+                <a class="back-link" href="./prosjekter.html"><span aria-hidden="true">←</span> Tilbake til våre prosjekter</a>
 
                 <div class="project-hero-top">
                     <h1 class="brand-font mb-0">Kartverket – Luftfartshinder softwareapplikasjon</h1>
@@ -173,18 +177,18 @@
                             <div class="om-oss-card underside-card text-center wheel-showcase-card">
                                 <h3 class="justify-content-center">Prøv hjulet selv</h3>
                                 <div class="wheel-demo">
-                                    <div class="wheel-wrap">
+                                    <div class="wheel-wrap" role="button" tabindex="0" aria-haspopup="true" aria-expanded="false" aria-label="Åpne hjulet og velg type luftfartshinder">
                                         <span class="wheel-idle-icon" aria-hidden="true">
                                             <i class="bi bi-hand-index-thumb"></i>
                                         </span>
                                         <div class="wheel hidden">
-                                            <div class="arc" data-type="point"><i class="fa-solid fa-genderless"></i></div>
-                                            <div class="arc" data-type="mast"><i class="material-symbols-outlined">adjust</i></div>
-                                            <div class="arc" data-type="line"><i class="material-symbols-outlined">show_chart</i>
+                                            <div class="arc" data-type="point" role="button" tabindex="-1" aria-label="Punkt"><i class="fa-solid fa-genderless" aria-hidden="true"></i></div>
+                                            <div class="arc" data-type="mast" role="button" tabindex="-1" aria-label="Mast"><i class="material-symbols-outlined" aria-hidden="true">adjust</i></div>
+                                            <div class="arc" data-type="line" role="button" tabindex="-1" aria-label="Linje"><i class="material-symbols-outlined" aria-hidden="true">show_chart</i>
                                             </div>
-                                            <div class="arc" data-type="powerline"><i
-                                                    class="material-symbols-outlined">diagonal_line</i></div>
-                                            <div class="arc" data-type="area"><i class="material-symbols-outlined">crop_square</i>
+                                            <div class="arc" data-type="powerline" role="button" tabindex="-1" aria-label="Luftspenn"><i
+                                                    class="material-symbols-outlined" aria-hidden="true">diagonal_line</i></div>
+                                            <div class="arc" data-type="area" role="button" tabindex="-1" aria-label="Areal"><i class="material-symbols-outlined" aria-hidden="true">crop_square</i>
                                             </div>
                                         </div>
                                     </div>
@@ -317,12 +321,12 @@
                     </div>
 
                     <div class="expo-block">
-                        <h3 class="expo-media-title">Pilot Testing</h3>
+                        <h3 class="expo-media-title">Pilottesting</h3>
                         <div class="row g-4 justify-content-center">
                             <div class="col-6">
                                 <div class="expo-portrait-frame">
                                     <video class="om-oss-video" controls playsinline preload="metadata"
-                                        poster="./Media/Videos/posters/IMG_3471.jpg" aria-label="Pilot Testing opptak 1">
+                                        poster="./Media/Videos/posters/IMG_3471.jpg" aria-label="Pilottesting opptak 1">
                                         <source src="./Media/Videos/IMG_3471.mp4" type="video/mp4">
                                     </video>
                                 </div>
@@ -330,7 +334,7 @@
                             <div class="col-6">
                                 <div class="expo-portrait-frame">
                                     <video class="om-oss-video" controls playsinline preload="metadata"
-                                        poster="./Media/Videos/posters/IMG_3473.jpg" aria-label="Pilot Testing opptak 2">
+                                        poster="./Media/Videos/posters/IMG_3473.jpg" aria-label="Pilottesting opptak 2">
                                         <source src="./Media/Videos/IMG_3473.mp4" type="video/mp4">
                                     </video>
                                 </div>
@@ -387,6 +391,7 @@
                                     rel="noopener noreferrer">
                                     <i class="bi bi-github me-2" aria-hidden="true"></i>
                                     Se kode på GitHub
+                                    <span class="visually-hidden">(åpnes i ny fane)</span>
                                 </a>
                             </div>
                             <div class="col-lg-6">

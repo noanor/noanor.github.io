@@ -110,7 +110,7 @@ function createCard(name, image, role, memberAnsvar, text, linkedinUrl, githubUr
 
     var img = document.createElement("img");
     img.setAttribute("src", "./Media/Profil-pic/" + image + ".jpg");
-    img.setAttribute("alt", "...")
+    img.setAttribute("alt", name);
     img.id = 'image-' + `${image}`;
     imageWrap.append(img);
 
@@ -119,7 +119,7 @@ function createCard(name, image, role, memberAnsvar, text, linkedinUrl, githubUr
     cardBody.className = "card-body";
     card.append(cardBody);
 
-    var cardTitle = document.createElement("h5");
+    var cardTitle = document.createElement("h2");
     cardTitle.className = "card-title";
     cardTitle.textContent = `${name}`;
 
@@ -152,7 +152,7 @@ function createCard(name, image, role, memberAnsvar, text, linkedinUrl, githubUr
     linkedinLink.href = linkedinUrl;
     linkedinLink.target = "_blank";
     linkedinLink.rel = "noopener";
-    linkedinLink.setAttribute("aria-label", "LinkedIn til " + name);
+    linkedinLink.setAttribute("aria-label", "LinkedIn til " + name + " (åpnes i ny fane)");
     linkedinLink.innerHTML = '<i class="bi bi-linkedin" aria-hidden="true"></i>';
 
     var githubLink = document.createElement("a");
@@ -160,7 +160,7 @@ function createCard(name, image, role, memberAnsvar, text, linkedinUrl, githubUr
     githubLink.href = githubUrl;
     githubLink.target = "_blank";
     githubLink.rel = "noopener";
-    githubLink.setAttribute("aria-label", "GitHub til " + name);
+    githubLink.setAttribute("aria-label", "GitHub til " + name + " (åpnes i ny fane)");
     githubLink.innerHTML = '<i class="bi bi-github" aria-hidden="true"></i>';
 
     var mailLink = document.createElement("a");
@@ -201,6 +201,7 @@ function createMemberModal() {
     modal.id = "memberModal";
     modal.tabIndex = -1;
     modal.setAttribute("aria-hidden", "true");
+    modal.setAttribute("aria-labelledby", "memberModalName");
 
     modal.innerHTML =
         '<div class="modal-dialog modal-dialog-centered">' +
@@ -210,7 +211,7 @@ function createMemberModal() {
         '      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Lukk"></button>' +
         '    </div>' +
         '    <div class="modal-body">' +
-        '      <img id="memberModalImage" src="" alt="..." class="rounded mb-3">' +
+        '      <img id="memberModalImage" src="" alt="" class="rounded mb-3">' +
         '      <p class="card-role" id="memberModalRole"></p>' +
         '      <p id="memberModalBio"></p>' +
         '    </div>' +
@@ -227,6 +228,7 @@ function createMemberModal() {
 
         modal.querySelector("#memberModalName").textContent = navn[index];
         modal.querySelector("#memberModalImage").setAttribute("src", "./Media/Profil-pic/" + images[index] + ".jpg");
+        modal.querySelector("#memberModalImage").setAttribute("alt", navn[index]);
         modal.querySelector("#memberModalRole").textContent = roles[index] || "";
         modal.querySelector("#memberModalBio").textContent = bios[index];
     });

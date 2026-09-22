@@ -32,7 +32,7 @@
                 <img src="./Media/logo-c6-white.png" alt="" class="navbar-logo">
                 <span class="navbar-brand-text brand-font">CORE-6</span>
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Vis eller skjul meny">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
@@ -104,6 +104,7 @@
                         >
                             <i class="bi bi-geo-alt" aria-hidden="true"></i>
                             <span>Universitetet i Agder, Kristiansand</span>
+                            <span class="visually-hidden">(åpnes i ny fane)</span>
                         </a>
                     </address>
                 </div>

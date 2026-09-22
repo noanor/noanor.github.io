@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="no" data-page="prosjekter">
+<html lang="nb" data-page="prosjekter">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Våre prosjekter · CORE-6</title>
         <link rel="icon" type="image/png" href="./Media/logo-c6-white.png">
+        <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,9 +14,10 @@
         <link rel="stylesheet" href="./styles/index.css">
     </head>
     <body>
+        <a class="skip-link" href="#hovedinnhold">Hopp til hovedinnhold</a>
         <div id="site-navbar"></div>
 
-        <main class="container underside">
+        <main class="container underside" id="hovedinnhold" tabindex="-1">
             <section aria-labelledby="prosjekt-heading" id="prosjekt">
                 <h1 id="prosjekt-heading" class="display-5 mb-3 brand-font">Våre prosjekter</h1>
                 <p class="prosjekt-intro">
@@ -29,6 +31,7 @@
                             <img src="./Media/kartverket-logo.png" alt="Kartverket">
                             <span class="prosjekt-kort-stamp" title="EXPO 2025 – 1. plass beste løsning">
                                 <i class="bi bi-award-fill" aria-hidden="true"></i>
+                                <span class="visually-hidden">EXPO 2025 – 1. plass beste løsning</span>
                             </span>
                         </div>
                         <div class="prosjekt-kort-body">
@@ -61,7 +64,7 @@
                                         </div>
                                     </div>
 
-                                    <a href="./luftfartshinder.html" class="btn btn-accent btn-sm stretched-link">
+                                    <a href="./luftfartshinder.html" class="btn btn-accent btn-sm stretched-link" aria-label="Se detaljer om Kartverket – Luftfartshinder softwareapplikasjon">
                                         Detaljer
                                     </a>
                                 </div>
@@ -102,7 +105,7 @@
                                         </div>
                                     </div>
 
-                                    <a href="./smaragd-motorsport.html" class="btn btn-accent btn-sm stretched-link">
+                                    <a href="./smaragd-motorsport.html" class="btn btn-accent btn-sm stretched-link" aria-label="Se detaljer om Smaragd Motorsport – E-handelsløsning">
                                         Detaljer
                                     </a>
                                 </div>
@@ -139,7 +142,7 @@
                                         </div>
                                     </div>
 
-                                    <a href="./nkom.html" class="btn btn-accent btn-sm stretched-link">
+                                    <a href="./nkom.html" class="btn btn-accent btn-sm stretched-link" aria-label="Se detaljer om Nasjonal kommunikasjonsmyndighet – FK-fjernkontroll">
                                         Detaljer
                                     </a>
                                 </div>

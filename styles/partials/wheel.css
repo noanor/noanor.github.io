@@ -77,11 +77,27 @@ Hjulet – radial meny og visning (luftfartshinder.html)
     border-radius: 50%;
     box-shadow: 0 10px 24px rgba(15, 23, 42, 0.1);
     cursor: pointer;
-    animation: wheel-hint-pulse 2.4s ease-in-out infinite;
 }
 
-.wheel-wrap.wheel-tried {
-    animation: none;
+@media (prefers-reduced-motion: no-preference) {
+    .wheel-wrap {
+        animation: wheel-hint-pulse 2.4s ease-in-out infinite;
+    }
+
+    .wheel-wrap.wheel-tried {
+        animation: none;
+    }
+}
+
+.wheel-wrap:focus-visible {
+    outline: 3px solid var(--accent);
+    outline-offset: 3px;
+}
+
+.wheel .arc:focus-visible {
+    outline: 3px solid #ffffff;
+    outline-offset: -6px;
+    z-index: 3;
 }
 
 .wheel-idle-icon {

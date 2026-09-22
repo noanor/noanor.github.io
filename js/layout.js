@@ -1,32 +1,44 @@
 (function () {
     const page = document.documentElement.dataset.page || "";
-    const home = page === "index" ? "" : "./index.html";
+    const projectDetailPages = ["luftfartshinder", "nkom", "smaragd-motorsport"];
+    const activePage = projectDetailPages.includes(page) ? "prosjekter" : page;
+
+    const navItems = [
+        { key: "index", label: "Hjem", href: "./index.html" },
+        { key: "om-oss", label: "Om oss", href: "./om-oss.html" },
+        { key: "team", label: "Team", href: "./team.html" },
+        { key: "prosjekter", label: "Våre prosjekter", href: "./prosjekter.html" },
+        { key: "kontakt", label: "Kontakt", href: "./kontakt.html" }
+    ];
+
+    const navLinksHTML = navItems.map(function (item) {
+        const activeClass = item.key === activePage ? " active" : "";
+        const ariaCurrent = item.key === activePage ? ' aria-current="page"' : "";
+        return (
+            '<li class="nav-item">' +
+            '<a class="nav-link' + activeClass + '" href="' + item.href + '"' + ariaCurrent + '>' + item.label + '</a>' +
+            '</li>'
+        );
+    }).join("");
+
+    const footerNavHTML = navItems.map(function (item) {
+        return '<li><a href="' + item.href + '">' + item.label + '</a></li>';
+    }).join("");
 
     const navbarHTML = `
     <nav class="navbar navbar-expand-lg" id="navbar">
-        <div class="container-fluid px-4 px-xl-5">
-            <a class="navbar-brand ms-2 me-lg-4 d-flex align-items-center gap-2" href="${home}#forside" aria-label="CORE-6 – til forsiden">
-                <img src="./Media/logo-transparent.png" class="navbar-logo">
+        <div class="container">
+            <a class="navbar-brand me-lg-4 d-flex align-items-center gap-2" href="./index.html" aria-label="CORE-6 – til forsiden">
+                <img src="./Media/logo-c6-white.png" alt="" class="navbar-logo">
                 <span class="navbar-brand-text brand-font">CORE-6</span>
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Vis eller skjul meny">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav gap-lg-4 ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="${home}#om-oss">Om oss</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="${home}#card-section">Teammedlemmer</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="${home}#prosjekt">Prosjekter</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="${home}#kontakt-oss">Kontakt</a>
-                    </li>
+                    ${navLinksHTML}
                 </ul>
             </div>
         </div>
@@ -43,7 +55,7 @@
 
                 <div class="col-12 col-md-5">
                     <div class="footer-brand">
-                        <img src="./Media/logo-transparent.png" alt="CORE-6 logo" class="footer-logo-image">
+                        <img src="./Media/logo-c6-white.png" alt="" class="footer-logo-image">
                         <span class="footer-logo">CORE-6</span>
                         <span class="footer-line"></span>
                     </div>
@@ -62,25 +74,11 @@
                 </div>
 
                 <div class="col-6 col-md-3">
-                    <h3 class="footer-heading">Navigasjon</h3>
+                    <h3 class="footer-heading">Sider</h3>
 
                     <nav aria-label="Hurtiglenker i bunntekst">
                         <ul class="footer-nav">
-                            <li>
-                                <a href="${home}#om-oss">
-                                    Om oss
-                                </a>
-                            </li>
-                            <li>
-                                <a href="${home}#card-section">
-                                    Teammedlemmer
-                                </a>
-                            </li>
-                            <li>
-                                <a href="${home}#prosjekt">
-                                    Prosjekter
-                                </a>
-                            </li>
+                            ${footerNavHTML}
                         </ul>
                     </nav>
                 </div>
@@ -88,15 +86,11 @@
                 <div class="col-6 col-md-4">
                     <h3 class="footer-heading">Kontakt</h3>
 
-                    <p class="footer-contact-text">
-                        Har du spørsmål om prosjektet eller gruppen? Ta gjerne kontakt med oss.
-                    </p>
-
                     <address class="footer-contact">
-                        <a href="tel:+4799686783">
-                            <i class="bi bi-telephone" aria-hidden="true"></i>
-                            <span>+47 996 86 783</span>
-                        </a>
+                        <div class="footer-contact-person">
+                            <span class="footer-contact-name">Efe Kaan Eksi</span>
+                            <span class="footer-contact-role">Gruppeleder / Kontaktperson</span>
+                        </div>
 
                         <a href="mailto:efeke@uia.no">
                             <i class="bi bi-envelope" aria-hidden="true"></i>
@@ -110,6 +104,7 @@
                         >
                             <i class="bi bi-geo-alt" aria-hidden="true"></i>
                             <span>Universitetet i Agder, Kristiansand</span>
+                            <span class="visually-hidden">(åpnes i ny fane)</span>
                         </a>
                     </address>
                 </div>
@@ -134,6 +129,45 @@
         if (footerSlot) {
             footerSlot.outerHTML = footerHTML;
         }
+
+        setupHeaderScrollBehavior();
+    }
+
+    function setupHeaderScrollBehavior() {
+        const navbar = document.getElementById("navbar");
+        if (!navbar) {
+            return;
+        }
+
+        const hero = page === "index" ? document.getElementById("forside") : null;
+
+        if (!hero) {
+            navbar.classList.add("scrolled");
+            return;
+        }
+
+        let ticking = false;
+
+        function updateNavbarState() {
+            const threshold = Math.min(
+                hero.offsetHeight - navbar.offsetHeight,
+                hero.offsetHeight * 0.6
+            );
+            const shouldBeSolid = window.scrollY >= threshold;
+            navbar.classList.toggle("scrolled", shouldBeSolid);
+            ticking = false;
+        }
+
+        function onScroll() {
+            if (!ticking) {
+                window.requestAnimationFrame(updateNavbarState);
+                ticking = true;
+            }
+        }
+
+        updateNavbarState();
+        window.addEventListener("scroll", onScroll, { passive: true });
+        window.addEventListener("resize", onScroll);
     }
 
     if (document.readyState === "loading") {

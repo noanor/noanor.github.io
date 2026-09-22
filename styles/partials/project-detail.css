@@ -1,0 +1,171 @@
+/*
+=====================================================
+Prosjekt-detaljsider – bånd-seksjoner (nkom, smaragd, luftfartshinder)
+=====================================================
+*/
+
+.project-underside {
+    padding-top: 0;
+    padding-bottom: 0;
+    min-height: 0;
+}
+
+.project-hero {
+    padding-top: 6.5rem;
+    padding-bottom: 2.5rem;
+}
+
+.project-hero-top {
+    margin-bottom: 0.85rem;
+}
+
+.project-hero-top h1 {
+    max-width: 100%;
+    overflow-wrap: break-word;
+}
+
+
+/*
+Seksjonsoverskrifter – sentrert, smal kolonne; overskrift og brødtekst venstrestilt inni
+*/
+
+.project-underside .section-heading {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.85rem;
+    text-align: left;
+    max-width: 46rem;
+    margin: 0 auto 1.75rem;
+}
+
+.project-underside .section-heading::after {
+    margin: 0.75rem 0 0;
+}
+
+.section-heading-medal {
+    display: inline-flex;
+    flex-shrink: 0;
+}
+
+.section-heading-medal .lsp-medal {
+    width: 2.75rem;
+    height: 2.75rem;
+    border-width: 2px;
+}
+
+.section-heading-medal .lsp-medal i {
+    font-size: 1.3rem;
+}
+
+.project-band-intro {
+    max-width: 46rem;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.project-tech-chips {
+    justify-content: flex-start;
+    max-width: 48rem;
+    margin: 0 auto;
+}
+
+.project-cta {
+    max-width: 46rem;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.project-cta p {
+    color: rgba(255, 255, 255, 0.82);
+    font-size: 1.05rem;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+}
+
+.project-cta-actions {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem 1.75rem;
+}
+
+.project-cta-secondary {
+    color: rgba(255, 255, 255, 0.85);
+    font-weight: 500;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+    padding-bottom: 2px;
+    transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.project-cta-secondary:hover {
+    color: #ffffff;
+    border-color: #ffffff;
+}
+
+.project-block {
+    max-width: 46rem;
+    margin: 0 auto;
+}
+
+.project-footer-nav {
+    padding: 0.5rem 0 3rem;
+}
+
+
+/*
+Gruppen-seksjon (deltakere på prosjekt-detaljside)
+*/
+
+.gruppen-medlem {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    height: 100%;
+    padding: 1.1rem 1.35rem;
+    border-radius: 0.75rem;
+    background-color: #ffffff;
+    border-top: 3px solid var(--accent);
+    box-shadow: 0 4px 14px rgba(15, 23, 42, 0.06);
+}
+
+.gruppen-medlem-bilde {
+    width: 3.5rem;
+    height: 3.5rem;
+    flex-shrink: 0;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.gruppen-medlem-bilde img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.gruppen-medlem-info {
+    min-width: 0;
+}
+
+.gruppen-medlem-navn {
+    font-family: var(--font-ui);
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: var(--navy);
+    margin-bottom: 0.35rem;
+}
+
+.gruppen-medlem-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.3rem;
+}
+
+@media (max-width: 767.98px) {
+    .project-hero {
+        padding-top: 5.5rem;
+    }
+
+}

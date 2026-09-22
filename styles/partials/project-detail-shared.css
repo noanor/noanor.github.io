@@ -1,0 +1,255 @@
+/*
+Delte komponenter for underside/detaljsider (om-oss, kontakt, prosjektsider)
+*/
+
+.underside {
+    padding-top: 6.5rem;
+    padding-bottom: 4rem;
+    min-height: 70vh;
+}
+
+.back-link {
+    display: inline-block;
+    margin-bottom: 1.25rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #64748b;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.back-link:hover {
+    color: var(--accent);
+}
+
+.underside-card {
+    max-width: none;
+    height: 100%;
+}
+
+.om-oss-card.underside-card h3 {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    font-size: 1.15rem;
+    margin-bottom: 1rem;
+    color: var(--navy);
+}
+
+.step-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 1.75rem;
+    height: 1.75rem;
+    border-radius: 50%;
+    background-color: var(--accent);
+    color: #ffffff;
+    font-family: var(--font-ui);
+    font-size: 0.85rem;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.om-oss-card.underside-card p {
+    font-size: 1.05rem;
+    line-height: 1.75;
+    color: var(--text-body);
+    margin-bottom: 1rem;
+}
+
+.om-oss-card.underside-card p:last-child {
+    margin-bottom: 0;
+}
+
+.prosjektbeskrivelse-innhold {
+    max-width: 52rem;
+    text-align: left;
+}
+
+.prosjektbeskrivelse-innhold p {
+    font-size: 1.05rem;
+    line-height: 1.75;
+    color: var(--text-body);
+    margin-bottom: 1.25rem;
+}
+
+.prosjektbeskrivelse-innhold p:last-child {
+    margin-bottom: 0;
+}
+
+.samarbeid-flow {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.samarbeid-circle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1 1 12rem;
+    width: auto;
+    min-width: 0;
+    max-width: 15rem;
+    aspect-ratio: 1;
+    padding: 1.5rem 1.1rem;
+    border-radius: 50%;
+    background-color: #ffffff;
+    border: 3px solid var(--accent);
+    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.1);
+    text-align: center;
+}
+
+.samarbeid-circle h3 {
+    font-family: var(--font-ui);
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    color: var(--navy);
+    margin-bottom: 0.5rem;
+}
+
+.samarbeid-circle p {
+    margin: 0;
+    font-size: 0.85rem;
+    line-height: 1.45;
+    color: var(--text-body);
+}
+
+.samarbeid-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    color: var(--accent);
+    font-size: 1.5rem;
+    line-height: 1;
+}
+
+@media (max-width: 991.98px) {
+    .samarbeid-flow {
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+
+    .samarbeid-circle {
+        flex: 0 0 auto;
+        width: min(280px, 85vw);
+        max-width: none;
+        padding: 2rem 1.6rem;
+    }
+
+    .samarbeid-circle h3 {
+        font-size: 1.1rem;
+    }
+
+    .samarbeid-circle p {
+        font-size: 1rem;
+    }
+
+    .samarbeid-arrow {
+        font-size: 2.25rem;
+    }
+
+    .samarbeid-arrow i {
+        transform: rotate(90deg);
+    }
+}
+
+.expo-block {
+    max-width: 46rem;
+    margin: 0 auto;
+}
+
+.expo-block + .expo-block {
+    margin-top: 3rem;
+}
+
+.expo-media-title {
+    font-family: var(--font-ui);
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    color: var(--navy);
+    margin-bottom: 0.9rem;
+}
+
+.expo-photo-frame {
+    aspect-ratio: 3 / 2;
+    border-radius: 0.75rem;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.12);
+}
+
+.expo-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.expo-portrait-frame {
+    aspect-ratio: 9 / 16;
+    max-width: 220px;
+    margin: 0 auto;
+    border-radius: 0.75rem;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.12);
+}
+
+.dokumentasjon-kort .om-oss-card.underside-card h3,
+.dokumentasjon-kort h3 {
+    display: block;
+}
+
+.dokumentasjon-kort h3 {
+    font-family: var(--font-ui);
+    font-size: 1.25rem;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    color: var(--navy);
+    margin-bottom: 1rem;
+}
+
+.dokumentasjon-kort p {
+    font-size: 1.05rem;
+    line-height: 1.75;
+    color: var(--text-body);
+    margin-bottom: 1rem;
+}
+
+.code-panel {
+    margin: 0;
+    padding: 1.35rem 1.4rem;
+    border-radius: 0.75rem;
+    background-color: #0b1f3a;
+    border: 1px solid rgba(37, 99, 235, 0.45);
+    box-shadow: inset 0 0 0 1px rgba(96, 165, 250, 0.12);
+    color: #e2e8f0;
+    font-family: Consolas, "Courier New", monospace;
+    font-size: 0.85rem;
+    line-height: 1.55;
+    overflow-x: auto;
+    white-space: pre;
+}
+
+.code-panel .code-comment {
+    color: #93c5fd;
+}
+
+.code-panel .code-keyword {
+    color: #60a5fa;
+}
+
+.code-panel .code-type {
+    color: #38bdf8;
+}
+
+.code-panel .code-method {
+    color: #bfdbfe;
+}

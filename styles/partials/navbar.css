@@ -1,0 +1,76 @@
+/*
+Navbar – toppmeny på alle sider
+*/
+
+#navbar {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1030;
+
+    background-color: transparent;
+
+    border-bottom: none;
+    box-shadow: none;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#navbar::after {
+    content: "";
+    position: absolute;
+    left: 4%;
+    right: 4%;
+    bottom: 0;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.85);
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+#navbar.scrolled {
+    background-color: var(--bg-muted);
+    box-shadow: 0 1px 0 rgba(15, 23, 42, 0.08);
+}
+
+#navbar.scrolled::after {
+    opacity: 0;
+}
+
+.navbar-logo {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+    display: block;
+}
+
+#navbar .nav-link {
+    font-family: var(--font-ui);
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #000000;
+    position: relative;
+    padding-bottom: 0.2rem;
+    transition: color 0.2s ease;
+}
+
+#navbar .nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--accent);
+    transition: width 0.2s ease;
+}
+
+#navbar .nav-link:hover {
+    color: var(--accent);
+}
+
+#navbar .nav-link:hover::after,
+#navbar .nav-link.active::after {
+    width: 100%;
+}

@@ -22,13 +22,49 @@ var roles = [
     ""
 ];
 
+var ansvar = [
+    ["Frontend", "UX"],
+    ["Frontend", "Dokumentasjon"],
+    ["Fullstack", "Sikkerhet"],
+    ["Design", "Sikkerhet"],
+    ["Frontend", "Design"],
+    ["Fullstack", "UX"]
+];
+
 var cardText = [
-    "Interesse for frontend, webdesign og UX",
-    "Interesse for frontend, akademisk skriving og UX",
-    "Interesse for fullstack utvikling og sikkerhet",
-    "Interesse for design, skriving og sikkerhet",
-    "Interesse for frontendutvikling og design",
-    "Interesse for fullstack utvikling og UX"
+    "Brenner for frontendutvikling og webdesign, med et sterkt fokus på gode brukeropplevelser.",
+    "Kombinerer frontendutvikling med akademisk skriving og en genuin interesse for UX.",
+    "Jobber gjerne på tvers av stacken, med spesiell interesse for sikkerhet i systemene vi bygger.",
+    "Har sansen for design og tydelig skriving, og bidrar med et kritisk blikk på sikkerhet.",
+    "Liker å bygge rene, gjennomtenkte grensesnitt med fokus på frontendutvikling og design.",
+    "Trives både med fullstack-utvikling og å finpusse brukeropplevelsen."
+];
+
+var linkedinLinks = [
+    "https://www.linkedin.com/in/efekaan-eksi-2b0a5239a/",
+    "https://www.linkedin.com/in/hildid-musse-6679a8392/",
+    "https://www.linkedin.com/in/madalitso-skjelnes-426741290/",
+    "https://www.linkedin.com/in/marion-rasmussen-281298270/",
+    "https://www.linkedin.com/in/dennistea/",
+    "https://www.linkedin.com/in/noa-nordén-097556333/"
+];
+
+var githubLinks = [
+    "https://github.com/efekaaneksi",
+    "https://github.com/Mussinho777",
+    "https://github.com/Phiri-Madalitso",
+    "https://github.com/marionrasmussen",
+    "https://github.com/dennistae",
+    "https://github.com/noanor"
+];
+
+var emails = [
+    "efeke@uia.no",
+    "hsmusse@uia.no",
+    "madalitsos@uia.no",
+    "marionnr@uia.no",
+    "denniste@uia.no",
+    "noa.vincent.norden@uia.no"
 ];
 
 var bios = [
@@ -41,81 +77,120 @@ var bios = [
 ];
 
 var cardSection = document.getElementById("card-section");
-var cardRow = document.createElement('div');
-cardRow.className = "card-row";
-cardSection.append(cardRow);
 
+if (cardSection) {
+    var topRow = document.createElement('div');
+    topRow.className = "card-row card-row-top";
+    cardSection.append(topRow);
 
+    var bottomRow = document.createElement('div');
+    bottomRow.className = "card-row card-row-bottom";
+    cardSection.append(bottomRow);
 
-for (var i = 0; i < navn.length; i += 1) {
-    var role = roles[i] || "";
-    var card = createCard(navn[i], images[i], role, cardText[i], i);
+    for (var i = 0; i < navn.length; i += 1) {
+        var role = roles[i] || "";
+        var card = createCard(navn[i], images[i], role, ansvar[i], cardText[i], linkedinLinks[i], githubLinks[i], emails[i], i);
+        var targetRow = i < 3 ? topRow : bottomRow;
 
-    cardRow.append(card);
+        targetRow.append(card);
+    }
+
+    createMemberModal();
 }
 
-createMemberModal();
-
-function createCard(name, image, role, text, index) {
+function createCard(name, image, role, memberAnsvar, text, linkedinUrl, githubUrl, email, index) {
     // Card container
     var card = document.createElement("div");
-    card.className = "card mb-3 team-card";
-
-    // Row
-    var div2 = document.createElement("div");
-    div2.className = "row g-0";
-    div2.style.cssText = "overflow: hidden;";
-    card.append(div2);
-
-    // Col
-    var div3 = document.createElement("div");
-    div3.className = "col-md-4 card-image rounded start";
-    div2.append(div3);
+    card.className = "card team-card";
 
     // Image
+    var imageWrap = document.createElement("div");
+    imageWrap.className = "team-card-image";
+    card.append(imageWrap);
+
     var img = document.createElement("img");
     img.setAttribute("src", "./Media/Profil-pic/" + image + ".jpg");
-    img.setAttribute("alt", "...")
-    // img.style.cssText = "width: 200px;"
-    img.className = "rounded-start";
+    img.setAttribute("alt", name);
     img.id = 'image-' + `${image}`;
-    div3.append(img)
-
-    // Col
-    var div4 = document.createElement("div");
-    div4.className = "col-md-8";
-    div2.append(div4);
+    imageWrap.append(img);
 
     // Card body
     var cardBody = document.createElement("div");
     cardBody.className = "card-body";
-    div4.append(cardBody);
+    card.append(cardBody);
 
-    var cardTitle = document.createElement("h5");
+    var cardTitle = document.createElement("h2");
     cardTitle.className = "card-title";
     cardTitle.textContent = `${name}`;
 
-    var cardRole = document.createElement("p");
+    var cardRole = document.createElement("div");
     cardRole.className = "card-role";
-    cardRole.textContent = role;
+
+    if (role) {
+        var leadTagEl = document.createElement("span");
+        leadTagEl.className = "team-tag team-tag-lead";
+        leadTagEl.textContent = role;
+        cardRole.append(leadTagEl);
+    }
+
+    memberAnsvar.forEach(function (tag) {
+        var tagEl = document.createElement("span");
+        tagEl.className = "team-tag";
+        tagEl.textContent = tag;
+        cardRole.append(tagEl);
+    });
 
     var cardText = document.createElement("p");
     cardText.className = "card-text";
     cardText.textContent = text;
 
+    var socials = document.createElement("div");
+    socials.className = "team-card-socials";
+
+    var linkedinLink = document.createElement("a");
+    linkedinLink.className = "team-card-social";
+    linkedinLink.href = linkedinUrl;
+    linkedinLink.target = "_blank";
+    linkedinLink.rel = "noopener";
+    linkedinLink.setAttribute("aria-label", "LinkedIn til " + name + " (åpnes i ny fane)");
+    linkedinLink.innerHTML = '<i class="bi bi-linkedin" aria-hidden="true"></i>';
+
+    var githubLink = document.createElement("a");
+    githubLink.className = "team-card-social";
+    githubLink.href = githubUrl;
+    githubLink.target = "_blank";
+    githubLink.rel = "noopener";
+    githubLink.setAttribute("aria-label", "GitHub til " + name + " (åpnes i ny fane)");
+    githubLink.innerHTML = '<i class="bi bi-github" aria-hidden="true"></i>';
+
+    var mailLink = document.createElement("a");
+    mailLink.className = "team-card-social";
+    mailLink.href = "mailto:" + email;
+    mailLink.setAttribute("aria-label", "Send e-post til " + name);
+    mailLink.innerHTML = '<i class="bi bi-envelope" aria-hidden="true"></i>';
+
+    socials.append(linkedinLink);
+    socials.append(githubLink);
+    socials.append(mailLink);
+
     var detailsBtn = document.createElement('button');
     detailsBtn.type = "button";
     detailsBtn.className = "btn btn-accent";
-    detailsBtn.textContent = "Detaljer";
+    detailsBtn.textContent = "Les mer";
     detailsBtn.id = 'btn-' + `${image}`;
     detailsBtn.setAttribute("data-bs-toggle", "modal");
     detailsBtn.setAttribute("data-bs-target", "#memberModal");
     detailsBtn.setAttribute("data-index", index);
 
+    var cardFooter = document.createElement("div");
+    cardFooter.className = "team-card-footer";
+    cardFooter.append(socials);
+    cardFooter.append(detailsBtn);
+
     cardBody.append(cardTitle);
     cardBody.append(cardRole);
     cardBody.append(cardText);
-    cardBody.append(detailsBtn);
+    cardBody.append(cardFooter);
 
     return card;
 }
@@ -126,6 +201,7 @@ function createMemberModal() {
     modal.id = "memberModal";
     modal.tabIndex = -1;
     modal.setAttribute("aria-hidden", "true");
+    modal.setAttribute("aria-labelledby", "memberModalName");
 
     modal.innerHTML =
         '<div class="modal-dialog modal-dialog-centered">' +
@@ -135,7 +211,7 @@ function createMemberModal() {
         '      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Lukk"></button>' +
         '    </div>' +
         '    <div class="modal-body">' +
-        '      <img id="memberModalImage" src="" alt="..." class="rounded mb-3">' +
+        '      <img id="memberModalImage" src="" alt="" class="rounded mb-3">' +
         '      <p class="card-role" id="memberModalRole"></p>' +
         '      <p id="memberModalBio"></p>' +
         '    </div>' +
@@ -152,6 +228,7 @@ function createMemberModal() {
 
         modal.querySelector("#memberModalName").textContent = navn[index];
         modal.querySelector("#memberModalImage").setAttribute("src", "./Media/Profil-pic/" + images[index] + ".jpg");
+        modal.querySelector("#memberModalImage").setAttribute("alt", navn[index]);
         modal.querySelector("#memberModalRole").textContent = roles[index] || "";
         modal.querySelector("#memberModalBio").textContent = bios[index];
     });

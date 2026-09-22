@@ -1,0 +1,81 @@
+/*
+Typografi og knapper – delt på tvers av sider
+*/
+
+/* Display-font kun på CORE-6-hero på forsiden (Orbitron = stand-in for Eurostile). */
+#forside .brand-font {
+    font-family: var(--font-brand);
+    font-weight: 700;
+    letter-spacing: 0.06em;
+}
+
+.brand-font {
+    font-weight: 700;
+    letter-spacing: normal;
+    color: var(--navy);
+}
+
+#forside .brand-tagline {
+    font-family: var(--font-brand);
+    font-weight: 500;
+    font-size: 1.05rem;
+    letter-spacing: 0.08em;
+    color: var(--navy);
+    max-width: 28rem;
+}
+
+.brand-tagline {
+    font-weight: 500;
+    font-size: 1.05rem;
+    letter-spacing: normal;
+    color: var(--navy);
+    max-width: 28rem;
+}
+
+.text-accent {
+    color: var(--navy);
+}
+
+.btn-accent {
+    --bs-btn-color: #fff;
+    --bs-btn-bg: var(--accent);
+    --bs-btn-border-color: var(--accent);
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #1d4ed8;
+    --bs-btn-hover-border-color: #1d4ed8;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: #1e40af;
+    --bs-btn-active-border-color: #1e40af;
+    font-family: var(--font-ui);
+    font-weight: 500;
+    letter-spacing: normal;
+    padding-inline: 1.4rem;
+}
+
+.btn-accent-outline {
+    --bs-btn-color: var(--navy);
+    --bs-btn-border-color: var(--navy);
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: var(--navy);
+    --bs-btn-hover-border-color: var(--navy);
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: var(--navy);
+    --bs-btn-active-border-color: var(--navy);
+    font-family: var(--font-ui);
+    font-weight: 500;
+    letter-spacing: normal;
+    padding-inline: 1.4rem;
+    background-color: transparent;
+    border-width: 2px;
+}
+
+.navbar-brand-text {
+    font-size: 1.15rem;
+    color: var(--navy);
+    line-height: 1;
+}
+
+#navbar .navbar-brand-text {
+    font-family: var(--font-brand);
+    letter-spacing: 0.06em;
+}

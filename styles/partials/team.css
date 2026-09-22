@@ -1,0 +1,173 @@
+/*
+Teamkort – teammedlemmer (team.html)
+*/
+
+.card-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.team-intro {
+    max-width: 46rem;
+    color: var(--text-body);
+    font-size: 1rem;
+    line-height: 1.55;
+    margin-bottom: 2.5rem;
+}
+
+.card-row {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.75rem;
+}
+
+.card-row-bottom {
+    margin-top: 1.5rem;
+}
+
+.team-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border: 1px solid var(--accent-soft);
+    border-radius: 0.75rem;
+    overflow: hidden;
+    background-color: #ffffff;
+    box-shadow: 0 4px 14px rgba(15, 23, 42, 0.06);
+}
+
+.team-card-image {
+    width: 6rem;
+    height: 6rem;
+    flex-shrink: 0;
+    margin: 1.25rem auto 0;
+    border-radius: 0.6rem;
+    overflow: hidden;
+}
+
+.team-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+.team-card .card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1;
+    width: 100%;
+    min-width: 0;
+    padding: 0.85rem 1.25rem 1.1rem;
+}
+
+.team-card .card-title {
+    font-family: "Orbitron", sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    margin-bottom: 0.25rem;
+}
+
+.card-role {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.35rem;
+    margin-bottom: 0.6rem;
+}
+
+.team-tag {
+    background-color: rgba(37, 99, 235, 0.1);
+    color: var(--accent);
+    font-weight: 600;
+    font-size: 0.7rem;
+    line-height: 1;
+    padding: 0.35rem 0.6rem;
+    border-radius: 999px;
+    white-space: nowrap;
+}
+
+.team-tag-lead {
+    background-color: var(--accent);
+    color: #ffffff;
+}
+
+.team-card .card-text {
+    color: var(--text-body);
+    font-weight: 400;
+    font-size: 0.84rem;
+    line-height: 1.45;
+    flex-grow: 1;
+    margin-bottom: 0.85rem;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+}
+
+.team-card-footer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+    width: 100%;
+    margin-top: auto;
+}
+
+.team-card-socials {
+    display: flex;
+    gap: 0.4rem;
+}
+
+.team-card-social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.75rem;
+    height: 2.75rem;
+    border-radius: 50%;
+    background-color: rgba(37, 99, 235, 0.1);
+    color: var(--accent);
+    font-size: 1rem;
+    transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.team-card-social:hover {
+    background-color: var(--accent);
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+.team-card .card-body .btn-accent {
+    margin-top: 0;
+    padding: 0.32rem 0.85rem;
+    font-size: 0.76rem;
+}
+
+#memberModalImage {
+    width: 100%;
+    max-height: 280px;
+    object-fit: cover;
+}
+
+@media (max-width: 991.98px) {
+    .card-row {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1.25rem;
+    }
+
+    .card-row-bottom {
+        margin-top: 1.5rem;
+    }
+}
+
+@media (max-width: 420px) {
+    .card-row {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}

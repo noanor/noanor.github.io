@@ -1,17 +1,26 @@
 /**
  * Vanta Globe-bakgrunn på Hjem (#forside).
+ * Respekterer prefers-reduced-motion.
  */
-VANTA.GLOBE({
-    el: "#forside",
-    mouseControls: true,
-    touchControls: true,
-    gyroControls: false,
-    minHeight: 200.00,
-    minWidth: 200.00,
-    scale: 1.00,
-    scaleMobile: 1.00,
-    backgroundColor: 0xd6d6e0,
-    color: 0x2563eb,
-    color2: 0xffffff,
-    size: 0.85
-});
+(function () {
+    var prefersReducedMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    var effect = VANTA.GLOBE({
+        el: "#forside",
+        mouseControls: true,
+        touchControls: true,
+        gyroControls: false,
+        minHeight: 200.00,
+        minWidth: 200.00,
+        scale: 1.00,
+        scaleMobile: 1.00,
+        backgroundColor: 0xeef1f7,
+        color: 0x2563eb,
+        color2: 0xffffff,
+        size: 0.85
+    });
+
+    if (prefersReducedMotion && effect && typeof effect.pause === "function") {
+        effect.pause();
+    }
+})();

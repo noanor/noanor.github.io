@@ -1,256 +1,164 @@
 <!DOCTYPE html>
-<html lang="no" data-page="index">
+<html lang="nb" data-page="index">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>CORE-6 | Bachelorprosjekt IT & Informasjonssystemer</title>
+        <title>CORE-6 | Hjem</title>
+        <link rel="icon" type="image/png" href="./Media/logo-c6-white.png">
+        <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="./styles/index.css">
-
-
     </head>
     <body>
+        <a class="skip-link" href="#hovedinnhold">Hopp til hovedinnhold</a>
         <div id="site-navbar"></div>
 
+        <main id="hovedinnhold" tabindex="-1">
         <section id="forside">
             <div class="container forside-innhold">
-                <h1 class="display-4 brand-font text-accent mb-2">CORE-6</h1>
-                <p class="brand-tagline mb-4">Sammen bygger vi bedre.</p>
-                <a href="#prosjekt" class="btn btn-accent btn-lg">Se prosjektet</a>
+                <h1 class="display-4 brand-font text-accent mb-2" data-reveal>CORE-6</h1>
+                <p class="brand-tagline mb-4" data-reveal>Sammen bygger vi bedre.</p>
+                <div class="d-flex flex-column flex-sm-row gap-3" data-reveal>
+                    <a href="./prosjekter.html" class="btn btn-accent btn-lg">Se alle prosjektene</a>
+                    <a href="./team.html" class="btn btn-accent-outline btn-lg">Vårt team</a>
+                </div>
             </div>
         </section>
 
-        <div class="container mb-5" id="container">
-            <section aria-labelledby="om-oss-heading" id="om-oss">
-                <div class="container om-oss-innhold">
-        
-                    <div class="row gy-5 align-items-center">
-                        <div class="col-lg-6 om-oss-tekst">
-                            <p class="om-oss-eyebrow">CORE-6 · Gruppe 7 · Bachelor 2027</p>
-        
-                            <h2 id="om-oss-heading" class="mb-3 brand-font">Om Oss</h2>
-        
-                            <p class="om-oss-intro">
-                                Vi er <strong>CORE-6</strong>, seks studenter innen IT og informasjonssystemer ved Universitetet i Agder, med ulik bakgrunn og erfaring, som jobber mot ett felles mål: å levere teknologiske løsninger av høy kvalitet.
-                            </p>
-        
-                            <p>
-                                Nettopp denne kombinasjonen gjør oss sterke. Ulike perspektiver gjør at vi løser problemer fra flere vinkler, samtidig som vi deler samme arbeidsmoral og ambisjonsnivå. Det er derfor CORE-6 ikke bare er seks studenter. Vi er et team som utfyller hverandre, utfordrer hverandre og sammen skaper resultater som gjør en forskjell.
-                            </p>
-        
-                            <div class="om-oss-stats" role="list">
-                                <div class="stat-item" role="listitem">
-                                    <span class="stat-number">6</span>
-                                    <span class="stat-label">Teammedlemmer</span>
-                                </div>
-        
-                                <div class="stat-item" role="listitem">
-                                    <span class="stat-number">6</span>
-                                    <span class="stat-label">Bakgrunner</span>
-                                </div>
-        
-                                <div class="stat-item" role="listitem">
-                                    <span class="stat-number">1</span>
-                                    <span class="stat-label">Felles mål</span>
-                                </div>
-                            </div>
-                        </div>
-        
-                        <!-- Gruppebilde kommer -->
-                        <div class="col-lg-6">
-                            <div class="om-oss-image-wrap">
-                                <img
-                                    src="./Media/gruppebilde.jpg"
-                                    class="om-oss-image"
-                                    alt="Gruppebilde av CORE-6"
-                                >
-                            </div>
-        
-                            <p class="om-oss-media-caption">Gruppebilde av CORE-6 kommer snart</p>
-                        </div>
-                    </div>
-        
-                    <!-- Ambisjoner, kompetanse, interesser bokser -->
-                    <div class="row mt-5 g-4 om-oss-cards">
-        
-                        <div class="col-md-4">
-                            <div class="om-oss-card">
-                                <span class="icon-badge">
-                                    <i class="bi bi-rocket-takeoff" aria-hidden="true"></i>
-                                </span>
-        
-                                <h3>Ambisjoner</h3>
-        
-                                <p>
-                                    Vi ønsker å skape løsninger som betyr noe, som løser reelle utfordringer, skaper nye muligheter og gjør en forskjell. Med høye ambisjoner og godt samarbeid skal vi levere løsninger både vi og samarbeidspartnerne våre kan være stolte av
-                                </p>
-                            </div>
-                        </div>
-        
-                        <div class="col-md-4">
-                            <div class="om-oss-card">
-                                <span class="icon-badge">
-                                    <i class="bi bi-cpu" aria-hidden="true"></i>
-                                </span>
-        
-                                <h3>Kompetanse</h3>
-        
-                                <p>
-                                    Seks personer, seks perspektiver, én samlet styrke. Med kompetanse innen utvikling, design, UX, databaser, prosjektstyring, testing og universell utforming kombinerer vi styrkene våre for å skape helhetlige løsninger som fungerer i praksis
-                                </p>
-        
-                                <div class="prosjekt-tags">
-                                    <span class="prosjekt-tag">Programutvikling</span>
-                                    <span class="prosjekt-tag">UX</span>
-                                    <span class="prosjekt-tag">Prosjektstyring</span>
-                                    <span class="prosjekt-tag">ASP.NET MVC</span>
-                                    <span class="prosjekt-tag">C#</span>
-                                    <span class="prosjekt-tag">JavaScript</span>
-                                    <span class="prosjekt-tag">HTML</span>
-                                    <span class="prosjekt-tag">CSS</span>
-                                    <span class="prosjekt-tag">Python</span>
-                                    <span class="prosjekt-tag">Scrum</span>
-                                    <span class="prosjekt-tag">WCAG</span>
-                                    <span class="prosjekt-tag">Docker</span>
-                                </div>
-                            </div>
-                        </div>
-        
-                        <div class="col-md-4">
-                            <div class="om-oss-card">
-                                <span class="icon-badge">
-                                    <i class="bi bi-lightbulb" aria-hidden="true"></i>
-                                </span>
-        
-                                <h3>Interesser</h3>
-        
-                                <p>
-                                    Vi drives av teknologi som gjør mer enn å bare fungere, teknologi som skaper forbindelser og nye muligheter. Vi brenner for systemutvikling, design og gode brukeropplevelser med menneskets behov i sentrum.
-                                </p>
-                            </div>
-                        </div>
-        
-                    </div>
-        
-                    <!-- Video kommer -->
-                    <div class="om-oss-video-section">
-                        <div class="om-oss-video-wrap">
-                            <video
-                                class="om-oss-video"
-                                controls
-                                poster="./Media/Videos/video-poster.jpg"
-                                aria-label="Promovideo av CORE-6"
-                            >
-                                <source src="./Media/Videos/promovideo.mp4" type="video/mp4">
-        
-                                <track
-                                    kind="captions"
-                                    src="./captions/promovideo-no.vtt"
-                                    srclang="no"
-                                    label="Norsk"
-                                >
-        
-                                Nettleseren din støtter ikke videoavspilling.
-                            </video>
-                        </div>
-        
-                        <p class="om-oss-media-caption">Promovideo av CORE-6 kommer snart</p>
-                    </div>
+        <section class="container home-highlights" aria-labelledby="home-highlights-heading">
+            <h2 id="home-highlights-heading" class="visually-hidden">Snarveier</h2>
+
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <a class="om-oss-card home-highlight-card" href="./om-oss.html">
+                        <span class="icon-badge">
+                            <i class="bi bi-people" aria-hidden="true"></i>
+                        </span>
+                        <h3 class="h5">Om oss</h3>
+                        <p>
+                            Bli kjent med CORE-6 – seks studenter innen IT og informasjonssystemer ved UiA, og hva som driver oss.
+                        </p>
+                        <span class="home-highlight-link">Les mer <i class="bi bi-arrow-right" aria-hidden="true"></i></span>
+                    </a>
                 </div>
-            </section>
 
-            <section id="card-section">
-                <h2 id="om-oss-heading" class="mb-3 brand-font">Teammedlemmer</h2>
-                <!-- Kort kommer her -->
-            </section>
-
-            <section id="prosjekt">
-                <h2 id="om-oss-heading" class="mb-3 brand-font">Prosjekter</h2>
-                <div class="row g-0 justify-content-center">
-                    <div class="col-lg-8">
-                        <div class="card prosjekt-kort mb-3 overflow-hidden">
-                            <div class="row g-0">
-                                <div class="col-md-4 prosjekt-card-img-wrap bg-image hover-zoom rounded-start">
-                                    <img src="./Media/kartverket-logo.png" class="prosjekt-card-img" alt="Kartverket">
-                                </div>
-                                <div class="col-md-8 d-flex">
-                                    <div class="card-body d-flex flex-column">
-                                        <h3 class="card-title pb-2 mb-0">Kartverket - Luftfartshinder softwareapplikasjon</h3>
-                                        <hr class="prosjekt-kort-strek">
-                                        <div class="flex-grow-1 d-flex align-items-center prosjekt-kort-tekst">
-                                            <p class="card-text mb-0">
-                                                System for innmelding og kontroll av luftfartshindre til Nasjonalt register for luftfartshindre (NRL).
-                                                Piloter og flygere kan registrere hinder på kart; registrator godkjenner eller avviser.
-                                            </p>
-                                        </div>
-                                        <div class="mt-auto" style="margin-bottom: 6mm;">
-                                            <div class="prosjekt-tags mb-3">
-                                                <span class="prosjekt-tag">ASP.NET Core</span>
-                                                <span class="prosjekt-tag">Entity Framework</span>
-                                                <span class="prosjekt-tag">MySQL</span>
-                                                <span class="prosjekt-tag">Leaflet</span>
-                                                <span class="prosjekt-tag">Docker</span>
-                                                <span class="prosjekt-tag">Authentication</span>
-                                                <span class="prosjekt-tag">Security</span>
-                                            </div>
-                                            <a href="./luftfartshinder.html" class="btn btn-accent align-self-start">
-                                                Se mer
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="col-md-4">
+                    <a class="om-oss-card home-highlight-card" href="./team.html">
+                        <span class="icon-badge">
+                            <i class="bi bi-person-badge" aria-hidden="true"></i>
+                        </span>
+                        <h3 class="h5">Vårt team</h3>
+                        <p>
+                            Møt gruppemedlemmene, rollene deres og kompetansen de bringer inn i prosjektene våre.
+                        </p>
+                        <span class="home-highlight-link">Se teamet <i class="bi bi-arrow-right" aria-hidden="true"></i></span>
+                    </a>
                 </div>
-            </section>
 
-            <section id="kontakt-oss" aria-labelledby="kontakt-heading">
-                <h2 id="kontakt-heading" class="mb-3 brand-font">Kontakt oss</h2>
-                <p class="kontakt-intro">Har du spørsmål om prosjektet eller gruppen? Send oss en beskjed, så svarer vi så fort vi kan.</p>
+                <div class="col-md-4">
+                    <a class="om-oss-card home-highlight-card" href="./prosjekter.html">
+                        <span class="icon-badge">
+                            <i class="bi bi-kanban" aria-hidden="true"></i>
+                        </span>
+                        <h3 class="h5">Våre prosjekter</h3>
+                        <p>
+                            Utforsk et bredt spekter av prosjekter, fra offentlige etater som Kartverket og Nkom til private bedrifter som Smaragd Motorsport.
+                        </p>
+                        <span class="home-highlight-link">Se prosjektene <i class="bi bi-arrow-right" aria-hidden="true"></i></span>
+                    </a>
+                </div>
+            </div>
+        </section>
 
-                <form id="contact-form" class="kontakt-form" novalidate>
-                    <div class="mb-3">
-                        <label for="contact-name" class="form-label">Navn</label>
-                        <input type="text" class="form-control" id="contact-name" name="name" required>
+        <section aria-labelledby="samarbeid-heading" class="om-oss-band om-oss-band-navy samarbeid-band">
+            <div class="container">
+                <h2 id="samarbeid-heading" class="section-heading">Vi søker en bachelorpartner</h2>
+
+                <p class="samarbeid-tekst" data-reveal>
+                    Fra januar til juni 2027 skal CORE-6 gjennomføre bacheloroppgaven vår, og vi ønsker å gjøre det
+                    i samarbeid med én bedrift eller organisasjon som har en reell problemstilling å utvikle en
+                    løsning på. Slik ser vi for oss veien dit:
+                </p>
+
+                <div class="tidslinje-wrapper" data-reveal>
+                    <div class="tidslinje-linje" aria-hidden="true">
+                        <div class="tidslinje-fyll"></div>
                     </div>
+                    <span class="tidslinje-pil" aria-hidden="true"></span>
 
-                    <div class="mb-3">
-                        <label for="contact-email" class="form-label">E-post</label>
-                        <input type="email" class="form-control" id="contact-email" name="email" required>
-                    </div>
+                    <ol class="tidslinje-liste">
+                        <li class="tidslinje-punkt">
+                            <span class="tidslinje-dot" aria-hidden="true"></span>
+                            <div class="tidslinje-innhold">
+                                <span class="tidslinje-dato">August 2026</span>
+                                <h3 class="tidslinje-tittel">Partnersøket starter</h3>
+                                <p>Vi begynner å se etter en bedrift eller organisasjon å samarbeide med.</p>
+                            </div>
+                        </li>
 
-                    <div class="mb-3">
-                        <label for="contact-message" class="form-label">Melding</label>
-                        <textarea class="form-control" id="contact-message" name="message" rows="5" required></textarea>
-                    </div>
+                        <li class="tidslinje-punkt">
+                            <span class="tidslinje-dot" aria-hidden="true"></span>
+                            <div class="tidslinje-innhold">
+                                <span class="tidslinje-dato">21. oktober 2026</span>
+                                <h3 class="tidslinje-tittel">RefreshIT</h3>
+                                <p>Vi møter bedrifter og presenterer oss på UiAs karrieredag for IT-studenter.</p>
+                            </div>
+                        </li>
 
-                    <label class="kontakt-form-honeypot" aria-hidden="true">
-                        Ikke fyll ut dette feltet
-                        <input type="text" name="_gotcha" tabindex="-1" autocomplete="off">
-                    </label>
+                        <li class="tidslinje-punkt">
+                            <span class="tidslinje-dot" aria-hidden="true"></span>
+                            <div class="tidslinje-innhold">
+                                <span class="tidslinje-dato">Desember 2026</span>
+                                <h3 class="tidslinje-tittel">Samarbeidsavtale på plass</h3>
+                                <p>Vi har blitt enige med en partner om rammene for bacheloroppgaven.</p>
+                            </div>
+                        </li>
 
-                    <button type="submit" class="btn btn-accent">Send melding</button>
+                        <li class="tidslinje-punkt">
+                            <span class="tidslinje-dot" aria-hidden="true"></span>
+                            <div class="tidslinje-innhold">
+                                <span class="tidslinje-dato">Januar 2027</span>
+                                <h3 class="tidslinje-tittel">Bacheloroppgaven starter</h3>
+                                <p>Samarbeidet med partnerbedriften går i gang for fullt.</p>
+                            </div>
+                        </li>
 
-                    <div id="contact-form-status" class="kontakt-form-status" role="status" aria-live="polite"></div>
-                </form>
-            </section>
+                        <li class="tidslinje-punkt">
+                            <span class="tidslinje-dot" aria-hidden="true"></span>
+                            <div class="tidslinje-innhold">
+                                <span class="tidslinje-dato">Juni 2027</span>
+                                <h3 class="tidslinje-tittel">Prosjektet leveres</h3>
+                                <p>Bacheloroppgaven ferdigstilles og presenteres.</p>
+                            </div>
+                        </li>
+                    </ol>
+                </div>
 
-        </div>
+                <p class="samarbeid-tekst" data-reveal>
+                    Høres dette ut som noe for dere? Ta gjerne kontakt.
+                </p>
+
+                <div class="samarbeid-cta" data-reveal>
+                    <a href="./kontakt.html" class="btn btn-accent">
+                        Ta kontakt <i class="bi bi-arrow-right" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+        </main>
 
         <div id="site-footer"></div>
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-        <script src="https://kit.fontawesome.com/53d2400da6.js" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/vanta@0.5.24/dist/vanta.globe.min.js"></script>
-        <script src="./js/script.js"></script>
         <script src="./js/forside-vanta.js"></script>
+        <script src="./js/reveal.js"></script>
+        <script src="./js/tidslinje.js"></script>
         <script src="./js/layout.js"></script>
-        <script src="./js/contact-form.js"></script>
     </body>
 </html>

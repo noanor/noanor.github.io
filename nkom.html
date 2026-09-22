@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="nb" data-page="nkom">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Nasjonal kommunikasjonsmyndighet · CORE-6</title>
+        <link rel="icon" type="image/png" href="./Media/logo-c6-white.png">
+        <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="./styles/index.css">
+    </head>
+
+    <body>
+        <a class="skip-link" href="#hovedinnhold">Hopp til hovedinnhold</a>
+        <div id="site-navbar"></div>
+
+        <main class="underside project-underside" id="hovedinnhold" tabindex="-1">
+
+            <div class="container project-hero">
+                <a class="back-link" href="./prosjekter.html"><span aria-hidden="true">←</span> Tilbake til våre prosjekter</a>
+
+                <div class="project-hero-top">
+                    <h1 class="brand-font mb-0">Nasjonal kommunikasjonsmyndighet (Nkom) – FK-fjernkontroll</h1>
+                </div>
+
+                <div class="prosjekt-tags mb-3">
+                    <span class="prosjekt-tag">.NET</span>
+                    <span class="prosjekt-tag">C#</span>
+                    <span class="prosjekt-tag">React</span>
+                    <span class="prosjekt-tag">TypeScript</span>
+                    <span class="prosjekt-tag">Kartvisning</span>
+                    <span class="prosjekt-tag">Scrum</span>
+                    <span class="prosjekt-tag">Kanban</span>
+                </div>
+
+                <p class="prosjekt-intro mb-3">
+                    Hvordan kan vi optimalisere dagens oversikt og arbeidsflyt for målestasjoner og fjernkontroll,
+                    og bygge et lesbart, skalerbart system oppå Nkoms master data?
+                </p>
+
+                <div class="prosjekt-deltakere mb-0">
+                    <span class="prosjekt-deltakere-label">Deltaker fra CORE-6:</span>
+                    <div class="prosjekt-deltakere-avatars">
+                        <span class="prosjekt-deltaker" title="Madalitso Phiri Skjelnes"><img src="./Media/Profil-pic/madda.jpg" alt="Madalitso Phiri Skjelnes"></span>
+                    </div>
+                </div>
+            </div>
+
+            <section class="om-oss-band om-oss-band-light" id="om-prosjektet">
+                <div class="container">
+                    <h2 class="section-heading">Om prosjektet</h2>
+                    <div class="prosjektbeskrivelse-innhold project-band-intro">
+                        <p>
+                            Dette er mitt individuelle praksisprosjekt hos Nasjonal kommunikasjonsmyndighet (Nkom),
+                            gjennomført som en del av emnet IS-302 og min praksisperiode i høstsemesteret 2026 i
+                            CORE-6 sitt bachelorløp. Jeg jobber med FK-fjernkontroll: et system for oversikt over
+                            målestasjoner som brukes til måling av frekvensbruk i Norge.
+                        </p>
+                        <p>
+                            Målingene tas på land, blant annet med utstyr i bil, eller i felt med mobil/koffert og
+                            avtaler med skip langs kysten. På hver lokasjon står måleutstyr sammen med en liten PC
+                            (LattePanda) som kan fjernstyres og kobles på.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="om-oss-band om-oss-band-white" id="utfordringen">
+                <div class="container">
+                    <h2 class="section-heading">Utfordringen</h2>
+                    <div class="prosjektbeskrivelse-innhold project-band-intro">
+                        <p>
+                            Tidligere var det dårlig oversikt over hva som sto hvor, og hvem som hadde ansvar. Nkom
+                            har gått over til Pure Service, men målet er å erstatte det med en felles, mer lesbar
+                            oversikt bygget rundt master data.
+                        </p>
+                        <p>
+                            Noen adresser er sensitive, og per i dag kjøres mye direkte på PC-en i felt. Første steg
+                            er å forstå hvordan det gjøres i dag og hvilke svakheter som finnes — blant annet dårlig
+                            lesbarhet med mange like gruppefelt, og en sletteknapp som må tenkes nøye gjennom.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="om-oss-band om-oss-band-navy" id="var-losning">
+                <div class="container">
+                    <h2 class="section-heading">Vår løsning</h2>
+                    <div class="project-block">
+                        <div class="om-oss-card om-oss-card--dark">
+                            <p>
+                                Jeg bidrar til et system der utstyr og stasjoner registreres, slik at Nkom kan
+                                identifisere dem gjennom en samlet database- og oversiktsløsning. Sensitiv tilgang
+                                holdes utenfor i denne omgangen.
+                            </p>
+                            <p>
+                                Første del av løsningen omfatter blant annet kartvisning med filtrering mellom
+                                faste og mobile stasjoner, en utstyrsliste, detaljvisning per stasjon med bilder,
+                                logg med datoer, og et eget notatfelt for oppfølging.
+                            </p>
+                            <p class="mb-0">
+                                Vi skiller tydelig mellom funksjonelle krav (knapper og hva som skjer når man
+                                trykker) og ikke-funksjonelle krav (struktur, skalering og hvordan løsningen
+                                bygges), slik at kjernen forblir robust når mer funksjonalitet legges på.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="om-oss-band om-oss-band-light" id="teknologi">
+                <div class="container">
+                    <h2 class="section-heading">Teknologi</h2>
+                    <p class="prosjektbeskrivelse-innhold project-band-intro">
+                        Løsningen bygges som en .NET-webapplikasjon i C#, med React og TypeScript i frontend. Det
+                        finnes allerede en front-baseline i GitHub, og løsningen kjører lokalt i starten mens
+                        datamodell og struktur modnes.
+                    </p>
+                    <div class="tech-chip-row project-tech-chips">
+                        <span class="tech-chip">.NET</span>
+                        <span class="tech-chip">C#</span>
+                        <span class="tech-chip">React</span>
+                        <span class="tech-chip">TypeScript</span>
+                        <span class="tech-chip">Kartvisning</span>
+                        <span class="tech-chip">Scrum</span>
+                        <span class="tech-chip">Kanban</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="om-oss-band om-oss-band-white" id="vart-fokus">
+                <div class="container">
+                    <h2 class="section-heading">Vårt fokus</h2>
+                    <div class="row g-4">
+                        <div class="col-md-4">
+                            <div class="om-oss-card">
+                                <span class="icon-badge">
+                                    <i class="bi bi-bullseye" aria-hidden="true"></i>
+                                </span>
+                                <h3>Kjernefunksjonalitet</h3>
+                                <p>
+                                    Jeg lukker ut støy og gjør kjernen robust først, med fokus på det viktigste
+                                    fremfor å bygge alt på en gang.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="om-oss-card">
+                                <span class="icon-badge">
+                                    <i class="bi bi-diagram-3" aria-hidden="true"></i>
+                                </span>
+                                <h3>Skalerbarhet</h3>
+                                <p>
+                                    Datamodellering og struktur som tåler nytt utstyr og flere stasjoner, slik at
+                                    funksjonalitet kan bygges på senere.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="om-oss-card">
+                                <span class="icon-badge">
+                                    <i class="bi bi-database-check" aria-hidden="true"></i>
+                                </span>
+                                <h3>Master data</h3>
+                                <p>
+                                    Løsningen skal lese data uten å endre kilden, slik at sannheten fortsatt lever
+                                    ett sted, i tråd med Nkoms prinsipper for master data.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="om-oss-band om-oss-band-light" id="gruppen">
+                <div class="container">
+                    <h2 class="section-heading">Gruppen</h2>
+                    <p class="prosjektbeskrivelse-innhold project-band-intro mb-4">
+                        FK-fjernkontroll er et individuelt praksisprosjekt, gjennomført av ett medlem fra CORE-6.
+                    </p>
+                    <div class="project-block">
+                        <div class="gruppen-medlem">
+                            <span class="gruppen-medlem-bilde">
+                                <img src="./Media/Profil-pic/madda.jpg" alt="Madalitso Phiri Skjelnes">
+                            </span>
+                            <div class="gruppen-medlem-info">
+                                <div class="gruppen-medlem-navn">Madalitso Phiri Skjelnes</div>
+                                <div class="gruppen-medlem-tags">
+                                    <span class="team-tag">Fullstack</span>
+                                    <span class="team-tag">Sikkerhet</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="om-oss-band om-oss-band-navy" id="utforsk-prosjektet">
+                <div class="container">
+                    <h2 class="section-heading">Utforsk hele prosjektet</h2>
+                    <div class="project-cta">
+                        <p>
+                            Vil du vite mer om behov, teknologi og fremdrift i FK-fjernkontroll? Følg med på
+                            prosjektet for hele historien, fra Madalitsos eget ståsted som fullstack-utvikler.
+                        </p>
+                        <div class="project-cta-actions">
+                            <a class="btn btn-accent" href="https://phiri-madalitso.github.io/Nkom/index.html#hjem" target="_blank" rel="noopener noreferrer">
+                                Følg med på prosjektet <i class="bi bi-box-arrow-up-right ms-1" aria-hidden="true"></i>
+                                <span class="visually-hidden">(åpnes i ny fane)</span>
+                            </a>
+                            <a class="project-cta-secondary" href="./prosjekter.html">
+                                Se andre prosjekter <i class="bi bi-arrow-right" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <div id="site-footer"></div>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+            crossorigin="anonymous"></script>
+        <script src="./js/reveal.js"></script>
+        <script src="./js/layout.js"></script>
+    </body>
+
+</html>

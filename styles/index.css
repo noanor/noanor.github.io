@@ -19,3 +19,4 @@ regler som overstyrer hverandre (f.eks. .prosjekt-kort-tekst) fortsatt gjør det
 @import url("./partials/footer.css");
 @import url("./partials/prosjekt-grid.css");
 @import url("./partials/project-detail.css");
+@import url("./partials/member-profile.css");

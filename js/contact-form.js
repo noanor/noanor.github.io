@@ -1,5 +1,4 @@
 (function () {
-    // TODO: replace with the real Formspree endpoint, e.g. "https://formspree.io/f/abcdwxyz"
     var FORM_ENDPOINT = "https://formspree.io/f/mvkolylg";
     var POPUP_DURATION = 6000;
 

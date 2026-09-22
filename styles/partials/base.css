@@ -1,0 +1,22 @@
+/*
+Grunnleggende stiler – fargevariabler, fonter og reset
+*/
+
+#card-section {
+    padding: 0;
+}
+
+:root {
+    --accent: #2563eb;
+    --accent-soft: #93c5fd;
+    --navy: #0b1f3a;
+    --bg-muted: #eef1f7;
+    --text-body: #334155;
+    --font-ui: "Segoe UI", Segoe UI, Tahoma, Geneva, Verdana, sans-serif;
+    --font-brand: "Orbitron", sans-serif;
+}
+
+body {
+    font-family: var(--font-ui);
+    background-color: var(--bg-muted);
+}

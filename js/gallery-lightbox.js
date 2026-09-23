@@ -143,6 +143,12 @@
             img.setAttribute("tabindex", "0");
             img.setAttribute("aria-label", "Åpne bildet «" + imageList[i].alt + "» i stort format");
 
+            var expandIcon = document.createElement("span");
+            expandIcon.className = "member-gallery-expand-icon";
+            expandIcon.setAttribute("aria-hidden", "true");
+            expandIcon.innerHTML = '<i class="bi bi-search"></i>';
+            item.appendChild(expandIcon);
+
             function trigger() {
                 open(imageList, i, img);
             }

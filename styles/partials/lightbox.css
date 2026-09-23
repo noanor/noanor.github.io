@@ -1,8 +1,9 @@
 /*
 Lightbox – full-størrelse visning av bildene i medlemsgalleriene.
-Bakgrunnen (resten av siden) blurres litt via backdrop-filter, mens selve
-bildet alltid vises i sin helhet (object-fit: contain), uansett om det
-er liggende eller stående format.
+Bakgrunnen (resten av siden) dimmes (mørk skygge, ingen blur) slik at
+fokuset ligger på bildet som er åpnet. Selve bildet vises alltid i sin
+helhet (object-fit: contain), uansett om det er liggende eller stående
+format.
 
 Pilene sitter i faste posisjoner på kantene av "scenen" (.lightbox-stage),
 som har en fast bredde tilsvarende det bredeste (liggende) bildet ville
@@ -11,7 +12,7 @@ de ligger heller ikke helt inntil et smalt, stående bilde.
 */
 
 .member-gallery-image-trigger {
-    cursor: zoom-in;
+    cursor: pointer;
 }
 
 .lightbox {
@@ -33,9 +34,7 @@ de ligger heller ikke helt inntil et smalt, stående bilde.
 .lightbox-backdrop {
     position: absolute;
     inset: 0;
-    background-color: rgba(5, 7, 13, 0.45);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
+    background-color: rgba(5, 7, 13, 0.8);
     opacity: 0;
     transition: opacity 0.45s cubic-bezier(0.22, 1, 0.36, 1);
     will-change: opacity;
@@ -84,7 +83,7 @@ de ligger heller ikke helt inntil et smalt, stående bilde.
     border-radius: 0.6rem;
     box-shadow: 0 24px 64px rgba(0, 0, 0, 0.5);
     background-color: #05070d;
-    cursor: zoom-out;
+    cursor: pointer;
 }
 
 .lightbox-caption {

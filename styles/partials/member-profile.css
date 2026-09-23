@@ -159,6 +159,7 @@ skygge og beskjæring. Punktnavigasjonen står utenfor denne boksen.
 }
 
 .member-gallery-carousel .carousel-item {
+    position: relative;
     height: 100%;
 }
 
@@ -167,6 +168,46 @@ skygge og beskjæring. Punktnavigasjonen står utenfor denne boksen.
     height: 100%;
     object-fit: cover;
     object-position: center;
+    transition: transform 0.4s ease;
+}
+
+/*
+Kun ekte :hover (musepeker) trigger zoom/ikon – bevisst IKKE :focus-within.
+Når lightboxen lukkes flyttes fokus tilbake til miniatyrbildet (god
+tastaturtilgjengelighet), men det skal ikke se ut som om musen fortsatt
+henger over bildet etterpå.
+*/
+.member-gallery-carousel .carousel-item:hover img {
+    transform: scale(1.05);
+}
+
+/*
+Et lite forstørrelsesglass-ikon i hjørnet som toner inn ved hover, i
+stedet for et stort ikon midt i bildet (som ble opplevd som forstyrrende).
+*/
+.member-gallery-expand-icon {
+    position: absolute;
+    right: 0.85rem;
+    bottom: 0.85rem;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    background-color: rgba(5, 7, 13, 0.55);
+    color: #ffffff;
+    font-size: 1.05rem;
+    opacity: 0;
+    transform: translateY(4px);
+    transition: opacity 0.25s ease, transform 0.25s ease;
+    pointer-events: none;
+}
+
+.member-gallery-carousel .carousel-item:hover .member-gallery-expand-icon {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .member-gallery-caption {

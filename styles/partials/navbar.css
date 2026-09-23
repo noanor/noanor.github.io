@@ -74,3 +74,141 @@ Navbar – toppmeny på alle sider
 #navbar .nav-link.active::after {
     width: 100%;
 }
+
+/*
+Hamburger-knapp – tre linjer som animerer smidig til en X når menyen
+er åpen (styrt av aria-expanded, satt av js/layout.js).
+*/
+.navbar-toggler {
+    position: relative;
+    z-index: 1051;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    width: 2.75rem;
+    height: 2.75rem;
+    padding: 0;
+    border: 0;
+    border-radius: 0.5rem;
+    background-color: transparent;
+    box-shadow: none;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+.navbar-toggler-bar {
+    display: block;
+    width: 22px;
+    height: 2px;
+    border-radius: 2px;
+    background-color: #000000;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.2s ease, background-color 0.2s ease;
+}
+
+#navbar.scrolled .navbar-toggler-bar {
+    background-color: #000000;
+}
+
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-bar {
+    background-color: #ffffff;
+}
+
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-bar:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-bar:nth-child(2) {
+    opacity: 0;
+}
+
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-bar:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+/*
+Full-skjerm mobilmeny (og nettbrett, samme brytningspunkt som Bootstraps
+navbar-expand-lg). Samme marineblå farge som bunnteksten, med en myk
+fade/skyv-animasjon i stedet for Bootstraps standard høyde-kollaps.
+*/
+@media (max-width: 991.98px) {
+    body.mobile-nav-open {
+        overflow: hidden;
+    }
+
+    body.mobile-nav-open .navbar-brand {
+        visibility: hidden;
+    }
+
+    .navbar-collapse {
+        position: fixed;
+        inset: 0;
+        z-index: 1045;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--navy);
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-16px);
+        transition: opacity 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+            transform 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+            visibility 0s linear 0.35s;
+    }
+
+    .navbar-collapse.is-open {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+        transition: opacity 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+            transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .navbar-collapse .navbar-nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        max-width: 22rem;
+    }
+
+    .navbar-collapse .nav-item {
+        width: 100%;
+        text-align: center;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+    }
+
+    .navbar-collapse .nav-item:last-child {
+        border-bottom: none;
+    }
+
+    #navbar .navbar-collapse .nav-link {
+        display: block;
+        padding: 1.15rem 0;
+        color: #ffffff;
+        font-family: var(--font-brand);
+        font-size: 1.4rem;
+        font-weight: 600;
+        letter-spacing: 0.03em;
+    }
+
+    #navbar .navbar-collapse .nav-link::after {
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: var(--accent-soft);
+    }
+
+    #navbar .navbar-collapse .nav-link:hover,
+    #navbar .navbar-collapse .nav-link.active {
+        color: var(--accent-soft);
+    }
+
+    #navbar .navbar-collapse .nav-link:hover::after,
+    #navbar .navbar-collapse .nav-link.active::after {
+        width: 2.5rem;
+    }
+}

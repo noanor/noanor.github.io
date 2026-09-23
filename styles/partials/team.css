@@ -26,15 +26,24 @@ Teamkort – teammedlemmer (team.html)
 }
 
 .team-card {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    border: 1px solid var(--accent-soft);
+    border: 1px solid var(--ink-border);
     border-radius: 0.75rem;
     overflow: hidden;
     background-color: #ffffff;
     box-shadow: 0 4px 14px rgba(15, 23, 42, 0.06);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.team-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--accent);
+    box-shadow: 0 20px 32px rgba(15, 23, 42, 0.12);
 }
 
 .team-card-image {
@@ -81,8 +90,8 @@ Teamkort – teammedlemmer (team.html)
 }
 
 .team-tag {
-    background-color: rgba(37, 99, 235, 0.1);
-    color: var(--accent);
+    background-color: var(--ink-soft);
+    color: var(--navy);
     font-weight: 600;
     font-size: 0.7rem;
     line-height: 1;
@@ -120,6 +129,12 @@ Teamkort – teammedlemmer (team.html)
 }
 
 .team-card-socials {
+    /* z-index virker uten "position" siden elementet er et flex-item av
+       .team-card-footer – slik unngår vi å lage en ny positioneringskontekst
+       som ville "fanget" .stretched-link sin overlay for tidlig. Høyere enn
+       .team-card-actions slik at de sosiale ikonene alltid kan klikkes,
+       selv om stretched-link-overlayen dekker hele kortet. */
+    z-index: 3;
     display: flex;
     gap: 0.4rem;
 }
@@ -131,8 +146,8 @@ Teamkort – teammedlemmer (team.html)
     width: 2.75rem;
     height: 2.75rem;
     border-radius: 50%;
-    background-color: rgba(37, 99, 235, 0.1);
-    color: var(--accent);
+    background-color: var(--ink-soft);
+    color: var(--navy);
     font-size: 1rem;
     transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
 }
@@ -144,6 +159,7 @@ Teamkort – teammedlemmer (team.html)
 }
 
 .team-card-actions {
+    z-index: 1;
     display: flex;
     align-items: center;
     gap: 0.4rem;

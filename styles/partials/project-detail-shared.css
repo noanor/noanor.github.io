@@ -44,7 +44,7 @@ Delte komponenter for underside/detaljsider (om-oss, kontakt, prosjektsider)
     width: 1.75rem;
     height: 1.75rem;
     border-radius: 50%;
-    background-color: var(--accent);
+    background-color: var(--navy);
     color: #ffffff;
     font-family: var(--font-ui);
     font-size: 0.85rem;
@@ -100,7 +100,7 @@ Delte komponenter for underside/detaljsider (om-oss, kontakt, prosjektsider)
     padding: 1.5rem 1.1rem;
     border-radius: 50%;
     background-color: #ffffff;
-    border: 3px solid var(--accent);
+    border: 3px solid var(--ink-border);
     box-shadow: 0 8px 20px rgba(15, 23, 42, 0.1);
     text-align: center;
 }

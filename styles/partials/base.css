@@ -12,8 +12,25 @@ Grunnleggende stiler – fargevariabler, fonter og reset
     --navy: #0b1f3a;
     --bg-muted: #eef1f7;
     --text-body: #334155;
+    /* Nøytrale, navy-tonede fyll/kanter til dekorative elementer (tags, ikonsirkler,
+       kort-kanter) som ikke skal ha aksentfarge – aksent er forbeholdt knapper,
+       lenke-/pil-hover og understreker, se skjemabruken i partials/*.css. */
+    --ink-soft: rgba(11, 31, 58, 0.07);
+    --ink-border: rgba(11, 31, 58, 0.16);
     --font-ui: "Segoe UI", Segoe UI, Tahoma, Geneva, Verdana, sans-serif;
     --font-brand: "Orbitron", sans-serif;
+}
+
+/*
+Scrollbaren er alltid til stede (i stedet for å dukke opp/forsvinne etter
+behov), slik at den aldri "blafrer" inn midt i en dukke-opp-animasjon eller
+når skrifter/bilder laster ferdig og siden blir noen piksler høyere.
+scrollbar-gutter er moderne-nettleser-varianten av det samme; overflow-y:
+scroll er en eldre, universelt støttet reserve som virker likt.
+*/
+html {
+    scrollbar-gutter: stable;
+    overflow-y: scroll;
 }
 
 body {

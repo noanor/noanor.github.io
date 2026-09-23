@@ -4,10 +4,18 @@ Bevegelse – sideinngang og scroll-reveal
 =====================================================
 */
 
+/*
+Elementene glir NED på plass fra litt over sin endelige posisjon (negativ
+translateY), i stedet for å gli opp fra under. Det unngår at det midlertidige
+transform-overshoot noensinne strekker siden lenger ned enn det ferdige
+innholdet gjør – som ellers kan trigge en scrollbar som blafrer inn/ut midt i
+animasjonen (mest merkbart i seksjoner rett over bunnteksten, som prosjekt-
+gridet, der det er lite "luft" igjen under det ferdige innholdet).
+*/
 @keyframes page-enter {
     from {
         opacity: 0;
-        transform: translateY(16px);
+        transform: translateY(-14px);
     }
 
     to {
@@ -19,7 +27,7 @@ Bevegelse – sideinngang og scroll-reveal
 @keyframes reveal-in {
     from {
         opacity: 0;
-        transform: translateY(24px);
+        transform: translateY(-18px);
     }
 
     to {
@@ -30,15 +38,16 @@ Bevegelse – sideinngang og scroll-reveal
 
 @media (prefers-reduced-motion: no-preference) {
     main {
-        animation: page-enter 0.5s cubic-bezier(0.16, 1, 0.3, 1) both;
+        animation: page-enter 0.75s cubic-bezier(0.22, 1, 0.36, 1) both;
     }
 
     .reveal {
         opacity: 0;
-        transform: translateY(24px);
+        transform: translateY(-18px);
+        will-change: opacity, transform;
     }
 
     .reveal.reveal-visible {
-        animation: reveal-in 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        animation: reveal-in 0.85s cubic-bezier(0.22, 1, 0.36, 1) forwards;
     }
 }

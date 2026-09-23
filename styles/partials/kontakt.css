@@ -22,7 +22,7 @@ Kontaktside
     padding: 1.5rem;
     border-radius: 0.75rem;
     background-color: #ffffff;
-    border-top: 3px solid var(--accent);
+    border-top: 3px solid var(--ink-border);
     box-shadow: 0 4px 14px rgba(15, 23, 42, 0.06);
 }
 
@@ -40,7 +40,7 @@ Kontaktside
     border-radius: 50%;
     object-fit: cover;
     background-color: var(--bg-muted);
-    border: 2px solid rgba(37, 99, 235, 0.15);
+    border: 2px solid var(--ink-border);
 }
 
 .kontakt-medlem-navn {

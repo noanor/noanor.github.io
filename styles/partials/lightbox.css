@@ -1,0 +1,196 @@
+/*
+Lightbox – full-størrelse visning av bildene i medlemsgalleriene.
+Bakgrunnen (resten av siden) dimmes (mørk skygge, ingen blur) slik at
+fokuset ligger på bildet som er åpnet. Selve bildet vises alltid i sin
+helhet (object-fit: contain), uansett om det er liggende eller stående
+format.
+
+Pilene sitter i faste posisjoner på kantene av "scenen" (.lightbox-stage),
+som har en fast bredde tilsvarende det bredeste (liggende) bildet ville
+fylt. Slik flytter ikke pilene seg mellom stående og liggende bilder, og
+de ligger heller ikke helt inntil et smalt, stående bilde.
+*/
+
+.member-gallery-image-trigger {
+    cursor: pointer;
+}
+
+.lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 1100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+    transition: visibility 0s linear 0.45s;
+}
+
+.lightbox.is-open {
+    visibility: visible;
+    transition: visibility 0s linear 0s;
+}
+
+.lightbox-backdrop {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(5, 7, 13, 0.8);
+    opacity: 0;
+    transition: opacity 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+    will-change: opacity;
+}
+
+.lightbox.is-open .lightbox-backdrop {
+    opacity: 1;
+}
+
+.lightbox-stage {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: min(82vw, 64rem);
+    max-height: 78vh;
+    opacity: 0;
+    transform: scale(0.97);
+    transition: opacity 0.4s cubic-bezier(0.22, 1, 0.36, 1), transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+    will-change: opacity, transform;
+}
+
+.lightbox.is-open .lightbox-stage {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.lightbox-content {
+    position: relative;
+    margin: 0;
+    max-width: 100%;
+    max-height: 78vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.lightbox-image {
+    display: block;
+    max-width: 100%;
+    max-height: 78vh;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    border-radius: 0.6rem;
+    box-shadow: 0 24px 64px rgba(0, 0, 0, 0.5);
+    background-color: #05070d;
+    cursor: pointer;
+}
+
+.lightbox-caption {
+    margin-top: 0.9rem;
+    color: #ffffff;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+.lightbox-close,
+.lightbox-nav {
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.14);
+    color: #ffffff;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.lightbox-close:hover,
+.lightbox-nav:hover {
+    background-color: rgba(255, 255, 255, 0.26);
+}
+
+.lightbox-close {
+    position: fixed;
+    top: 1.25rem;
+    right: 1.25rem;
+    width: 2.9rem;
+    height: 2.9rem;
+    font-size: 1.15rem;
+}
+
+/*
+Faste posisjoner på kanten av .lightbox-stage (ikke .lightbox-content),
+slik at de alltid står stille uansett om bildet er stående eller liggende.
+*/
+.lightbox-nav {
+    position: absolute;
+    top: 50%;
+    flex-shrink: 0;
+    width: 3rem;
+    height: 3rem;
+    font-size: 1.3rem;
+    transform: translateY(-50%);
+}
+
+.lightbox-nav:hover {
+    transform: translateY(-50%) scale(1.06);
+}
+
+.lightbox-prev {
+    left: 0;
+}
+
+.lightbox-next {
+    right: 0;
+}
+
+.lightbox-counter {
+    position: fixed;
+    left: 50%;
+    bottom: 1.5rem;
+    transform: translateX(-50%);
+    margin: 0;
+    padding: 0.4rem 1rem;
+    border-radius: 999px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    font-size: 0.85rem;
+    letter-spacing: 0.04em;
+    opacity: 0;
+    transition: opacity 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.lightbox.is-open .lightbox-counter {
+    opacity: 1;
+}
+
+body.lightbox-open {
+    overflow: hidden;
+}
+
+@media (max-width: 575.98px) {
+    .lightbox-stage {
+        width: 92vw;
+        max-height: 70vh;
+    }
+
+    .lightbox-image {
+        max-height: 70vh;
+    }
+
+    .lightbox-nav {
+        width: 2.6rem;
+        height: 2.6rem;
+        font-size: 1.15rem;
+    }
+
+    .lightbox-close {
+        width: 2.6rem;
+        height: 2.6rem;
+        top: 1rem;
+        right: 1rem;
+    }
+}

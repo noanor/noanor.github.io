@@ -48,7 +48,7 @@ Medlemsprofilside (f.eks. dennis-tea.html)
 .member-hero-role {
     font-size: 0.9rem;
     font-weight: 600;
-    color: var(--accent);
+    color: var(--navy);
     letter-spacing: 0.01em;
     margin-bottom: 1.25rem;
 }
@@ -87,7 +87,7 @@ Medlemsprofilside (f.eks. dennis-tea.html)
 
 .member-hero-social i:first-child {
     font-size: 1.1rem;
-    color: var(--accent);
+    color: var(--navy);
 }
 
 .member-hero-social .bi-arrow-right {

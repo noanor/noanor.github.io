@@ -16,7 +16,7 @@ Prosjektoversikt – kortgrid (prosjekter.html)
     flex-direction: column;
     height: 100%;
     background-color: #ffffff;
-    border: 1px solid var(--accent-soft);
+    border: 1px solid var(--ink-border);
     border-radius: 1.1rem;
     overflow: hidden;
     box-shadow: 0 4px 14px rgba(15, 23, 42, 0.05);

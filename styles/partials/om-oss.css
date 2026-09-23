@@ -74,14 +74,14 @@ Om oss seksjonen
     display: flex;
     flex-direction: column;
     padding-left: 0.9rem;
-    border-left: 2px solid var(--accent);
+    border-left: 2px solid var(--ink-border);
 }
 
 .stat-number {
     font-family: var(--font-ui);
     font-weight: 700;
     font-size: 2rem;
-    color: var(--accent);
+    color: var(--navy);
     line-height: 1;
 }
 
@@ -138,7 +138,7 @@ Gruppebildet
 
 .om-oss-placeholder i {
     font-size: 3rem;
-    color: var(--accent);
+    color: var(--navy);
     opacity: 0.5;
 }
 
@@ -186,7 +186,7 @@ Ambisjoner, kompetanse og interesser blokker
     padding: 1.75rem;
     border-radius: 0.75rem;
     background-color: #ffffff;
-    border-top: 3px solid var(--accent);
+    border-top: 3px solid var(--ink-border);
     box-shadow: 0 4px 14px rgba(15, 23, 42, 0.06);
 }
 
@@ -197,13 +197,13 @@ Ambisjoner, kompetanse og interesser blokker
     width: 44px;
     height: 44px;
     border-radius: 50%;
-    background-color: rgba(37, 99, 235, 0.1);
+    background-color: var(--ink-soft);
     margin-bottom: 0.9rem;
 }
 
 .icon-badge i {
     font-size: 1.25rem;
-    color: var(--accent);
+    color: var(--navy);
 }
 
 .om-oss-card h3 {
@@ -224,7 +224,7 @@ Ambisjoner, kompetanse og interesser blokker
 
 .om-oss-card--dark {
     background-color: rgba(255, 255, 255, 0.06);
-    border-top-color: var(--accent-soft);
+    border-top-color: rgba(255, 255, 255, 0.22);
     box-shadow: none;
 }
 
@@ -233,7 +233,7 @@ Ambisjoner, kompetanse og interesser blokker
 }
 
 .om-oss-card--dark .icon-badge i {
-    color: var(--accent-soft);
+    color: #ffffff;
 }
 
 .om-oss-card--dark h3 {
@@ -270,7 +270,7 @@ Teknologier og verktøy
 .tech-group {
     background-color: var(--bg-muted);
     border-radius: 0.75rem;
-    border-left: 4px solid var(--accent);
+    border-left: 4px solid var(--navy);
     padding: 1.5rem 1.75rem;
 }
 
@@ -308,7 +308,7 @@ Teknologier og verktøy
     color: var(--navy);
     font-size: 0.8rem;
     font-weight: 600;
-    border: 1px solid rgba(37, 99, 235, 0.22);
+    border: 1px solid var(--ink-border);
 }
 
 @media (max-width: 767.98px) {

@@ -37,11 +37,13 @@
                 <img src="./Media/logo-c6-white.png" alt="" class="navbar-logo">
                 <span class="navbar-brand-text brand-font">CORE-6</span>
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Vis eller skjul meny">
-                <span class="navbar-toggler-icon"></span>
+            <button class="navbar-toggler" type="button" id="navbarToggler" aria-controls="navbarNav" aria-expanded="false" aria-label="Vis eller skjul meny">
+                <span class="navbar-toggler-bar"></span>
+                <span class="navbar-toggler-bar"></span>
+                <span class="navbar-toggler-bar"></span>
             </button>
 
-            <div class="collapse navbar-collapse" id="navbarNav">
+            <div class="navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav gap-lg-4 ms-auto">
                     ${navLinksHTML}
                 </ul>
@@ -136,6 +138,55 @@
         }
 
         setupHeaderScrollBehavior();
+        setupMobileNav();
+    }
+
+    function setupMobileNav() {
+        const toggler = document.getElementById("navbarToggler");
+        const collapseEl = document.getElementById("navbarNav");
+
+        if (!toggler || !collapseEl) {
+            return;
+        }
+
+        const MOBILE_BREAKPOINT = 992;
+
+        function closeMenu() {
+            collapseEl.classList.remove("is-open");
+            toggler.setAttribute("aria-expanded", "false");
+            document.body.classList.remove("mobile-nav-open");
+        }
+
+        function openMenu() {
+            collapseEl.classList.add("is-open");
+            toggler.setAttribute("aria-expanded", "true");
+            document.body.classList.add("mobile-nav-open");
+        }
+
+        toggler.addEventListener("click", function () {
+            if (collapseEl.classList.contains("is-open")) {
+                closeMenu();
+            } else {
+                openMenu();
+            }
+        });
+
+        collapseEl.querySelectorAll(".nav-link").forEach(function (link) {
+            link.addEventListener("click", closeMenu);
+        });
+
+        document.addEventListener("keydown", function (event) {
+            if (event.key === "Escape" && collapseEl.classList.contains("is-open")) {
+                closeMenu();
+                toggler.focus();
+            }
+        });
+
+        window.addEventListener("resize", function () {
+            if (window.innerWidth >= MOBILE_BREAKPOINT && collapseEl.classList.contains("is-open")) {
+                closeMenu();
+            }
+        });
     }
 
     function setupHeaderScrollBehavior() {

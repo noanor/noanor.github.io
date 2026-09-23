@@ -182,27 +182,34 @@ function createCard(name, image, role, memberAnsvar, text, linkedinUrl, githubUr
     socials.append(githubLink);
     socials.append(mailLink);
 
-    var detailsBtn = document.createElement('button');
-    detailsBtn.type = "button";
-    detailsBtn.className = "btn btn-accent";
-    detailsBtn.textContent = "Les mer";
-    detailsBtn.id = 'btn-' + `${image}`;
-    detailsBtn.setAttribute("data-bs-toggle", "modal");
-    detailsBtn.setAttribute("data-bs-target", "#memberModal");
-    detailsBtn.setAttribute("data-index", index);
-
     var actions = document.createElement("div");
     actions.className = "team-card-actions";
 
-    if (profileUrl) {
-        var profileLink = document.createElement("a");
-        profileLink.className = "btn btn-accent-outline";
-        profileLink.href = profileUrl;
-        profileLink.textContent = "Se profil";
-        actions.append(profileLink);
-    }
+    var detailsBtn = null;
 
-    actions.append(detailsBtn);
+    if (profileUrl) {
+        // Kun ett, profesjonelt handlingsvalg når medlemmet har egen profilside:
+        // hele kortet er klikkbart via stretched-link, i tillegg til selve knappen.
+        var profileLink = document.createElement("a");
+        profileLink.className = "btn btn-accent stretched-link";
+        profileLink.href = profileUrl;
+        profileLink.innerHTML = 'Se profil <i class="bi bi-arrow-right" aria-hidden="true"></i>';
+        profileLink.setAttribute("aria-label", "Se profilen til " + name);
+        actions.append(profileLink);
+    } else {
+        // Uten egen profilside ennå viser knappen en forhåndsvisning i en
+        // modal, men har samme profesjonelle tekst som de andre kortene
+        // siden alle etter hvert får sin egen profilside.
+        detailsBtn = document.createElement('button');
+        detailsBtn.type = "button";
+        detailsBtn.className = "btn btn-accent";
+        detailsBtn.innerHTML = 'Se profil <i class="bi bi-arrow-right" aria-hidden="true"></i>';
+        detailsBtn.id = 'btn-' + `${image}`;
+        detailsBtn.setAttribute("data-bs-toggle", "modal");
+        detailsBtn.setAttribute("data-bs-target", "#memberModal");
+        detailsBtn.setAttribute("data-index", index);
+        actions.append(detailsBtn);
+    }
 
     var cardFooter = document.createElement("div");
     cardFooter.className = "team-card-footer";
@@ -213,6 +220,19 @@ function createCard(name, image, role, memberAnsvar, text, linkedinUrl, githubUr
     cardBody.append(cardRole);
     cardBody.append(cardText);
     cardBody.append(cardFooter);
+
+    // Gjør hele profilboksen klikkbar, akkurat som prosjektkortene på
+    // "Våre prosjekter". Når kortet ikke har en egen profilside, åpner et
+    // klikk hvor som helst på kortet (utenom sosiale ikoner/knappen selv,
+    // som håndterer sine egne klikk) den samme "Les mer"-modalen som knappen.
+    if (detailsBtn) {
+        card.addEventListener("click", function (event) {
+            if (event.target.closest(".team-card-socials") || event.target.closest(".team-card-actions")) {
+                return;
+            }
+            detailsBtn.click();
+        });
+    }
 
     return card;
 }

@@ -16,6 +16,18 @@ Grunnleggende stiler – fargevariabler, fonter og reset
     --font-brand: "Orbitron", sans-serif;
 }
 
+/*
+Scrollbaren er alltid til stede (i stedet for å dukke opp/forsvinne etter
+behov), slik at den aldri "blafrer" inn midt i en dukke-opp-animasjon eller
+når skrifter/bilder laster ferdig og siden blir noen piksler høyere.
+scrollbar-gutter er moderne-nettleser-varianten av det samme; overflow-y:
+scroll er en eldre, universelt støttet reserve som virker likt.
+*/
+html {
+    scrollbar-gutter: stable;
+    overflow-y: scroll;
+}
+
 body {
     font-family: var(--font-ui);
     background-color: var(--bg-muted);

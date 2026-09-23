@@ -12,6 +12,11 @@ Medlemsprofilside (f.eks. dennis-tea.html)
     grid-template-columns: minmax(0, 17rem) minmax(0, 1fr);
     gap: 2.5rem;
     align-items: start;
+    /* Samme bredde/sentrering som "Om meg"-innholdet under, slik at
+       bilde + tekst fremstår som en samlet, sentrert blokk over den
+       seksjonen i stedet for å strekke seg ut til hele containerens bredde. */
+    max-width: 58rem;
+    margin-inline: auto;
 }
 
 .member-hero-photo-frame {
@@ -106,11 +111,21 @@ Medlemsprofilside (f.eks. dennis-tea.html)
     .member-hero-grid {
         grid-template-columns: 1fr;
         gap: 1.5rem;
+        text-align: center;
     }
 
     .member-hero-photo-frame {
         max-width: 16rem;
         margin-inline: auto;
+    }
+
+    .member-hero-bio {
+        margin-inline: auto;
+    }
+
+    .member-hero-tags,
+    .member-hero-socials {
+        justify-content: center;
     }
 }
 
@@ -125,6 +140,14 @@ Bildegalleri – Bootstrap carousel
 .member-gallery-carousel {
     max-width: 44rem;
     margin-inline: auto;
+}
+
+/*
+Selve "bildeboksen": kun scenen (bilde + piler) får avrundede hjørner,
+skygge og beskjæring. Punktnavigasjonen står utenfor denne boksen.
+*/
+.member-gallery-stage {
+    position: relative;
     border-radius: 0.9rem;
     overflow: hidden;
     box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35);
@@ -142,8 +165,8 @@ Bildegalleri – Bootstrap carousel
 .member-gallery-carousel .carousel-item img {
     width: 100%;
     height: 100%;
-    object-fit: contain;
-    background-color: #05070d;
+    object-fit: cover;
+    object-position: center;
 }
 
 .member-gallery-caption {
@@ -165,7 +188,11 @@ Bildegalleri – Bootstrap carousel
 
 .member-gallery-carousel .carousel-indicators {
     position: static;
-    margin: 0.85rem 0 0;
+    margin: 0 0 1rem;
+}
+
+.member-gallery-carousel .carousel-indicators [data-bs-target] {
+    border-radius: 999px;
 }
 
 .member-gallery-hint {

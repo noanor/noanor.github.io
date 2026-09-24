@@ -69,7 +69,7 @@ var emails = [
 
 var bios = [
     "Setter pris på en aktiv hverdag med trening, padel og fotball, og følger Real Madrid tett. Er også glad i fotografering og å tilbringe tid med venner og familie.",
-    "Født og oppvokst i Kristiansand. Brenner for gode digitale brukeropplevelser, UX-design og frontendutvikling. Utenom skjermen: trening, fotball og reiser.",
+    "Brenner for design, webutvikling og gode digitale brukeropplevelser, og verdsetter et sterkt samspill i teamet som nestleder. Utenom skjermen: styrketrening, boksing, fotball og reiser.",
     "Interessert i fullstack-utvikling og sikkerhet, og opptatt av å finne reelle problemer og bygge egne løsninger på dem. Snakker seks språk og elsker å reise, fotografere og lage mat.",
     "Hestejente med bakgrunn fra sprangridning på nasjonalt og internasjonalt nivå. Interessert i UX-design og sikkerhet, og glad i å reise og holde seg aktiv.",
     "Interessert i UX/UI, frontend, webutvikling og design, og opptatt av å bygge gjennomtenkte, brukervennlige løsninger. Utenfor skjermen er han glad i løping, reising og musikk.",

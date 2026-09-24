@@ -1,7 +1,7 @@
 (function () {
     const page = document.documentElement.dataset.page || "";
     const projectDetailPages = ["luftfartshinder", "nkom", "smaragd-motorsport"];
-    const memberDetailPages = ["dennis-tea", "hildid-musse", "efe-kaan-eksi", "noa-vincent-norden"];
+    const memberDetailPages = ["dennis-tea", "hildid-musse", "efe-kaan-eksi", "noa-vincent-norden", "marion-rasmussen"];
     const activePage = projectDetailPages.includes(page)
         ? "prosjekter"
         : memberDetailPages.includes(page)

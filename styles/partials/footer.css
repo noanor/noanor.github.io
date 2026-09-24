@@ -6,7 +6,7 @@ Footer
     overflow: hidden;
     padding: 5rem 0 1.5rem;
     background-color: var(--navy);
-    color: #e2e8f0;
+    color: rgba(255, 255, 255, 0.85);
     border-top: 1px solid rgba(255, 255, 255, 0.12);
 }
 
@@ -21,12 +21,12 @@ Footer grid-effekt
 
     background-image:
         linear-gradient(
-            rgba(147, 197, 253, 0.09) 1px,
+            rgba(255, 255, 255, 0.06) 1px,
             transparent 1px
         ),
         linear-gradient(
             90deg,
-            rgba(147, 197, 253, 0.09) 1px,
+            rgba(255, 255, 255, 0.06) 1px,
             transparent 1px
         );
 
@@ -102,7 +102,7 @@ Logo
     font-family: var(--font-ui);
     font-size: 0.95rem;
     line-height: 1.7;
-    color: #cbd5e1;
+    color: rgba(255, 255, 255, 0.72);
 }
 
 .footer-meta {
@@ -113,12 +113,12 @@ Logo
     letter-spacing: 0.08em;
     text-transform: uppercase;
 
-    color: #94a3b8;
+    color: rgba(255, 255, 255, 0.55);
 }
 
 
-/* 
-Footer heading 
+/*
+Footer heading
 */
 .footer-heading {
     margin-bottom: 1.25rem;
@@ -164,7 +164,7 @@ Footer navigasjon
     align-items: center;
     gap: 0.7rem;
 
-    color: #e2e8f0;
+    color: rgba(255, 255, 255, 0.85);
     text-decoration: none;
 
     font-family: var(--font-ui);
@@ -179,7 +179,7 @@ Footer navigasjon
 .footer-nav a span {
     font-family: var(--font-ui);
     font-size: 0.65rem;
-    color: #e2e8f0;
+    color: rgba(255, 255, 255, 0.85);
 }
 
 .footer-nav a:hover {
@@ -226,7 +226,7 @@ Footer kontakt
     align-items: center;
     gap: 0.75rem;
 
-    color: #e2e8f0;
+    color: rgba(255, 255, 255, 0.85);
     text-decoration: none;
 
     font-family: var(--font-ui);
@@ -269,7 +269,7 @@ Footer bunn
 .footer-bottom p {
     margin: 0;
 
-    color: #94a3b8;
+    color: rgba(255, 255, 255, 0.55);
     font-size: 0.75rem;
 }
 

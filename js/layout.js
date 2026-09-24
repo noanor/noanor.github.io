@@ -9,11 +9,11 @@
             : page;
 
     const navItems = [
-        { key: "index", label: "Hjem", href: "./index.html" },
-        { key: "om-oss", label: "Om oss", href: "./om-oss.html" },
-        { key: "team", label: "Team", href: "./team.html" },
-        { key: "prosjekter", label: "Våre prosjekter", href: "./prosjekter.html" },
-        { key: "kontakt", label: "Kontakt", href: "./kontakt.html" }
+        { key: "index", label: "Hjem", href: "/index.html" },
+        { key: "om-oss", label: "Om oss", href: "/om-oss.html" },
+        { key: "team", label: "Team", href: "/team.html" },
+        { key: "prosjekter", label: "Våre prosjekter", href: "/prosjekter.html" },
+        { key: "kontakt", label: "Kontakt", href: "/kontakt.html" }
     ];
 
     const navLinksHTML = navItems.map(function (item) {
@@ -33,8 +33,8 @@
     const navbarHTML = `
     <nav class="navbar navbar-expand-lg" id="navbar">
         <div class="container">
-            <a class="navbar-brand me-lg-4 d-flex align-items-center gap-2" href="./index.html" aria-label="CORE-6 – til forsiden">
-                <img src="./Media/logo-c6-white.png" alt="" class="navbar-logo">
+            <a class="navbar-brand me-lg-4 d-flex align-items-center gap-2" href="/index.html" aria-label="CORE-6 – til forsiden">
+                <img src="/Media/logo-c6-white.png" alt="" class="navbar-logo">
                 <span class="navbar-brand-text brand-font">CORE-6</span>
             </a>
             <button class="navbar-toggler" type="button" id="navbarToggler" aria-controls="navbarNav" aria-expanded="false" aria-label="Vis eller skjul meny">
@@ -62,7 +62,7 @@
 
                 <div class="col-12 col-md-5">
                     <div class="footer-brand">
-                        <img src="./Media/logo-c6-white.png" alt="" class="footer-logo-image">
+                        <img src="/Media/logo-c6-white.png" alt="" class="footer-logo-image">
                         <span class="footer-logo">CORE-6</span>
                         <span class="footer-line"></span>
                     </div>

@@ -36,6 +36,33 @@ Typografi og knapper – delt på tvers av sider
     color: var(--navy);
 }
 
+.btn-accent,
+.btn-accent-outline {
+    --bs-btn-border-radius: 0.75rem;
+    --bs-btn-hover-border-radius: 0.75rem;
+    --bs-btn-active-border-radius: 0.75rem;
+    font-family: var(--font-ui);
+    font-weight: 600;
+    letter-spacing: normal;
+    padding-inline: 1.4rem;
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        background-color 0.2s ease,
+        border-color 0.2s ease,
+        color 0.2s ease;
+}
+
+.btn-accent:hover,
+.btn-accent-outline:hover {
+    transform: translateY(-2px);
+}
+
+.btn-accent:active,
+.btn-accent-outline:active {
+    transform: translateY(0);
+}
+
 .btn-accent {
     --bs-btn-color: #fff;
     --bs-btn-bg: var(--accent);
@@ -46,10 +73,11 @@ Typografi og knapper – delt på tvers av sider
     --bs-btn-active-color: #fff;
     --bs-btn-active-bg: var(--accent-active);
     --bs-btn-active-border-color: var(--accent-active);
-    font-family: var(--font-ui);
-    font-weight: 500;
-    letter-spacing: normal;
-    padding-inline: 1.4rem;
+    box-shadow: 0 4px 14px rgba(184, 101, 30, 0.28);
+}
+
+.btn-accent:hover {
+    box-shadow: 0 8px 22px rgba(184, 101, 30, 0.38);
 }
 
 .btn-accent-outline {
@@ -61,12 +89,12 @@ Typografi og knapper – delt på tvers av sider
     --bs-btn-active-color: #fff;
     --bs-btn-active-bg: var(--navy);
     --bs-btn-active-border-color: var(--navy);
-    font-family: var(--font-ui);
-    font-weight: 500;
-    letter-spacing: normal;
-    padding-inline: 1.4rem;
     background-color: transparent;
-    border-width: 2px;
+    border-width: 1.5px;
+}
+
+.btn-accent-outline:hover {
+    box-shadow: 0 8px 22px rgba(33, 29, 26, 0.18);
 }
 
 .navbar-brand-text {

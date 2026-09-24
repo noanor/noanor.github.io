@@ -71,7 +71,7 @@ var bios = [
     "Setter pris på en aktiv hverdag med trening, padel og fotball, og følger Real Madrid tett. Er også glad i fotografering og å tilbringe tid med venner og familie.",
     "Født og oppvokst i Kristiansand. Brenner for gode digitale brukeropplevelser, UX-design og frontendutvikling. Utenom skjermen: trening, fotball og reiser.",
     "TODO: Skriv en kort bio for Madalitso Phiri Skjelnes",
-    "TODO: Skriv en kort bio for Marion Rasmussen",
+    "Hestejente med bakgrunn fra sprangridning på nasjonalt og internasjonalt nivå. Interessert i UX-design og sikkerhet, og glad i å reise og holde seg aktiv.",
     "Interessert i UX/UI, frontend, webutvikling og design, og opptatt av å bygge gjennomtenkte, brukervennlige løsninger. Utenfor skjermen er han glad i løping, reising og musikk.",
     "TODO: Skriv en kort bio for Noa Vincent Nordén"
 ];
@@ -80,7 +80,7 @@ var profileLinks = [
     "./efe-kaan-eksi.html",
     "./hildid-musse.html",
     "",
-    "",
+    "./marion-rasmussen.html",
     "./dennis-tea.html",
     ""
 ];

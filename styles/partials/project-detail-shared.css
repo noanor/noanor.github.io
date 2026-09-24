@@ -227,9 +227,9 @@ Delte komponenter for underside/detaljsider (om-oss, kontakt, prosjektsider)
     margin: 0;
     padding: 1.35rem 1.4rem;
     border-radius: 0.75rem;
-    background-color: #0b1f3a;
-    border: 1px solid rgba(37, 99, 235, 0.45);
-    box-shadow: inset 0 0 0 1px rgba(96, 165, 250, 0.12);
+    background-color: var(--navy);
+    border: 1px solid rgba(184, 101, 30, 0.45);
+    box-shadow: inset 0 0 0 1px rgba(237, 195, 142, 0.12);
     color: #e2e8f0;
     font-family: Consolas, "Courier New", monospace;
     font-size: 0.85rem;
@@ -239,7 +239,7 @@ Delte komponenter for underside/detaljsider (om-oss, kontakt, prosjektsider)
 }
 
 .code-panel .code-comment {
-    color: #93c5fd;
+    color: var(--accent-soft);
 }
 
 .code-panel .code-keyword {

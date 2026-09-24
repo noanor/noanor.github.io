@@ -37,7 +37,7 @@ forteller brukeren at hjulet over er klikkbart.
     margin-top: 1.25rem;
     padding: 0.4rem 0.95rem;
     border-radius: 999px;
-    background-color: rgba(37, 99, 235, 0.1);
+    background-color: rgba(184, 101, 30, 0.1);
     color: var(--accent);
     font-size: 0.85rem;
     font-weight: 600;
@@ -123,11 +123,11 @@ forteller brukeren at hjulet over er klikkbart.
 
 @keyframes wheel-hint-pulse {
     0%, 100% {
-        box-shadow: 0 10px 24px rgba(15, 23, 42, 0.1), 0 0 0 0 rgba(37, 99, 235, 0.28);
+        box-shadow: 0 10px 24px rgba(15, 23, 42, 0.1), 0 0 0 0 rgba(184, 101, 30, 0.28);
     }
 
     50% {
-        box-shadow: 0 10px 24px rgba(15, 23, 42, 0.1), 0 0 0 14px rgba(37, 99, 235, 0);
+        box-shadow: 0 10px 24px rgba(15, 23, 42, 0.1), 0 0 0 14px rgba(184, 101, 30, 0);
     }
 }
 

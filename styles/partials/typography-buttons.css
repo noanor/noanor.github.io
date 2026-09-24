@@ -41,11 +41,11 @@ Typografi og knapper – delt på tvers av sider
     --bs-btn-bg: var(--accent);
     --bs-btn-border-color: var(--accent);
     --bs-btn-hover-color: #fff;
-    --bs-btn-hover-bg: #1d4ed8;
-    --bs-btn-hover-border-color: #1d4ed8;
+    --bs-btn-hover-bg: var(--accent-hover);
+    --bs-btn-hover-border-color: var(--accent-hover);
     --bs-btn-active-color: #fff;
-    --bs-btn-active-bg: #1e40af;
-    --bs-btn-active-border-color: #1e40af;
+    --bs-btn-active-bg: var(--accent-active);
+    --bs-btn-active-border-color: var(--accent-active);
     font-family: var(--font-ui);
     font-weight: 500;
     letter-spacing: normal;

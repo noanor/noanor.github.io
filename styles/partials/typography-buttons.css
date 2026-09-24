@@ -53,13 +53,21 @@ Typografi og knapper – delt på tvers av sider
         color 0.2s ease;
 }
 
-.btn-accent:hover,
-.btn-accent-outline:hover {
+/*
+Løft-effekten på hover flyttes IKKE på knapper som er en .stretched-link
+(f.eks. "Se profil"/"Detaljer" inni team-/prosjektkortene). Der dekker
+lenkens usynlige klikkflate hele kortet, så :hover trigges av musen hvor
+som helst på kortet – flytter vi da selve den lille knappen, "hopper" den
+synlig hver gang musen beveger seg over kortet, uavhengig av hvor markøren
+faktisk er. Frittstående knapper (hero, footer, CTA-seksjoner) beholder løftet.
+*/
+.btn-accent:not(.stretched-link):hover,
+.btn-accent-outline:not(.stretched-link):hover {
     transform: translateY(-2px);
 }
 
-.btn-accent:active,
-.btn-accent-outline:active {
+.btn-accent:not(.stretched-link):active,
+.btn-accent-outline:not(.stretched-link):active {
     transform: translateY(0);
 }
 

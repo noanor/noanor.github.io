@@ -70,7 +70,7 @@ var emails = [
 var bios = [
     "Setter pris på en aktiv hverdag med trening, padel og fotball, og følger Real Madrid tett. Er også glad i fotografering og å tilbringe tid med venner og familie.",
     "Født og oppvokst i Kristiansand. Brenner for gode digitale brukeropplevelser, UX-design og frontendutvikling. Utenom skjermen: trening, fotball og reiser.",
-    "TODO: Skriv en kort bio for Madalitso Phiri Skjelnes",
+    "Interessert i fullstack-utvikling og sikkerhet, og opptatt av å finne reelle problemer og bygge egne løsninger på dem. Snakker seks språk og elsker å reise, fotografere og lage mat.",
     "Hestejente med bakgrunn fra sprangridning på nasjonalt og internasjonalt nivå. Interessert i UX-design og sikkerhet, og glad i å reise og holde seg aktiv.",
     "Interessert i UX/UI, frontend, webutvikling og design, og opptatt av å bygge gjennomtenkte, brukervennlige løsninger. Utenfor skjermen er han glad i løping, reising og musikk.",
     "Strukturert og kreativ, med interesse for teknologi og digitale verktøy. Bruker fritiden på sport, trening, videospill, fotografering og å reise og oppleve nye kulturer."
@@ -79,7 +79,7 @@ var bios = [
 var profileLinks = [
     "./efe-kaan-eksi.html",
     "./hildid-musse.html",
-    "",
+    "./madalitso-phiri-skjelnes.html",
     "./marion-rasmussen.html",
     "./dennis-tea.html",
     "./noa-vincent-norden.html"

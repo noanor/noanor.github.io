@@ -8,6 +8,17 @@ Nettsiden til **CORE-6** (Gruppe 7) — bachelorprosjekt innen IT og informasjon
 
 CORE-6 består av seks studenter som gjennom bachelorprosjektet og individuelle praksisperioder jobber med reelle oppdragsgivere, blant annet Kartverket, Nasjonal kommunikasjonsmyndighet (Nkom) og Smaragd Motorsport. Denne nettsiden presenterer gruppen, teamet og prosjektene, og fungerer som gruppens digitale visittkort.
 
+## Gruppemedlemmer
+
+| Navn | Rolle | Profil | GitHub | LinkedIn |
+|---|---|---|---|---|
+| Efe Kaan Eksi | Gruppeleder | [Profilside](https://noanor.github.io/team/efe-kaan-eksi.html) | [GitHub](https://github.com/efekaaneksi) | [LinkedIn](https://www.linkedin.com/in/efekaan-eksi-2b0a5239a/) |
+| Hildid Musse | Nestleder | [Profilside](https://noanor.github.io/team/hildid-musse.html) | [GitHub](https://github.com/Mussinho777) | [LinkedIn](https://www.linkedin.com/in/hildid-musse-6679a8392/) |
+| Madalitso Phiri Skjelnes | | [Profilside](https://noanor.github.io/team/madalitso-phiri-skjelnes.html) | [GitHub](https://github.com/Phiri-Madalitso) | [LinkedIn](https://www.linkedin.com/in/madalitso-skjelnes-426741290/) |
+| Marion Rasmussen | | [Profilside](https://noanor.github.io/team/marion-rasmussen.html) | [GitHub](https://github.com/marionrasmussen) | [LinkedIn](https://www.linkedin.com/in/marion-rasmussen-281298270/) |
+| Dennis Tea | | [Profilside](https://noanor.github.io/team/dennis-tea.html) | [GitHub](https://github.com/dennistae) | [LinkedIn](https://www.linkedin.com/in/dennistea/) |
+| Noa Vincent Nordén | | [Profilside](https://noanor.github.io/team/noa-vincent-norden.html) | [GitHub](https://github.com/noanor) | [LinkedIn](https://www.linkedin.com/in/noa-nordén-097556333/) |
+
 ## Sidestruktur
 
 | Side | Beskrivelse |
@@ -15,10 +26,11 @@ CORE-6 består av seks studenter som gjennom bachelorprosjektet og individuelle 
 | `index.html` | Forside med hero-seksjon og tidslinje for bachelorsamarbeidet |
 | `om-oss.html` | Om gruppen, hva som driver oss, og teknologier/verktøy vi bruker |
 | `team.html` | Presentasjon av hvert teammedlem |
+| `team/*.html` | Egen profilside per teammedlem |
 | `prosjekter.html` | Oversikt over alle prosjekter |
-| `luftfartshinder.html` | Prosjektside: Kartverket – Luftfartshinder softwareapplikasjon |
-| `nkom.html` | Prosjektside: Nkom – FK-fjernkontroll |
-| `smaragd-motorsport.html` | Prosjektside: Smaragd Motorsport – E-handelsløsning |
+| `prosjekter/luftfartshinder.html` | Prosjektside: Kartverket – Luftfartshinder softwareapplikasjon |
+| `prosjekter/nkom.html` | Prosjektside: Nkom – FK-fjernkontroll |
+| `prosjekter/smaragd-motorsport.html` | Prosjektside: Smaragd Motorsport – E-handelsløsning |
 | `kontakt.html` | Kontaktinformasjon til alle gruppemedlemmer |
 
 ## Teknologier
@@ -32,10 +44,12 @@ CORE-6 består av seks studenter som gjennom bachelorprosjektet og individuelle 
 ## Prosjektstruktur
 
 ```
-├── *.html              Sidene
+├── *.html                Toppnivå-sidene (forside, oversikter, kontakt)
+├── team/                 Én profilside per teammedlem
+├── prosjekter/           Én detaljside per prosjekt
 ├── styles/
-│   ├── index.css        Samler alle partials
-│   └── partials/        Ett stilark per komponent/seksjon
+│   ├── index.css         Samler alle partials
+│   └── partials/         Ett stilark per komponent/seksjon
 ├── js/
 │   ├── layout.js         Bygger navbar + footer på alle sider
 │   ├── script.js         Genererer teamkortene
@@ -46,6 +60,12 @@ CORE-6 består av seks studenter som gjennom bachelorprosjektet og individuelle 
 │   └── forside-vanta.js   Globus-bakgrunn på forsiden
 └── Media/                Bilder, logoer og videoer
 ```
+
+Toppnivå-sidene og layout.js bruker rot-relative stier (`/styles/…`, `/js/…`,
+`/Media/…`) slik at de fungerer uendret uansett hvilken mappedybde siden som
+laster dem ligger på. Det krever statisk hosting fra domenets rot (som
+GitHub Pages for et bruker-repo som dette), og fungerer også med den lokale
+dev-serveren i `.claude/no-cache-server.py`.
 
 ## Kjøre lokalt
 

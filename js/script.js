@@ -77,12 +77,12 @@ var bios = [
 ];
 
 var profileLinks = [
-    "./efe-kaan-eksi.html",
-    "./hildid-musse.html",
-    "./madalitso-phiri-skjelnes.html",
-    "./marion-rasmussen.html",
-    "./dennis-tea.html",
-    "./noa-vincent-norden.html"
+    "./team/efe-kaan-eksi.html",
+    "./team/hildid-musse.html",
+    "./team/madalitso-phiri-skjelnes.html",
+    "./team/marion-rasmussen.html",
+    "./team/dennis-tea.html",
+    "./team/noa-vincent-norden.html"
 ];
 
 var cardSection = document.getElementById("card-section");

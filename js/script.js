@@ -36,7 +36,7 @@ var cardText = [
     "Brenner for å skape gode digitale brukeropplevelser, med interesse for UX-design, problemløsning og frontendutvikling.",
     "Jobber gjerne på tvers av stacken, med spesiell interesse for sikkerhet i systemene vi bygger.",
     "Har sansen for design og tydelig skriving, og bidrar med et kritisk blikk på sikkerhet.",
-    "Liker å bygge rene, gjennomtenkte grensesnitt med fokus på frontendutvikling og design.",
+    "Arbeider med frontend, design og UX/UI, med fokus på å forstå brukernes behov og utvikle gjennomtenkte, brukervennlige løsninger.",
     "Trives både med fullstack-utvikling og å finpusse brukeropplevelsen."
 ];
 

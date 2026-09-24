@@ -248,3 +248,37 @@ stedet for et stort ikon midt i bildet (som ble opplevd som forstyrrende).
         padding-inline: 2.75rem;
     }
 }
+
+/*
+Språkflagg – liten visuell rad med flagg + språknavn
+*/
+
+.language-flags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin: 1.25rem 0;
+}
+
+.language-flag {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.3rem;
+    padding: 0.6rem 0.9rem;
+    border-radius: 0.65rem;
+    background-color: #ffffff;
+    border: 1px solid var(--ink-border, rgba(11, 31, 58, 0.16));
+    box-shadow: 0 2px 8px rgba(15, 23, 42, 0.06);
+}
+
+.language-flag-emoji {
+    font-size: 1.5rem;
+    line-height: 1;
+}
+
+.language-flag-name {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--navy);
+}

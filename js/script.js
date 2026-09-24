@@ -73,7 +73,7 @@ var bios = [
     "TODO: Skriv en kort bio for Madalitso Phiri Skjelnes",
     "Hestejente med bakgrunn fra sprangridning på nasjonalt og internasjonalt nivå. Interessert i UX-design og sikkerhet, og glad i å reise og holde seg aktiv.",
     "Interessert i UX/UI, frontend, webutvikling og design, og opptatt av å bygge gjennomtenkte, brukervennlige løsninger. Utenfor skjermen er han glad i løping, reising og musikk.",
-    "TODO: Skriv en kort bio for Noa Vincent Nordén"
+    "Strukturert og kreativ, med interesse for teknologi og digitale verktøy. Bruker fritiden på sport, trening, videospill, fotografering og å reise og oppleve nye kulturer."
 ];
 
 var profileLinks = [
@@ -82,7 +82,7 @@ var profileLinks = [
     "",
     "./marion-rasmussen.html",
     "./dennis-tea.html",
-    ""
+    "./noa-vincent-norden.html"
 ];
 
 var cardSection = document.getElementById("card-section");

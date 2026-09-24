@@ -7,16 +7,18 @@ Grunnleggende stiler – fargevariabler, fonter og reset
 }
 
 :root {
-    --accent: #2563eb;
-    --accent-soft: #93c5fd;
-    --navy: #0b1f3a;
-    --bg-muted: #eef1f7;
-    --text-body: #334155;
+    --accent: #b8651e;
+    --accent-hover: #9c5419;
+    --accent-active: #7c4313;
+    --accent-soft: #edc38e;
+    --navy: #211d1a;
+    --bg-muted: #f6f4f1;
+    --text-body: #443f3a;
     /* Nøytrale, navy-tonede fyll/kanter til dekorative elementer (tags, ikonsirkler,
        kort-kanter) som ikke skal ha aksentfarge – aksent er forbeholdt knapper,
        lenke-/pil-hover og understreker, se skjemabruken i partials/*.css. */
-    --ink-soft: rgba(11, 31, 58, 0.07);
-    --ink-border: rgba(11, 31, 58, 0.16);
+    --ink-soft: rgba(33, 29, 26, 0.06);
+    --ink-border: rgba(33, 29, 26, 0.14);
     --font-ui: "Segoe UI", Segoe UI, Tahoma, Geneva, Verdana, sans-serif;
     --font-brand: "Orbitron", sans-serif;
 }

@@ -32,9 +32,38 @@ Forside – hero-seksjon og snarveier (index.html)
     z-index: 0 !important;
 }
 
+/*
+Dempet gradient mellom animasjonen og teksten, slik at tittel, slagord og
+knapper alltid har god kontrast mot rutenettet og kloden.
+*/
+#forside::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+    background: linear-gradient(
+        90deg,
+        rgba(246, 244, 241, 0.95) 0%,
+        rgba(246, 244, 241, 0.85) 35%,
+        rgba(246, 244, 241, 0) 70%
+    );
+}
+
 .forside-innhold {
     position: relative;
-    z-index: 1;
+    z-index: 2;
+}
+
+@media (max-width: 767.98px) {
+    #forside::before {
+        background: linear-gradient(
+            180deg,
+            rgba(246, 244, 241, 0.55) 0%,
+            rgba(246, 244, 241, 0.9) 45%,
+            rgba(246, 244, 241, 0.55) 100%
+        );
+    }
 }
 
 .home-highlights {

@@ -7,6 +7,10 @@ Kontaktside
 
 .kontakt-intro {
     color: var(--text-body);
+    margin-bottom: 0.75rem;
+}
+
+.kontakt-intro:last-of-type {
     margin-bottom: 1.5rem;
 }
 

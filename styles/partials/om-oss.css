@@ -97,14 +97,14 @@ Om oss seksjonen
     flex-wrap: wrap;
     align-items: center;
     gap: 1rem 1.5rem;
-    margin-top: 2.25rem;
-    padding-top: 1.75rem;
+    margin-top: 1.75rem;
+    padding-top: 1.5rem;
     border-top: 1px solid rgba(33, 29, 26, 0.1);
 }
 
 .om-oss-team-cta-text {
     margin: 0;
-    max-width: 26rem;
+    flex: 1 1 14rem;
     color: var(--text-body);
     font-size: 0.92rem;
     line-height: 1.55;

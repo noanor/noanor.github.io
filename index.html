@@ -23,8 +23,33 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="./styles/index.css">
+        <script>
+            // Lastesiden vises bare første gang forsiden åpnes i en økt (se js/laster.js)
+            (function () {
+                try {
+                    if (!sessionStorage.getItem("core6-lastet")) {
+                        document.documentElement.classList.add("vis-laster");
+                        sessionStorage.setItem("core6-lastet", "1");
+                    }
+                } catch (e) {}
+            })();
+        </script>
     </head>
     <body>
+        <div class="laster" role="status" aria-live="polite">
+            <div class="laster-gardin laster-gardin-venstre" aria-hidden="true"></div>
+            <div class="laster-gardin laster-gardin-hoyre" aria-hidden="true"></div>
+            <div class="laster-midt">
+                <div class="laster-spinner" aria-hidden="true">
+                    <span class="laster-ring laster-ring-ytre"></span>
+                    <span class="laster-ring"></span>
+                    <img class="laster-logo" src="./Media/logo-c6-white.png" width="300" height="300" alt="">
+                </div>
+                <p class="laster-navn" aria-hidden="true">CORE-6</p>
+                <div class="laster-linje" aria-hidden="true"><span></span></div>
+                <span class="laster-skjult-tekst">Laster inn CORE-6</span>
+            </div>
+        </div>
         <a class="skip-link" href="#hovedinnhold">Hopp til hovedinnhold</a>
         <div id="site-navbar"></div>
 
@@ -171,6 +196,7 @@
         <div id="site-footer"></div>
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+        <script src="./js/laster.js"></script>
         <script src="./js/reveal.js"></script>
         <script src="./js/tidslinje.js"></script>
         <script src="./js/layout.js"></script>

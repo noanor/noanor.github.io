@@ -22,6 +22,8 @@ Forside – hero-seksjon og snarveier (index.html)
     overflow: hidden;
     box-sizing: border-box;
     height: 100vh;
+    /* svh = synlig høyde på mobil, uten adresselinjen */
+    height: 100svh;
     min-height: 32rem;
     padding-top: 4.75rem;
     background-color: var(--navy);
@@ -104,6 +106,7 @@ html[data-page="index"] #navbar:not(.scrolled) .nav-link.nav-cta {
     #forside {
         height: auto;
         min-height: 100vh;
+        min-height: 100svh;
         padding-block: 6.5rem 3rem;
     }
 

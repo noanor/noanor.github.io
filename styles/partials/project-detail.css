@@ -22,6 +22,7 @@ Prosjekt-detaljsider – bånd-seksjoner (nkom, smaragd, luftfartshinder)
 .project-hero-top h1 {
     max-width: 100%;
     overflow-wrap: break-word;
+    hyphens: auto;
 }
 
 
@@ -110,7 +111,7 @@ Seksjonsoverskrifter – sentrert, smal kolonne; overskrift og brødtekst venstr
 }
 
 .project-footer-nav {
-    padding: 0.5rem 0 3rem;
+    padding-block: 0.5rem 3rem;
 }
 
 
@@ -166,6 +167,16 @@ Gruppen-seksjon (deltakere på prosjekt-detaljside)
 @media (max-width: 767.98px) {
     .project-hero {
         padding-top: 5.5rem;
+    }
+
+    /* Lange norske ord (f.eks. «kommunikasjonsmyndighet») må få plass på én linje */
+    .project-hero-top h1 {
+        font-size: 1.55rem;
+    }
+
+    .code-panel {
+        padding: 1rem;
+        font-size: 0.75rem;
     }
 
 }

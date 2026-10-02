@@ -153,47 +153,6 @@ Forside – hero-seksjon og snarveier (index.html)
     mix-blend-mode: soft-light;
 }
 
-/* Små merker som svever foran bildet og gir parallakse når kortet vipper */
-.forside-3d-merke {
-    position: absolute;
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0.55rem 0.95rem;
-    border-radius: 999px;
-    background: rgba(255, 255, 255, 0.88);
-    backdrop-filter: blur(6px);
-    -webkit-backdrop-filter: blur(6px);
-    color: var(--navy);
-    font-size: 0.85rem;
-    font-weight: 600;
-    white-space: nowrap;
-    box-shadow: 0 12px 24px -12px rgba(33, 29, 26, 0.45);
-    pointer-events: none;
-}
-
-.forside-3d-merke i {
-    color: var(--accent);
-}
-
-.forside-3d-merke-1 {
-    top: -1.1rem;
-    left: -1.5rem;
-    transform: translateZ(70px);
-}
-
-.forside-3d-merke-2 {
-    bottom: 18%;
-    right: -1.75rem;
-    transform: translateZ(95px);
-}
-
-.forside-3d-merke-3 {
-    bottom: -1.2rem;
-    left: 12%;
-    transform: translateZ(55px);
-}
-
 @keyframes forside-3d-sveve {
     0%, 100% { translate: 0 0; }
     50% { translate: 0 -12px; }
@@ -226,19 +185,6 @@ Forside – hero-seksjon og snarveier (index.html)
 
     .forside-3d {
         max-width: 34rem;
-    }
-
-    .forside-3d-merke {
-        font-size: 0.75rem;
-        padding: 0.4rem 0.75rem;
-    }
-
-    .forside-3d-merke-1 {
-        left: 0.5rem;
-    }
-
-    .forside-3d-merke-2 {
-        right: 0.5rem;
     }
 
     .forside-blob-1 {

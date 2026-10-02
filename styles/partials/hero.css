@@ -13,9 +13,8 @@ Forside – hero-seksjon og snarveier (index.html)
 }
 
 /*
-  Hjem: tekst til venstre og gruppebildet som et 3D-kort til høyre.
-  Bak ligger et interaktivt punktnett (canvas) og to myke fargeflater som driver sakte.
-  All bevegelse styres av js/forside-3d.js.
+  Hjem: heldekkende videoloop i bakgrunnen med et mørkt lag over,
+  slik at teksten og knappene står tydelig frem.
 */
 #forside {
     position: relative;
@@ -23,154 +22,84 @@ Forside – hero-seksjon og snarveier (index.html)
     overflow: hidden;
     box-sizing: border-box;
     height: 100vh;
+    min-height: 32rem;
     padding-top: 4.75rem;
-    background-color: var(--bg-muted);
+    background-color: var(--navy);
     display: flex;
     align-items: center;
 }
 
-.forside-bakgrunn {
+.forside-video {
     position: absolute;
     inset: 0;
-    z-index: 0;
+    z-index: -2;
     width: 100%;
     height: 100%;
-    display: block;
-}
-
-/* Myke, uskarpe fargeflater som driver rolig rundt i bakgrunnen */
-.forside-blob {
-    position: absolute;
-    z-index: -1;
-    border-radius: 50%;
-    filter: blur(70px);
+    object-fit: cover;
     pointer-events: none;
-    will-change: transform;
 }
 
-.forside-blob-1 {
-    width: 34rem;
-    height: 34rem;
-    right: 4%;
-    top: 12%;
-    background: rgba(184, 101, 30, 0.22);
-    animation: forside-blob-drift-1 18s ease-in-out infinite alternate;
-}
-
-.forside-blob-2 {
-    width: 26rem;
-    height: 26rem;
-    left: 18%;
-    bottom: -8%;
-    background: rgba(237, 195, 142, 0.35);
-    animation: forside-blob-drift-2 22s ease-in-out infinite alternate;
-}
-
-@keyframes forside-blob-drift-1 {
-    0% { transform: translate(0, 0) scale(1); }
-    50% { transform: translate(-6rem, 4rem) scale(1.15); }
-    100% { transform: translate(-2rem, -3rem) scale(0.95); }
-}
-
-@keyframes forside-blob-drift-2 {
-    0% { transform: translate(0, 0) scale(1); }
-    50% { transform: translate(8rem, -5rem) scale(1.1); }
-    100% { transform: translate(3rem, 2rem) scale(0.9); }
+.forside-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background:
+        linear-gradient(90deg, rgba(20, 17, 15, 0.78) 0%, rgba(20, 17, 15, 0.5) 55%, rgba(20, 17, 15, 0.3) 100%),
+        linear-gradient(180deg, rgba(20, 17, 15, 0.45) 0%, rgba(20, 17, 15, 0) 30%);
 }
 
 .forside-innhold {
     position: relative;
-    z-index: 2;
-    display: grid;
-    grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.5fr);
-    align-items: center;
-    gap: 2.5rem;
-    pointer-events: none;
+    z-index: 1;
 }
 
-.forside-tekst,
-.forside-3d {
-    pointer-events: auto;
+.forside-tekst {
+    max-width: 38rem;
 }
 
-.forside-3d {
-    margin: 0;
-    perspective: 1100px;
-    --tilt-x: 0deg;
-    --tilt-y: 0deg;
-    --glans-x: 50%;
-    --glans-y: 30%;
+#forside .text-accent {
+    color: #ffffff;
+    text-shadow: 0 2px 24px rgba(0, 0, 0, 0.45);
 }
 
-/* Selve 3D-kortet. Ingen overflow: hidden her, ellers flates dybden ut. */
-.forside-3d-kort {
-    position: relative;
-    transform-style: preserve-3d;
-    transform: rotateX(var(--tilt-x)) rotateY(var(--tilt-y));
-    transition: transform 0.25s ease-out;
-    animation: forside-3d-sveve 6s ease-in-out infinite;
-    will-change: transform;
+#forside .brand-tagline {
+    color: rgba(255, 255, 255, 0.92);
+    font-size: 1.25rem;
+    text-shadow: 0 1px 14px rgba(0, 0, 0, 0.5);
 }
 
-.forside-3d-bilde {
-    position: relative;
-    border-radius: 18px;
-    overflow: hidden;
-    border: 6px solid #ffffff;
-    box-shadow:
-        0 2px 0 #e9e4dd,
-        0 4px 0 #ddd6cc,
-        0 26px 40px -22px rgba(33, 29, 26, 0.45),
-        0 12px 20px -14px rgba(33, 29, 26, 0.3);
-    transition: box-shadow 0.3s ease, transform 0.3s ease;
+#forside .btn-accent-outline {
+    --bs-btn-color: #ffffff;
+    --bs-btn-border-color: rgba(255, 255, 255, 0.85);
+    --bs-btn-hover-color: var(--navy);
+    --bs-btn-hover-bg: #ffffff;
+    --bs-btn-hover-border-color: #ffffff;
+    --bs-btn-active-color: var(--navy);
+    --bs-btn-active-bg: #ffffff;
+    --bs-btn-active-border-color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(4px);
 }
 
-.forside-3d:hover .forside-3d-bilde {
-    transform: translateZ(10px) scale(1.015);
-    box-shadow:
-        0 2px 0 #e9e4dd,
-        0 4px 0 #ddd6cc,
-        0 40px 60px -26px rgba(33, 29, 26, 0.5),
-        0 18px 28px -16px rgba(33, 29, 26, 0.32);
+/* Toppmenyen er lys mens den ligger over videoen, og går tilbake til normal ved scrolling */
+html[data-page="index"] #navbar:not(.scrolled) .nav-link:not(.nav-cta),
+html[data-page="index"] #navbar:not(.scrolled) .navbar-brand-text {
+    color: #ffffff;
 }
 
-.forside-3d-bilde img {
-    display: block;
-    width: 100%;
-    height: auto;
+html[data-page="index"] #navbar:not(.scrolled) .nav-link:not(.nav-cta):hover {
+    color: var(--accent-soft);
 }
 
-/* Lysrefleks som følger musepekeren */
-.forside-3d-glans {
-    position: absolute;
-    inset: 0;
-    pointer-events: none;
-    background: radial-gradient(
-        circle at var(--glans-x) var(--glans-y),
-        rgba(255, 255, 255, 0.32) 0%,
-        rgba(255, 255, 255, 0) 55%
-    );
-    mix-blend-mode: soft-light;
+html[data-page="index"] #navbar:not(.scrolled) .navbar-toggler-bar {
+    background-color: #ffffff;
 }
 
-@keyframes forside-3d-sveve {
-    0%, 100% { translate: 0 0; }
-    50% { translate: 0 -12px; }
+html[data-page="index"] #navbar:not(.scrolled) .nav-link.nav-cta {
+    color: #ffffff;
+    border-color: rgba(255, 255, 255, 0.85);
 }
 
-@media (prefers-reduced-motion: reduce) {
-    .forside-3d-kort,
-    .forside-blob {
-        animation: none;
-    }
-
-    .forside-3d-kort,
-    .forside-3d-bilde {
-        transition: none;
-    }
-}
-
-/* Mindre skjermer: bildet under teksten */
 @media (max-width: 991.98px) {
     #forside {
         height: auto;
@@ -178,23 +107,8 @@ Forside – hero-seksjon og snarveier (index.html)
         padding-block: 6.5rem 3rem;
     }
 
-    .forside-innhold {
-        grid-template-columns: minmax(0, 1fr);
-        gap: 2.5rem;
-    }
-
-    .forside-3d {
-        max-width: 42rem;
-    }
-
-    .forside-blob-1 {
-        width: 22rem;
-        height: 22rem;
-    }
-
-    .forside-blob-2 {
-        width: 18rem;
-        height: 18rem;
+    .forside-overlay {
+        background: rgba(20, 17, 15, 0.62);
     }
 }
 
@@ -232,15 +146,6 @@ Forside – hero-seksjon og snarveier (index.html)
 /*
 Samarbeid-seksjonen – søker bachelorpartner
 */
-
-/* Gruppebildet i bakgrunnen, dempet med et mørkt lag så teksten og tidslinjen er lesbar */
-.samarbeid-band {
-    background-image:
-        linear-gradient(rgba(33, 29, 26, 0.86), rgba(33, 29, 26, 0.86)),
-        url("../../Media/gruppebilde.jpg");
-    background-size: cover;
-    background-position: center 35%;
-}
 
 .samarbeid-tekst {
     max-width: 42rem;

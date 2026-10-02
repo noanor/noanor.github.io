@@ -24,12 +24,20 @@ Forside – hero-seksjon og snarveier (index.html)
     height: 100vh;
     padding-top: 4.75rem;
     background-color: var(--bg-muted);
+    /* Gruppebildet bak kloden, lysnet så rutenettet og kloden fortsatt synes */
+    background-image:
+        linear-gradient(rgba(246, 244, 241, 0.45), rgba(246, 244, 241, 0.45)),
+        url("../../Media/gruppebilde.jpg");
+    background-size: cover;
+    background-position: center 30%;
     display: flex;
     align-items: center;
 }
 
+/* multiply gjør Vantas lyse bakgrunn gjennomsiktig, mens de mørke linjene blir liggende oppå bildet */
 #forside canvas {
     z-index: 0 !important;
+    mix-blend-mode: multiply;
 }
 
 /*

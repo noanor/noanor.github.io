@@ -61,7 +61,8 @@ Vi søker en samarbeidspartner for bacheloroppgaven som gjennomføres fra januar
 │   ├── prosjekt-wheel.js  Radial meny («Hjulet») på Luftfartshinder-siden
 │   ├── gallery-lightbox.js  Bildegalleri med forstørrelse på profilsidene
 │   ├── kontakt-kopier.js  Kopier e-post-knapp
-│   └── forside-3d.js      3D-vipping av gruppebildet på forsiden
+│   ├── forside-3d.js      3D-vipping av gruppebildet på forsiden
+│   └── kort-3d.js         3D-vipping av gruppebildet på Om oss
 └── Media/
     ├── gruppebilde.jpg    Gruppebilde av teamet
     ├── Profil-pic/        Portretter og private bildegallerier

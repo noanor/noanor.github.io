@@ -15,6 +15,7 @@ regler som overstyrer hverandre (f.eks. .prosjekt-kort-tekst) fortsatt gjør det
 @import url("./partials/prosjekt-shared.css");
 @import url("./partials/project-detail-shared.css");
 @import url("./partials/om-oss.css");
+@import url("./partials/kort-3d.css");
 @import url("./partials/kontakt.css");
 @import url("./partials/footer.css");
 @import url("./partials/prosjekt-grid.css");

@@ -17,7 +17,7 @@
         backgroundColor: 0xf6f4f1,
         color: 0x000000,
         color2: 0xffffff,
-        size: 0.5
+        size: 0.85
     });
 
     if (prefersReducedMotion && effect && typeof effect.pause === "function") {

@@ -41,7 +41,6 @@ Vi søker en samarbeidspartner for bacheloroppgaven som gjennomføres fra januar
 
 - HTML, CSS og JavaScript (vanilla, uten byggeprosess)
 - [Bootstrap 5](https://getbootstrap.com/) og [Bootstrap Icons](https://icons.getbootstrap.com/)
-- [Vanta.js](https://www.vantajs.com/) (Three.js) for den animerte globusbakgrunnen på forsiden
 - Google Fonts (Orbitron)
 - Hosting via GitHub Pages
 
@@ -62,7 +61,7 @@ Vi søker en samarbeidspartner for bacheloroppgaven som gjennomføres fra januar
 │   ├── prosjekt-wheel.js  Radial meny («Hjulet») på Luftfartshinder-siden
 │   ├── gallery-lightbox.js  Bildegalleri med forstørrelse på profilsidene
 │   ├── kontakt-kopier.js  Kopier e-post-knapp
-│   └── forside-vanta.js   Globusbakgrunn på forsiden
+│   └── forside-3d.js      3D-vipping av gruppebildet på forsiden
 └── Media/
     ├── gruppebilde.jpg    Gruppebilde av teamet
     ├── Profil-pic/        Portretter og private bildegallerier

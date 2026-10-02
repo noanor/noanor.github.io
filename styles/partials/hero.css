@@ -13,8 +13,8 @@ Forside – hero-seksjon og snarveier (index.html)
 }
 
 /*
-  Hjem-bakgrunn: Vanta Globe (js/forside-vanta.js).
-  Vanta legger inn sitt eget canvas. Teksten må ligge over (z-index).
+  Hjem: tekst til venstre og gruppebildet som et 3D-kort til høyre.
+  Kortet vipper etter musepekeren (js/forside-3d.js) og svever rolig.
 */
 #forside {
     position: relative;
@@ -28,41 +28,101 @@ Forside – hero-seksjon og snarveier (index.html)
     align-items: center;
 }
 
-#forside canvas {
-    z-index: 0 !important;
-}
-
-/*
-Dempet gradient mellom animasjonen og teksten, slik at tittel, slagord og
-knapper alltid har god kontrast mot rutenettet og kloden.
-*/
+/* Svak, varm glød bak kortet som gir dybde */
 #forside::before {
     content: "";
     position: absolute;
     inset: 0;
-    z-index: 1;
+    z-index: 0;
     pointer-events: none;
-    background: linear-gradient(
-        90deg,
-        rgba(246, 244, 241, 0.95) 0%,
-        rgba(246, 244, 241, 0.85) 35%,
-        rgba(246, 244, 241, 0) 70%
+    background: radial-gradient(
+        ellipse 45% 55% at 72% 55%,
+        rgba(184, 101, 30, 0.14) 0%,
+        rgba(184, 101, 30, 0) 70%
     );
 }
 
 .forside-innhold {
     position: relative;
     z-index: 2;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr);
+    align-items: center;
+    gap: 3rem;
 }
 
-@media (max-width: 767.98px) {
-    #forside::before {
-        background: linear-gradient(
-            180deg,
-            rgba(246, 244, 241, 0.55) 0%,
-            rgba(246, 244, 241, 0.9) 45%,
-            rgba(246, 244, 241, 0.55) 100%
-        );
+.forside-3d {
+    margin: 0;
+    perspective: 1100px;
+    --tilt-x: 0deg;
+    --tilt-y: 0deg;
+    --glans-x: 50%;
+    --glans-y: 30%;
+}
+
+.forside-3d-kort {
+    position: relative;
+    border-radius: 18px;
+    overflow: hidden;
+    border: 6px solid #ffffff;
+    transform-style: preserve-3d;
+    transform: rotateX(var(--tilt-x)) rotateY(var(--tilt-y));
+    transition: transform 0.25s ease-out;
+    box-shadow:
+        0 2px 0 #e9e4dd,
+        0 4px 0 #ddd6cc,
+        0 26px 40px -22px rgba(33, 29, 26, 0.45),
+        0 12px 20px -14px rgba(33, 29, 26, 0.3);
+    animation: forside-3d-sveve 6s ease-in-out infinite;
+    will-change: transform;
+}
+
+.forside-3d-kort img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* Lysrefleks som følger musepekeren */
+.forside-3d-glans {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: radial-gradient(
+        circle at var(--glans-x) var(--glans-y),
+        rgba(255, 255, 255, 0.28) 0%,
+        rgba(255, 255, 255, 0) 55%
+    );
+    mix-blend-mode: soft-light;
+}
+
+@keyframes forside-3d-sveve {
+    0%, 100% { translate: 0 0; }
+    50% { translate: 0 -12px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .forside-3d-kort {
+        animation: none;
+        transition: none;
+    }
+}
+
+/* Mindre skjermer: bildet under teksten */
+@media (max-width: 991.98px) {
+    #forside {
+        height: auto;
+        min-height: 100vh;
+        padding-block: 6.5rem 3rem;
+    }
+
+    .forside-innhold {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 2.5rem;
+    }
+
+    .forside-3d {
+        max-width: 34rem;
     }
 }
 

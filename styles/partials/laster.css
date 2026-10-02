@@ -10,6 +10,7 @@ Logoen spinner, så glir to brune gardiner til hver side og avdekker forsiden.
     position: fixed;
     inset: 0;
     z-index: 9999;
+    touch-action: none;
 }
 
 html.vis-laster .laster,

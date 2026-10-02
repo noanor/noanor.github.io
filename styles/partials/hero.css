@@ -101,6 +101,15 @@ knapper alltid har god kontrast mot rutenettet og kloden.
 Samarbeid-seksjonen – søker bachelorpartner
 */
 
+/* Gruppebildet i bakgrunnen, dempet med et mørkt lag så teksten og tidslinjen er lesbar */
+.samarbeid-band {
+    background-image:
+        linear-gradient(rgba(33, 29, 26, 0.86), rgba(33, 29, 26, 0.86)),
+        url("../../Media/gruppebilde.jpg");
+    background-size: cover;
+    background-position: center 35%;
+}
+
 .samarbeid-tekst {
     max-width: 42rem;
     margin: 0 auto 1.25rem;

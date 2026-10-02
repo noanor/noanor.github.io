@@ -1,0 +1,82 @@
+/*
+3D-kort for bilder (brukes på Om oss).
+Kortet vipper etter musepekeren, har en lysrefleks som følger pekeren,
+svever rolig og løfter seg litt ved hover. Styres av js/kort-3d.js.
+*/
+
+.kort-3d {
+    margin: 0;
+    perspective: 1100px;
+    --tilt-x: 0deg;
+    --tilt-y: 0deg;
+    --glans-x: 50%;
+    --glans-y: 30%;
+}
+
+/* Ingen overflow: hidden her, ellers flates dybden ut */
+.kort-3d-indre {
+    position: relative;
+    transform-style: preserve-3d;
+    transform: rotateX(var(--tilt-x)) rotateY(var(--tilt-y));
+    transition: transform 0.25s ease-out;
+    animation: kort-3d-sveve 6s ease-in-out infinite;
+    will-change: transform;
+}
+
+.kort-3d-bilde {
+    position: relative;
+    border-radius: 18px;
+    overflow: hidden;
+    border: 6px solid #ffffff;
+    background-color: #ececec;
+    box-shadow:
+        0 2px 0 #e9e4dd,
+        0 4px 0 #ddd6cc,
+        0 26px 40px -22px rgba(33, 29, 26, 0.45),
+        0 12px 20px -14px rgba(33, 29, 26, 0.3);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.kort-3d:hover .kort-3d-bilde {
+    transform: translateZ(10px) scale(1.015);
+    box-shadow:
+        0 2px 0 #e9e4dd,
+        0 4px 0 #ddd6cc,
+        0 40px 60px -26px rgba(33, 29, 26, 0.5),
+        0 18px 28px -16px rgba(33, 29, 26, 0.32);
+}
+
+.kort-3d-bilde img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* Lysrefleks som følger musepekeren */
+.kort-3d-glans {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: radial-gradient(
+        circle at var(--glans-x) var(--glans-y),
+        rgba(255, 255, 255, 0.32) 0%,
+        rgba(255, 255, 255, 0) 55%
+    );
+    mix-blend-mode: soft-light;
+}
+
+@keyframes kort-3d-sveve {
+    0%, 100% { translate: 0 0; }
+    50% { translate: 0 -12px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .kort-3d-indre {
+        animation: none;
+    }
+
+    .kort-3d-indre,
+    .kort-3d-bilde {
+        transition: none;
+    }
+}

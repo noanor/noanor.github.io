@@ -13,6 +13,16 @@ Om oss seksjonen
     padding-block: 4.5rem;
 }
 
+.underside.om-oss-main {
+    padding-top: 4.5rem;
+    padding-bottom: 0;
+    min-height: 0;
+}
+
+.om-oss-main > .om-oss-band:first-child {
+    padding-top: 2rem;
+}
+
 .om-oss-band-light {
     background-color: var(--bg-muted);
 }

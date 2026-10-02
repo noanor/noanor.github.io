@@ -97,14 +97,14 @@ Om oss seksjonen
     flex-wrap: wrap;
     align-items: center;
     gap: 1rem 1.5rem;
-    margin-top: 2.25rem;
-    padding-top: 1.75rem;
+    margin-top: 1.75rem;
+    padding-top: 1.5rem;
     border-top: 1px solid rgba(33, 29, 26, 0.1);
 }
 
 .om-oss-team-cta-text {
     margin: 0;
-    max-width: 26rem;
+    flex: 1 1 14rem;
     color: var(--text-body);
     font-size: 0.92rem;
     line-height: 1.55;
@@ -123,10 +123,20 @@ Gruppebildet
     border-radius: 0.75rem;
     overflow: hidden;
     background-color: #ececec;
-    aspect-ratio: 4 / 3;
-    max-height: 340px;
-    margin-inline: auto;
+    aspect-ratio: 16 / 9;
+    margin: 0 auto;
     box-shadow: 0 12px 28px rgba(15, 23, 42, 0.16);
+}
+
+.om-oss-image-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+#presentasjonsvideo {
+    scroll-margin-top: 4.5rem;
 }
 
 .om-oss-placeholder {
@@ -140,6 +150,50 @@ Gruppebildet
     font-size: 3rem;
     color: var(--navy);
     opacity: 0.5;
+}
+
+
+/*
+Lenke fra intro-seksjonen ned til presentasjonsvideoen
+*/
+
+.om-oss-video-link-wrap {
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+}
+
+.om-oss-video-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.4rem 0.25rem;
+    color: var(--navy);
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.om-oss-video-link i {
+    font-size: 1.1rem;
+    color: var(--accent);
+    transition: transform 0.25s ease;
+}
+
+.om-oss-video-link:hover,
+.om-oss-video-link:focus-visible {
+    color: var(--accent);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    html {
+        scroll-behavior: smooth;
+    }
+
+    .om-oss-video-link:hover i,
+    .om-oss-video-link:focus-visible i {
+        transform: translateY(4px);
+    }
 }
 
 
@@ -333,10 +387,6 @@ Teknologier og verktøy
 
     .om-oss-band {
         padding-block: 3rem;
-    }
-
-    .om-oss-image-wrap {
-        max-height: none;
     }
 
     .om-oss-stats {

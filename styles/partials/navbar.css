@@ -76,6 +76,51 @@ Navbar – toppmeny på alle sider
 }
 
 /*
+Kontakt som handlingsknapp i navigasjonen (kun i bred visning – i mobilmenyen
+beholder den samme stil som de andre lenkene).
+*/
+@media (min-width: 992px) {
+    #navbar .nav-link.nav-cta {
+        padding: 0.5rem 1.15rem;
+        border: 2px solid var(--accent);
+        border-radius: 0.6rem;
+        background-color: var(--accent);
+        color: #ffffff;
+        transition: background-color 0.2s ease, border-color 0.2s ease,
+            color 0.2s ease, transform 0.2s ease;
+    }
+
+    /* Over hero-seksjonen på forsiden: gjennomsiktig knapp med omriss. */
+    #navbar:not(.scrolled) .nav-link.nav-cta {
+        background-color: transparent;
+        border-color: var(--accent);
+        color: var(--accent);
+    }
+
+    #navbar:not(.scrolled) .nav-link.nav-cta:hover {
+        background-color: var(--accent);
+        border-color: var(--accent);
+        color: #ffffff;
+    }
+
+    #navbar .nav-link.nav-cta::after {
+        display: none;
+    }
+
+    #navbar .nav-link.nav-cta:hover {
+        background-color: var(--accent-hover);
+        border-color: var(--accent-hover);
+        color: #ffffff;
+        transform: translateY(-1px);
+    }
+
+    #navbar .nav-link.nav-cta.active {
+        background-color: var(--accent-active);
+        border-color: var(--accent-active);
+    }
+}
+
+/*
 Hamburger-knapp – tre linjer som animerer smidig til en X når menyen
 er åpen (styrt av aria-expanded, satt av js/layout.js).
 */

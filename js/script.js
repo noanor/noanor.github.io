@@ -118,7 +118,7 @@ function createCard(name, image, role, memberAnsvar, text, linkedinUrl, githubUr
     card.append(imageWrap);
 
     var img = document.createElement("img");
-    img.setAttribute("src", "./Media/Profil-pic/" + image + ".jpg");
+    img.setAttribute("src", "./Media/Profil-pic/" + image + "-ikon.jpg");
     img.setAttribute("alt", name);
     img.id = 'image-' + `${image}`;
     imageWrap.append(img);
@@ -269,7 +269,7 @@ function createMemberModal() {
         var index = event.relatedTarget.getAttribute("data-index");
 
         modal.querySelector("#memberModalName").textContent = navn[index];
-        modal.querySelector("#memberModalImage").setAttribute("src", "./Media/Profil-pic/" + images[index] + ".jpg");
+        modal.querySelector("#memberModalImage").setAttribute("src", "./Media/Profil-pic/" + images[index] + "-ikon.jpg");
         modal.querySelector("#memberModalImage").setAttribute("alt", navn[index]);
         modal.querySelector("#memberModalRole").textContent = roles[index] || "";
         modal.querySelector("#memberModalBio").textContent = bios[index];

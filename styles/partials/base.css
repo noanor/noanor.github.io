@@ -41,6 +41,15 @@ body {
 }
 
 /*
+Bilder skaleres proporsjonalt. width/height-attributtene i HTML reserverer
+plass mens bildet lastes (unngår layout-hopp), uten å forvrenge bildet.
+*/
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/*
 Hopp til hovedinnhold – skjult til den får tastaturfokus
 */
 .skip-link {

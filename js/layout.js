@@ -13,11 +13,11 @@
         { key: "om-oss", label: "Om oss", href: "/om-oss.html" },
         { key: "team", label: "Team", href: "/team.html" },
         { key: "prosjekter", label: "Våre prosjekter", href: "/prosjekter.html" },
-        { key: "kontakt", label: "Kontakt", href: "/kontakt.html" }
+        { key: "kontakt", label: "Kontakt", href: "/kontakt.html", cta: true }
     ];
 
     const navLinksHTML = navItems.map(function (item) {
-        const activeClass = item.key === activePage ? " active" : "";
+        const activeClass = (item.key === activePage ? " active" : "") + (item.cta ? " nav-cta" : "");
         const ariaCurrent = item.key === activePage ? ' aria-current="page"' : "";
         return (
             '<li class="nav-item">' +

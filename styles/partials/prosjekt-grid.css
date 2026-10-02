@@ -48,6 +48,11 @@ Prosjektoversikt – kortgrid (prosjekter.html)
     object-fit: contain;
 }
 
+/* Kartverket-logoen er bred og lav, så den holdes mindre for å gi luft til EXPO-merket. */
+.prosjekt-kort-banner img.prosjekt-logo-kartverket {
+    max-width: 64%;
+}
+
 .prosjekt-kort-stamp {
     position: absolute;
     right: 0.85rem;

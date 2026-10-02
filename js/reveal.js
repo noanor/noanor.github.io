@@ -68,6 +68,31 @@
         elements.forEach(function (el) {
             observer.observe(el);
         });
+
+        // Sikkerhetsnett: hvis observeren ikke rakk å utløse (f.eks. fane i
+        // bakgrunnen, hopp til anker eller treg gjengivelse), vises alt som
+        // allerede er i eller over synsfeltet, slik at innhold aldri blir
+        // stående usynlig.
+        function revealVisible() {
+            elements.forEach(function (el) {
+                if (el.classList.contains("reveal") && !el.classList.contains("reveal-visible") &&
+                    el.getBoundingClientRect().top < window.innerHeight) {
+                    el.classList.add("reveal-visible");
+                    el.addEventListener("animationend", function handler() {
+                        el.removeEventListener("animationend", handler);
+                        clearRevealState(el);
+                    });
+                    observer.unobserve(el);
+                }
+            });
+        }
+
+        window.setTimeout(revealVisible, 1500);
+        window.addEventListener("pageshow", function (event) {
+            if (event.persisted) {
+                revealVisible();
+            }
+        });
     }
 
     if (document.readyState === "loading") {

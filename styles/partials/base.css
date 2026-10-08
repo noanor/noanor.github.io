@@ -7,9 +7,10 @@ Grunnleggende stiler – fargevariabler, fonter og reset
 }
 
 :root {
-    --accent: #b8651e;
-    --accent-hover: #9c5419;
-    --accent-active: #7c4313;
+    /* Mørkere brun enn før: hvit tekst på --accent gir 5,1:1 (WCAG AA krever 4,5:1) */
+    --accent: #a85a19;
+    --accent-hover: #8f4c15;
+    --accent-active: #733b0f;
     --accent-soft: #edc38e;
     --navy: #211d1a;
     --bg-muted: #f6f4f1;

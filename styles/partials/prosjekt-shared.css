@@ -61,11 +61,23 @@ Prosjekt-komponenter delt mellom oversikt og detaljsider
     transition: opacity 0.15s ease, transform 0.15s ease;
 }
 
-.prosjekt-deltaker[data-navn]:hover {
+.prosjekt-deltaker[data-navn]:hover,
+.prosjekt-deltaker[data-navn]:focus-visible {
     z-index: 3;
 }
 
-.prosjekt-deltaker[data-navn]:hover::after {
+.prosjekt-deltaker[data-navn]:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+}
+
+/* Esc skjuler tooltipen (WCAG 1.4.13), se layout.js */
+.prosjekt-deltaker[data-navn].tooltip-skjult::after {
+    opacity: 0 !important;
+}
+
+.prosjekt-deltaker[data-navn]:hover::after,
+.prosjekt-deltaker[data-navn]:focus-visible::after {
     opacity: 1;
     transform: translate(-50%, 0);
 }

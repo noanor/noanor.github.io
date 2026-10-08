@@ -104,7 +104,6 @@ faktisk er. Frittstående knapper (hero, footer, CTA-seksjoner) beholder løftet
 .btn-accent-outline:hover {
     box-shadow: 0 8px 22px rgba(33, 29, 26, 0.18);
 }
-
 .navbar-brand-text {
     font-size: 1.15rem;
     color: var(--navy);

@@ -51,7 +51,8 @@ Navbar – toppmeny på alle sider
     text-transform: uppercase;
     color: #000000;
     position: relative;
-    padding-bottom: 0.2rem;
+    padding-block: 0.3rem;
+    min-height: 24px;
     transition: color 0.2s ease;
 }
 
@@ -80,6 +81,10 @@ Kontakt som handlingsknapp i navigasjonen (kun i bred visning – i mobilmenyen
 beholder den samme stil som de andre lenkene).
 */
 @media (min-width: 992px) {
+    #navbar .navbar-nav {
+        align-items: center;
+    }
+
     #navbar .nav-link.nav-cta {
         padding: 0.5rem 1.15rem;
         border: 2px solid var(--accent);

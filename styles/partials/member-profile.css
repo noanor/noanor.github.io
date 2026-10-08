@@ -234,6 +234,9 @@ stedet for et stort ikon midt i bildet (som ble opplevd som forstyrrende).
 
 .member-gallery-carousel .carousel-indicators [data-bs-target] {
     border-radius: 999px;
+    /* Usynlig kant rundt prikken gir klikkmål på minst 24 px (WCAG 2.5.8) */
+    border-top-width: 11px;
+    border-bottom-width: 11px;
 }
 
 .member-gallery-hint {

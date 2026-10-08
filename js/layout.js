@@ -226,6 +226,25 @@
         window.addEventListener("resize", onScroll);
     }
 
+    /*
+    Esc skjuler navne-tooltipen på deltakerikonene (WCAG 1.4.13). Den vises igjen
+    neste gang musen eller fokus går inn på et ikon.
+    */
+    document.addEventListener("keydown", function (event) {
+        if (event.key !== "Escape") return;
+        document.querySelectorAll(".prosjekt-deltaker[data-navn]").forEach(function (ikon) {
+            if (ikon.matches(":hover, :focus")) ikon.classList.add("tooltip-skjult");
+        });
+    });
+
+    ["mouseleave", "blur"].forEach(function (type) {
+        document.addEventListener(type, function (event) {
+            if (event.target.classList && event.target.classList.contains("tooltip-skjult")) {
+                event.target.classList.remove("tooltip-skjult");
+            }
+        }, true);
+    });
+
     if (document.readyState === "loading") {
         document.addEventListener("DOMContentLoaded", mountLayout);
     } else {

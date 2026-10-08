@@ -47,6 +47,7 @@
                 <ul class="navbar-nav gap-lg-4 ms-auto">
                     ${navLinksHTML}
                 </ul>
+                <p class="navbar-collapse-note">Gruppe 7 &middot; Universitetet i Agder</p>
             </div>
         </div>
     </nav>`;

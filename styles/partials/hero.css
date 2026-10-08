@@ -71,14 +71,23 @@ Forside – hero-seksjon og snarveier (index.html)
 #forside .btn-accent-outline {
     --bs-btn-color: #ffffff;
     --bs-btn-border-color: rgba(255, 255, 255, 0.85);
-    --bs-btn-hover-color: var(--navy);
-    --bs-btn-hover-bg: #ffffff;
-    --bs-btn-hover-border-color: #ffffff;
-    --bs-btn-active-color: var(--navy);
-    --bs-btn-active-bg: #ffffff;
-    --bs-btn-active-border-color: #ffffff;
+    --bs-btn-hover-color: #ffffff;
+    --bs-btn-hover-bg: var(--accent-hover);
+    --bs-btn-hover-border-color: var(--accent-hover);
+    --bs-btn-active-color: #ffffff;
+    --bs-btn-active-bg: var(--accent-active);
+    --bs-btn-active-border-color: var(--accent-active);
     background-color: rgba(255, 255, 255, 0.08);
     backdrop-filter: blur(4px);
+}
+
+#forside .btn-accent-outline:hover,
+#forside .btn-accent-outline:active {
+    background-color: var(--bs-btn-hover-bg);
+}
+
+#forside .btn-accent-outline:active {
+    background-color: var(--bs-btn-active-bg);
 }
 
 /* Toppmenyen er lys mens den ligger over videoen, og går tilbake til normal ved scrolling */

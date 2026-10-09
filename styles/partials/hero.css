@@ -174,8 +174,37 @@ Samarbeid-seksjonen – søker bachelorpartner
 
 .samarbeid-cta {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
+    gap: 1rem;
     margin-top: 2rem;
+}
+
+/* "Nei takk"-knappen rømmer unna musepekeren (se js/nei-takk.js) */
+.btn-nei-takk {
+    --bs-btn-color: rgba(255, 255, 255, 0.85);
+    --bs-btn-border-color: rgba(255, 255, 255, 0.45);
+    --bs-btn-hover-color: rgba(255, 255, 255, 0.85);
+    --bs-btn-hover-border-color: rgba(255, 255, 255, 0.45);
+    --bs-btn-active-color: rgba(255, 255, 255, 0.85);
+    --bs-btn-active-border-color: rgba(255, 255, 255, 0.45);
+    --bs-btn-border-radius: 0.75rem;
+    font-family: var(--font-ui);
+    font-weight: 600;
+    padding-inline: 1.4rem;
+    background-color: transparent;
+    border-width: 1.5px;
+    position: relative;
+    z-index: 2;
+    translate: var(--flykt-x, 0px) var(--flykt-y, 0px);
+    transition: translate 0.25s cubic-bezier(0.22, 1, 0.36, 1);
+    user-select: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .btn-nei-takk {
+        transition: none;
+    }
 }
 
 .tidslinje-wrapper {

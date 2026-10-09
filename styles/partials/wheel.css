@@ -69,56 +69,134 @@ forteller brukeren at hjulet over er klikkbart.
     filter: drop-shadow(0 1px 1px rgba(255, 255, 255, 0.5));
 }
 
-.wheel-wrap {
+/*
+Interaktivt kart – klikk i kartet åpner hjulet der man klikket,
+akkurat som i Luftfartshinder-løsningen.
+*/
+.wheel-map-wrap {
     position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: min(260px, 100%);
-    aspect-ratio: 1;
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    min-height: 300px;
     overflow: hidden;
-    background: radial-gradient(circle at 32% 28%, #f7f9fc, var(--bg-muted));
-    border: 2px solid var(--ink-border);
-    border-radius: 50%;
-    box-shadow: 0 10px 24px rgba(15, 23, 42, 0.1);
-    cursor: pointer;
+    border-radius: 1rem;
+    box-shadow: 0 10px 24px rgba(15, 23, 42, 0.12);
+    text-align: left;
 }
 
 @media (prefers-reduced-motion: no-preference) {
-    .wheel-wrap {
+    .wheel-map-wrap {
         animation: wheel-hint-pulse 2.4s ease-in-out infinite;
     }
 
-    .wheel-wrap.wheel-tried {
+    .wheel-map-wrap.wheel-tried {
         animation: none;
     }
 }
 
-.wheel-wrap:focus-visible {
+.wheel-map {
+    position: absolute;
+    inset: 0;
+    cursor: crosshair;
+}
+
+.wheel-map.leaflet-container {
+    font: inherit;
+    font-size: 0.8rem;
+}
+
+.wheel-map:focus-visible {
     outline: 3px solid var(--accent);
-    outline-offset: 3px;
+    outline-offset: -3px;
+}
+
+.wheel-map-wrap .wheel {
+    width: 220px;
+    height: 220px;
+    --icon-radius: -18px;
+}
+
+.wheel-map-toast {
+    position: absolute;
+    top: 0.75rem;
+    left: 50%;
+    z-index: 2100;
+    transform: translateX(-50%);
+    padding: 0.45rem 0.9rem;
+    border-radius: 0.5rem;
+    background-color: #2f7d4f;
+    color: #ffffff;
+    font-size: 0.85rem;
+    font-weight: 600;
+    white-space: nowrap;
+    box-shadow: 0 6px 16px rgba(15, 23, 42, 0.2);
+    pointer-events: none;
+}
+
+.wheel-map-marker span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: hsl(var(--hue), 36%, 52%);
+    border: 2px solid #ffffff;
+    box-shadow: 0 3px 8px rgba(15, 23, 42, 0.35);
+    color: #ffffff;
+    font-size: 1rem;
+}
+
+.wheel-map-marker i {
+    font-size: 1rem;
+    line-height: 1;
+}
+
+.wheel-map-footer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem 1rem;
+    margin-top: 1.25rem;
+}
+
+.wheel-map-footer .wheel-demo-hint {
+    margin-top: 0;
+}
+
+.wheel-map-count {
+    font-size: 0.85rem;
+    color: var(--navy);
+}
+
+.wheel-map-reset {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.35rem 0.8rem;
+    border: 1px solid var(--ink-border);
+    border-radius: 999px;
+    background: #ffffff;
+    color: var(--navy);
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.wheel-map-reset:hover {
+    background: var(--bg-muted);
+}
+
+.wheel-map-reset:focus-visible {
+    outline: 3px solid var(--accent);
+    outline-offset: 2px;
 }
 
 .wheel .arc:focus-visible {
     outline: 3px solid #ffffff;
     outline-offset: -6px;
     z-index: 3;
-}
-
-.wheel-idle-icon {
-    position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 2.5rem;
-    color: var(--navy);
-    opacity: 0.32;
-    pointer-events: none;
-    transition: opacity 0.3s ease;
-}
-
-.wheel-wrap.wheel-tried .wheel-idle-icon {
-    opacity: 0;
 }
 
 @keyframes wheel-hint-pulse {

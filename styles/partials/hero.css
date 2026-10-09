@@ -180,24 +180,16 @@ Samarbeid-seksjonen – søker bachelorpartner
     margin-top: 2rem;
 }
 
-/* "Nei takk"-knappen rømmer unna musepekeren (se js/nei-takk.js) */
+/* "Nei takk"-knappen rømmer unna musepekeren (se js/nei-takk.js). Utseendet kommer fra .btn-accent. */
 .btn-nei-takk {
-    --bs-btn-color: rgba(255, 255, 255, 0.85);
-    --bs-btn-border-color: rgba(255, 255, 255, 0.45);
-    --bs-btn-hover-color: rgba(255, 255, 255, 0.85);
-    --bs-btn-hover-border-color: rgba(255, 255, 255, 0.45);
-    --bs-btn-active-color: rgba(255, 255, 255, 0.85);
-    --bs-btn-active-border-color: rgba(255, 255, 255, 0.45);
-    --bs-btn-border-radius: 0.75rem;
-    font-family: var(--font-ui);
-    font-weight: 600;
-    padding-inline: 1.4rem;
-    background-color: transparent;
-    border-width: 1.5px;
     position: relative;
     z-index: 2;
     translate: var(--flykt-x, 0px) var(--flykt-y, 0px);
-    transition: translate 0.25s cubic-bezier(0.22, 1, 0.36, 1);
+    transition:
+        translate 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        background-color 0.2s ease;
     user-select: none;
 }
 

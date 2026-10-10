@@ -174,8 +174,29 @@ Samarbeid-seksjonen – søker bachelorpartner
 
 .samarbeid-cta {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
+    gap: 1rem;
     margin-top: 2rem;
+}
+
+/* "Nei takk"-knappen rømmer unna musepekeren (se js/nei-takk.js). Utseendet kommer fra .btn-accent. */
+.btn-nei-takk {
+    position: relative;
+    z-index: 2;
+    translate: var(--flykt-x, 0px) var(--flykt-y, 0px);
+    transition:
+        translate 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        background-color 0.2s ease;
+    user-select: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .btn-nei-takk {
+        transition: none;
+    }
 }
 
 .tidslinje-wrapper {

@@ -68,7 +68,7 @@ Seksjonsoverskrifter – sentrert, smal kolonne; overskrift og brødtekst venstr
 .project-tech-chips {
     justify-content: flex-start;
     max-width: 48rem;
-    margin: 0 auto;
+    margin: 1.5rem auto 0;
 }
 
 .project-cta {

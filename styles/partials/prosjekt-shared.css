@@ -116,3 +116,7 @@ Prosjekt-komponenter delt mellom oversikt og detaljsider
     border: 1px solid var(--ink-border);
 }
 
+
+.prosjekt-intro-wide {
+    max-width: none;
+}

@@ -41,6 +41,60 @@ Forside – hero-seksjon og snarveier (index.html)
     pointer-events: none;
 }
 
+/* Reserveanimasjon (bildesekvens på canvas): vises når videoen ikke kan spilles av, f.eks. ved strømsparing */
+.forside-reserve {
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background: var(--navy) url("../../Media/Videos/posters/promovideoclip-mobil.jpg") center / cover no-repeat;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+}
+
+#forside[data-video="reserve"] .forside-reserve {
+    opacity: 1;
+}
+
+#forside[data-video="reserve"] .forside-video {
+    visibility: hidden;
+}
+
+/* Pause/spill av for bakgrunnsvideoen (WCAG 2.2.2) */
+.forside-video-knapp {
+    position: absolute;
+    right: max(1rem, env(safe-area-inset-right));
+    bottom: max(1rem, env(safe-area-inset-bottom));
+    z-index: 2;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.75rem;
+    height: 2.75rem;
+    padding: 0;
+    font-size: 1.5rem;
+    line-height: 1;
+    color: #ffffff;
+    background: rgba(20, 17, 15, 0.6);
+    border: 2px solid rgba(255, 255, 255, 0.85);
+    border-radius: 50%;
+    cursor: pointer;
+    backdrop-filter: blur(4px);
+    transition: background-color 0.2s ease;
+}
+
+.forside-video-knapp:hover {
+    background: var(--accent-hover);
+}
+
+.forside-video-knapp:focus-visible {
+    outline: 3px solid #ffffff;
+    outline-offset: 3px;
+}
+
 .forside-overlay {
     position: absolute;
     inset: 0;
